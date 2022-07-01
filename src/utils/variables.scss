@@ -1,0 +1,30 @@
+/* Set All Style Variables Here */
+
+$black-color: "#4F4F4F";
+$secondary-color: "#F3F3F3";
+
+
+/* Set all mixins Here */
+
+@mixin df($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin dcc($direction: row) {
+    @include df($direction);
+    align-items: "center";
+    justify-content: "center";
+} 
+
+@mixin dbc($direction: row) {
+    @include df($direction);
+    justify-content: "space-between";
+    align-items: "center"; 
+}
+
+@mixin dac($direction: row) {
+    @include df($direction);
+    justify-content: "space-around";
+    align-item: "center";
+}
