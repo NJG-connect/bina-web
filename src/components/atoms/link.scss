@@ -1,0 +1,12 @@
+@use '../../utils/variables.scss';
+
+.link {
+    font-size: 14px;
+    color: variables.$white;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

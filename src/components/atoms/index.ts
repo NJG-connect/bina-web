@@ -5,5 +5,6 @@ import Input from './Input';
 import Img from './Img';
 import Skills from './Skills';
 import IconButton from './IconButton';
+import Link from './Link';
 
-export { Title, Button, CardButton, Input, Img, Skills, IconButton };
+export { Title, Button, CardButton, Input, Img, Skills, IconButton, Link };
