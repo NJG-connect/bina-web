@@ -30,8 +30,7 @@
     .icon {
         width: 39px;
         height: 39px;
-        background-position: center;
-        background-size: 100%;
+        @include variables.img();
     }
 }
 
