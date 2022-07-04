@@ -13,7 +13,7 @@ const Skills: React.FC<Props> = ({title, img}) => {
 
     return (
         <div className="skills-item">
-            <Img img="user" className="img" />
+            <Img img={img} className="img" />
             <h4>{title}</h4>
         </div>
     )

@@ -1,0 +1,20 @@
+@use '../../utils/variables.scss';
+
+.skills-item {
+    width: 100%;
+    @include variables.dbc(row);
+
+
+    h4 {
+        font-size: 27px;
+        font-weight: 500;
+        font-family: variables.$font;
+    }
+
+    .img {
+        width: 40px;
+        height: 40px;
+        @include variables.img();
+    }
+
+}
