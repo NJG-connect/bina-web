@@ -6,6 +6,9 @@
     font-size: variables.$title-size;
     color: variables.$blue;
     position: relative;
+    text-transform: uppercase;
+    font-family: variables.$font;
+    font-weight: 400;
 
     &::before, &::after {
         content: '';
@@ -17,11 +20,13 @@
     }
 
     &::before {
-        transform: translateX(-225%);
+        transform: translateX(-100%);
+        margin-right: 5rem;
     }
 
     &::after {
-        transform: translateX(225%);
+        transform: translateX(100%);
+        margin-left: 5rem;
     }
 }
 
