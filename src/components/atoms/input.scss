@@ -1,0 +1,47 @@
+@use '../../utils/variables.scss';
+
+.input-container {
+    position: relative;
+    width: 100%;
+    @include variables.dxc(row);
+
+    label {
+        font-size: 20px;
+        color: variables.$gray;
+    }
+
+    input {
+        width: 90%;
+        border: none;
+        height: 100%;
+        font-size: 20px;
+        padding: 9px 0 9px 10px;
+        color: variables.$black-color;
+
+        &::placeholder {
+            color: variables.$secondary-color;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .icon {
+        width: 39px;
+        height: 39px;
+        background-position: center;
+        background-size: 100%;
+    }
+}
+
+.icon-mode {
+    border: 3px solid variables.$blue;
+    background-color: white;
+}
+
+.input {
+    width: 60% !important;
+    border-bottom: 1.5px solid #707070 !important;
+    margin-left: .5rem;
+}
