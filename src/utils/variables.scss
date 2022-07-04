@@ -1,7 +1,11 @@
 /* Set All Style Variables Here */
 
-$black-color: "#4F4F4F";
-$secondary-color: "#F3F3F3";
+$black-color: #4F4F4F;
+$secondary-color: #F3F3F3;
+$blue: #3A504E;
+
+$header-size: 73px;
+$title-size: 52px;
 
 
 /* Set all mixins Here */
@@ -13,20 +17,20 @@ $secondary-color: "#F3F3F3";
 
 @mixin dcc($direction: row) {
     @include df($direction);
-    align-items: "center";
-    justify-content: "center";
+    align-items: center;
+    justify-content: center;
 } 
 
 @mixin dbc($direction: row) {
     @include df($direction);
-    justify-content: "space-between";
-    align-items: "center"; 
+    justify-content: space-between;
+    align-items: center; 
 }
 
 @mixin dac($direction: row) {
     @include df($direction);
-    justify-content: "space-around";
-    align-items: "center";
+    justify-content: space-around;
+    align-items: center;
 }
 
 @mixin dxc($direction: row) {
@@ -35,11 +39,11 @@ $secondary-color: "#F3F3F3";
 }
 
 @mixin dxs($direction: row) {
-    @include df($direction)
-    align-items: "flex-start";
+    @include df($direction);
+    align-items: flex-start;
 } 
 
 @mixin dxe($direction: row) {
     @include fd($direction);
-    align-items: "flex-end";
+    align-items: flex-end;
 }
