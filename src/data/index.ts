@@ -13,12 +13,7 @@ const data: CmsPropsType = {
       title: "Accueil",
       file: "/src/data/data.json", // root path specifies info of the first section
       fields: [
-        {
-          type: "input",
-          title: "Title", // printing on AdminPanel
-          id: "HomeTitle", // key reference in the file ( info.json)
-          htmlId: "HomeTitle", // id to write in the html for real time editing
-        },
+        
       ],
     },
   ],
