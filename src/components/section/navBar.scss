@@ -48,11 +48,15 @@ nav {
 
     }
 
-    .hamburger {
+    .icon {
         position: absolute;
         right: 5rem;
         width: 30px;
         height: 30px;
+
+        &:hover {
+            cursor: pointer;
+        }
 
         .img {
             @include variables.img();
@@ -85,5 +89,87 @@ nav {
 }
 
 
-@media only screen and (max-width: 1100px) {}
+@media only screen and (max-width: 1100px) {
 
+    nav {
+        @include variables.dcc(row);
+
+        .bina-logo {
+            margin: 0;
+        }
+
+        .right {
+            display: none;
+        }
+
+        .show {
+            position: fixed;
+            z-index: 100;
+            width: 50%;
+            height: 100vh;
+            top: 0;
+            right: 0;
+            margin: 0;
+            background-color: variables.$blue;
+            @include variables.dac(column);
+
+            .icon {
+                top: 2.5rem;
+                transform: translateY(-50%);
+            }
+
+            .navigation, .link {
+                width: 90%;
+            }
+
+            .navigation {
+                @include variables.dbc(column);
+                height: 20%;
+
+                & a {
+                    font-size: 18px;
+                }
+
+                & a:nth-child(2) {
+                    border: none;
+                }
+
+            }
+        }
+
+    }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    nav {
+
+        .show {
+            width: 75%;
+        }
+
+        .icon {
+            right: 2rem;
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    nav {
+
+        .show {
+            width: 100%;
+        }
+
+        .icon {
+            right: 1rem;
+        }
+
+    }
+
+}

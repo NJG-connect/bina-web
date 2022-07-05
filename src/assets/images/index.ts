@@ -14,12 +14,14 @@ export type ImageType =
   | "key"
   | "sheild"
   | "letter"
-  | "menu";
+  | "menu"
+  | "close";
 
 const images: { [key in ImageType]: any } = {
   user: require("./user.png"),
   letter: require("./letter.png"),
   menu: require("./menu.png"),
+  close: require("./close.png"),
   collaboration,
   delay,
   handleshake,

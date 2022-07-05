@@ -19,7 +19,9 @@ const NavBar: React.FC = () => {
 
             <div className="bina-logo"></div>
 
-            <div className="right">
+            <div className={`right ${column && "show"}`}>
+
+            {width <= 1100 && <IconButton img="close" onClick={() => setColumn(!column)} className="icon" />}
 
                 <div className="navigation">
                     <a href="#" className="l">Nos projets</a>
@@ -33,7 +35,7 @@ const NavBar: React.FC = () => {
                 </div>
             </div>
 
-            {width <= 1100 && <IconButton img="menu" onClick={() => setColumn(!column)} className="hamburger" />}
+            {width <= 1100 && <IconButton img="menu" onClick={() => setColumn(!column)} className="icon" />}
 
         </nav>
     )
