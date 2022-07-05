@@ -7,13 +7,13 @@ import data from "./data/";
 import { HomeScreen, ProjectScreen } from "./components/screens/";
 
 function App() {
-  console.log(process.env.REACT_APP_GH_TOKEN_PERSONAL);
+  console.log(typeof process.env.REACT_APP_GH_TOKEN_PERSONAL);
 
   return (
     <>
       <AdminPanel
         config={data}
-        githubToken={process.env.REACT_APP_GH_TOKEN_PERSONAL}
+        githubToken={process.env.REACT_APP_GH_TOKEN_PERSONAL!}
       />
 
       <Routes>
