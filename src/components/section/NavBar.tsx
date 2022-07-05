@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router";
 
 import './navBar.scss';
+import useWindowDimensions from "../../utils/windowSizeHook";
 
 import { IconButton, Button } from "../atoms";
 
 const NavBar: React.FC = () => {
 
     const navigate = useNavigate();
+
+    const [column, setColumn] = useState<Boolean>(false);
+    const { height, width } = useWindowDimensions();
+    
 
     return (
         <nav>
@@ -27,6 +32,8 @@ const NavBar: React.FC = () => {
                     <IconButton img="letter" onClick={() => {}} />
                 </div>
             </div>
+
+            {width <= 1100 && <IconButton img="menu" onClick={() => setColumn(!column)} className="hamburger" />}
 
         </nav>
     )
