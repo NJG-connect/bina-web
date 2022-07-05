@@ -10,9 +10,15 @@ const data: CmsPropsType = {
   fields: [
     {
       type: "section", // start second with this its to create first section on Panel
-      title: "Section 1",
-      file: "/src/data/info.json", // root path specifies info of the first section
+      title: "Accueil",
+      file: "/src/data/data.json", // root path specifies info of the first section
       fields: [
+        {
+          type: "input",
+          title: "Title", // printing on AdminPanel
+          id: "HomeTitle", // key reference in the file ( info.json)
+          htmlId: "HomeTitle", // id to write in the html for real time editing
+        },
       ],
     },
   ],
