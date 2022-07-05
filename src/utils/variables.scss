@@ -58,3 +58,12 @@ $font:  normal normal normal 52px/68px Lato;
     background-size: 100%;
     background-repeat: no-repeat;
 }
+
+@mixin links($color) {
+    text-decoration: none;
+    color: $color;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}

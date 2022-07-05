@@ -13,7 +13,11 @@ const Link: React.FC<Props> = ({value, link, href}) => {
 
     const navigate = useNavigate()
 
-    return <div className="link" onClick={() => navigate(link)}>{value}</div>
+    return (
+    
+        <div className="link" onClick={() => navigate(link)}>{value}</div>
+        
+    )
 
 }
 
