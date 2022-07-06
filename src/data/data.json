@@ -1,5 +1,4 @@
 {
-  "Home": {
     "NavBar": {
       "Links": [
         { "title": "Nos Projets" },
@@ -8,6 +7,4 @@
       ],
       "Boutton": "Préparer mon projet"
     }
-  },
-  "ProjectTitle": "Project Page ! (Dev Branch)"
 }
