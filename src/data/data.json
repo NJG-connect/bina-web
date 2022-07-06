@@ -1,20 +1,22 @@
 {
-    "Home": {
-        "NavBar": {
-            "Link1": {
-                "text": "Nos Projets",
-                "link": "#"
-            },
-            "Link2": {
-                "text": "Nos Engagements",
-                "link": "#"
-            },
-            "Link3": {
-                "text": "Votre Tranquilité",
-                "link": "#"
-            },
-            "Boutton": "Préparer mon projet"
+  "Home": {
+    "NavBar": {
+      "Links": [
+        {
+          "text": "Nos Projets",
+          "link": "#"
+        },
+        {
+          "text": "Nos Engagements",
+          "link": "#"
+        },
+        {
+          "text": "Votre Tranquilité",
+          "link": "#"
         }
-    },
-    "ProjectTitle": "Project Page ! (Dev Branch)"
+      ],
+      "Boutton": "Préparer mon projet"
+    }
+  },
+  "ProjectTitle": "Project Page ! (Dev Branch)"
 }

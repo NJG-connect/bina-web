@@ -27,9 +27,7 @@ const NavBar: React.FC = () => {
             {width <= 1100 && <IconButton img="close" onClick={() => setColumn(!column)} className="icon" />}
 
                 <div className="navigation">
-                    <a href={infoJson.Home.NavBar.Link1.link}>{infoJson.Home.NavBar.Link1.text}</a>
-                    <a href={infoJson.Home.NavBar.Link2.link}>{infoJson.Home.NavBar.Link2.text}</a>
-                    <a href={infoJson.Home.NavBar.Link3.link}>{infoJson.Home.NavBar.Link3.text}</a>
+                    {infoJson.Home.NavBar.Links.map(elm => <a href={elm.link}>{elm.text}</a>)}
                 </div>
 
                 <div className="link">
