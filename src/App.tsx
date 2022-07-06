@@ -7,7 +7,6 @@ import data from "./data/";
 import { HomeScreen, ProjectScreen } from "./components/screens/";
 
 function App() {
-  console.log(typeof process.env.REACT_APP_GH_TOKEN_PERSONAL);
 
   return (
     <>
