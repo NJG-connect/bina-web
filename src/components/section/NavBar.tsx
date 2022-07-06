@@ -27,7 +27,7 @@ const NavBar: React.FC = () => {
             {width <= 1100 && <IconButton img="close" onClick={() => setColumn(!column)} className="icon" />}
 
                 <div className="navigation">
-                    {infoJson.Home.NavBar.Links.map(elm => <a href={elm.link}>{elm.text}</a>)}
+                    {infoJson.Home.NavBar.Links.map(elm => <a id={elm.text.slice(0, 5).replaceAll(" ", "-")} href={elm.link}>{elm.text}</a>)}
                 </div>
 
                 <div className="link">

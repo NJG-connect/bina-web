@@ -1,19 +1,103 @@
 import { CmsPropsType } from "lyatom-cms";
 
 const data: CmsPropsType = {
-  branch: "main", // Branch to update
-  repo: "NJG-connect/bina-web", // Follows the pattern [org-or-username]/[repo-name]
-  urlForLogin: "admin", // url for access of the panelAdmin
-  mediaFolder: "/src/assets/images", // root path to the media files
-  title: "Bina", // title in the PanelAdmin
-  type: "firstLvl", // start always with this
+  //Master
+  branch: "dev", // Switch Branch to main for production
+  repo: "NJG-connect/bina-web",
+  urlForLogin: "admin", 
+  mediaFolder: "/src/assets/images",
+  title: "Bina", 
+  type: "firstLvl",
   fields: [
+    //Home Section
     {
-      type: "section", // start second with this its to create first section on Panel
+      type: "section",
       title: "Accueil",
-      file: "/src/data/data.json", // root path specifies info of the first section
+      file: "/src/data/data.json", 
       fields: [
-        
+        //NavBar
+        {
+          type: "object",
+          title: "Navigation",
+          id: "Home.NavBar",
+          fields: [
+            //Links
+            {
+              type: "array",
+              title: "Liens",
+              id: "Home.NavBar.Links",
+              referenceFieldKey: "test",
+              fields: [
+                //Link Item
+                {
+                  type: "object",
+                  title: "Lien 1",
+                  id: "Home.NavBar.Links",
+                  fields: [
+                    //Text of link
+                    {
+                      type: "input",
+                      title: "Texte",
+                      id: "Home.NavBar.Links.text",
+                      htmlId: "Nos-P",
+                    },
+                    //Link
+                    {
+                      type: "input",
+                      title: "Lien",
+                      id: "Home.NavBar.Links.link",
+                      htmlId: "Nos-P",
+                    },
+                  ],
+                },
+                //Link Item
+                {
+                  type: "object",
+                  title: "Lien 2",
+                  id: "Home.NavBar.Links",
+                  fields: [
+                    //Text of link
+                    {
+                      type: "input",
+                      title: "Texte",
+                      id: "Home.NavBar.Links.text",
+                      htmlId: "Nos-E",
+                    },
+                    //Link
+                    {
+                      type: "input",
+                      title: "Lien",
+                      id: "Home.NavBar.Links.link",
+                      htmlId: "Nos-E",
+                    },
+                  ],
+                },
+                //Link Item
+                {
+                  type: "object",
+                  title: "Lien 3",
+                  id: "Home.NavBar.Links",
+                  fields: [
+                    //Text of link
+                    {
+                      type: "input",
+                      title: "Texte",
+                      id: "Home.NavBar.Links.text",
+                      htmlId: "Votre",
+                    },
+                    //Link
+                    {
+                      type: "input",
+                      title: "Lien",
+                      id: "Home.NavBar.Links.link",
+                      htmlId: "Votre",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
   ],
