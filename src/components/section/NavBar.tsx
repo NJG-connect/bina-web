@@ -5,6 +5,7 @@ import './navBar.scss';
 import useWindowDimensions from "../../utils/windowSizeHook";
 import { IconButton, Button } from "../atoms";
 import infoJson from "../../data/data.json";
+import { info } from "console";
 
 
 
@@ -21,12 +22,11 @@ const NavBar: React.FC = () => {
 
             <div className="bina-logo"></div>
 
-            <div className={`right ${column && "show"}`}>
+            <div className={`right ${column && "show slide-in"}`}>
 
             {width <= 1100 && <IconButton img="close" onClick={() => setColumn(!column)} className="icon" />}
 
                 <div className="navigation">
-                    {/* Do .map() */}
                     <a href={infoJson.Home.NavBar.Link1.link}>{infoJson.Home.NavBar.Link1.text}</a>
                     <a href={infoJson.Home.NavBar.Link2.link}>{infoJson.Home.NavBar.Link2.text}</a>
                     <a href={infoJson.Home.NavBar.Link3.link}>{infoJson.Home.NavBar.Link3.text}</a>

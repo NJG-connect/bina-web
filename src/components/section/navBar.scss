@@ -1,5 +1,6 @@
 @use '../../utils/variables.scss';
 
+//Basic style
 nav {
     position: fixed;
     top: 0;
@@ -68,6 +69,29 @@ nav {
     
 }
 
+
+//Keyframmes
+@keyframes slideIn {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+
+
+
+//Responsive
 @media only screen and (max-width: 1300px) {
 
     nav {
@@ -112,6 +136,7 @@ nav {
             margin: 0;
             background-color: variables.$blue;
             @include variables.dac(column);
+            transform: translateX(100%);
 
             .icon {
                 top: 2.5rem;
@@ -135,6 +160,18 @@ nav {
                 }
 
             }
+        }
+
+        .slide-in {
+            animation: .7s slideIn;
+            animation-play-state: ease-in;
+            animation-fill-mode: forwards;
+        }
+
+        .slide-out {
+            animation: .7s slideOut;
+            animation-play-state: ease-in;
+            animation-fill-mode: forwards;
         }
 
     }
