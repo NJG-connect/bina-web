@@ -1,7 +1,11 @@
 {
   "Home": {
     "NavBar": {
-      "Links": ["Nos Projets", "Nos Engagements", "Votre Tranquilité"],
+      "Links": [
+        { "title": "Nos Projets" },
+        { "title": "Nos Engagements" },
+        { "title": "Votre Tranquilité" }
+      ],
       "Boutton": "Préparer mon projet"
     }
   },
