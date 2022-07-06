@@ -19,13 +19,13 @@ const data: CmsPropsType = {
         {
           type: "object",
           title: "Navigation",
-          id: "Home.NavBar",
+          id: "NavBar",
           fields: [
             //Links
             {
               type: "array",
               title: "Liens",
-              id: "div-navbar",
+              id: "Links",
               referenceFieldKey: "title",
               fields: [
                 //Link Item
@@ -41,7 +41,7 @@ const data: CmsPropsType = {
             {
               type: "input",
               title: "Bouton",
-              id: "Home.NavBar.Button",
+              id: "Button",
               htmlId: "navbar-button"
             },
           ],
