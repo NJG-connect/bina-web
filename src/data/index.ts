@@ -33,7 +33,7 @@ const data: CmsPropsType = {
                   type: "input",
                   title: "Title",
                   id: "title",
-                  htmlId: "navbar-"
+                  htmlId: "div-navbar"
                 },
               ],
             },
