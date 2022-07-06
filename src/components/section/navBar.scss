@@ -35,6 +35,10 @@ nav {
             font-size: 16px;
             text-align: center;
             padding: 7px 20px;
+            
+            &:hover {
+                text-shadow: 0 0 .01px variables.$white, 0 0 .01px variables.$white;
+            }
         }
     
         .navigation a:nth-child(2) {
@@ -120,6 +124,7 @@ nav {
 
         .bina-logo {
             margin: 0;
+            z-index: 200;
         }
 
         .right {

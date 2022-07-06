@@ -6,13 +6,13 @@ interface Props {
     value: string;
     className: "nav-button" | "contact-button";
     onClick: () => void;
-    id?: "navbar-button" | "contact-button";
+    htmlId?: string;
 }
 
-const Button: React.FC<Props> = ({value, className, onClick = () => {} }, id = "") => {
+const Button: React.FC<Props> = ({value, className, onClick = () => {}, htmlId}) => {
 
     return (
-        <div id={`${id}`} className={`button ${className}`} onClick={onClick}>{value}</div>
+        <div id={htmlId} className={`button ${className}`} onClick={onClick}>{value}</div>
     )
 
 }

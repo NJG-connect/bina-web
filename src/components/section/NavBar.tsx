@@ -31,7 +31,7 @@ const NavBar: React.FC = () => {
                 </div>
 
                 <div className="link">  
-                    <Button value={infoJson.NavBar.Boutton} onClick={() => navigate("/project")} className="nav-button" id="navbar-button" />
+                    <Button value={infoJson.NavBar.Boutton} onClick={() => navigate("/project")} className="nav-button" htmlId="navbar-button" />
                     <IconButton img="letter" onClick={() => {}} />
                 </div>
             </div>
