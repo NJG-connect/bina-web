@@ -26,75 +26,23 @@ const data: CmsPropsType = {
               type: "array",
               title: "Liens",
               id: "Home.NavBar.Links",
-              referenceFieldKey: "test",
+              referenceFieldKey: "Home.NavBar.Links",
               fields: [
                 //Link Item
                 {
-                  type: "object",
-                  title: "Lien 1",
+                  type: "input",
+                  title: "Title",
                   id: "Home.NavBar.Links",
-                  fields: [
-                    //Text of link
-                    {
-                      type: "input",
-                      title: "Texte",
-                      id: "Home.NavBar.Links.text",
-                      htmlId: "Nos-P",
-                    },
-                    //Link
-                    {
-                      type: "input",
-                      title: "Lien",
-                      id: "Home.NavBar.Links.link",
-                      htmlId: "Nos-P",
-                    },
-                  ],
-                },
-                //Link Item
-                {
-                  type: "object",
-                  title: "Lien 2",
-                  id: "Home.NavBar.Links",
-                  fields: [
-                    //Text of link
-                    {
-                      type: "input",
-                      title: "Texte",
-                      id: "Home.NavBar.Links.text",
-                      htmlId: "Nos-E",
-                    },
-                    //Link
-                    {
-                      type: "input",
-                      title: "Lien",
-                      id: "Home.NavBar.Links.link",
-                      htmlId: "Nos-E",
-                    },
-                  ],
-                },
-                //Link Item
-                {
-                  type: "object",
-                  title: "Lien 3",
-                  id: "Home.NavBar.Links",
-                  fields: [
-                    //Text of link
-                    {
-                      type: "input",
-                      title: "Texte",
-                      id: "Home.NavBar.Links.text",
-                      htmlId: "Votre",
-                    },
-                    //Link
-                    {
-                      type: "input",
-                      title: "Lien",
-                      id: "Home.NavBar.Links.link",
-                      htmlId: "Votre",
-                    },
-                  ],
+                  htmlId: "navbar-"
                 },
               ],
+            },
+            //Button Text
+            {
+              type: "input",
+              title: "Bouton",
+              id: "Home.NavBar.Button",
+              htmlId: "navbar-button"
             },
           ],
         },
@@ -104,3 +52,54 @@ const data: CmsPropsType = {
 };
 
 export default data;
+
+
+/*
+
+{
+  Home: {
+    Navbar: {
+      => Trois liens + Boutton
+      Links: [
+        input1,
+        input2,       ==> Gère le href en dur 
+        input3        ==> id ? -> Création de l'id sous forme = navbar-<index>
+      ],
+      Button (inputType)
+    },
+    Header: {
+
+    },
+    ...
+  }
+}
+
+{
+  
+  screen1: {
+
+  },
+  ...
+  }
+}
+
+
+
+
+"Links": [
+        {
+          "text": "Nos Projets",
+          "link": "#"
+        },
+        {
+          "text": "Nos Engagements",
+          "link": "#"
+        },
+        {
+          "text": "Votre Tranquilité",
+          "link": "#"
+        }
+      ],
+
+
+*/

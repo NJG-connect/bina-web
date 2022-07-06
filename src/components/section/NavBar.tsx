@@ -5,7 +5,6 @@ import './navBar.scss';
 import useWindowDimensions from "../../utils/windowSizeHook";
 import { IconButton, Button } from "../atoms";
 import infoJson from "../../data/data.json";
-import { info } from "console";
 
 
 
@@ -13,7 +12,7 @@ const NavBar: React.FC = () => {
 
     const navigate = useNavigate();
 
-    const [column, setColumn] = useState<Boolean>(false);
+    const [isColumn, setIsColumn] = useState<Boolean>(false);
     const { height, width } = useWindowDimensions();
     
 
@@ -22,21 +21,21 @@ const NavBar: React.FC = () => {
 
             <div className="bina-logo"></div>
 
-            <div className={`right ${column && "show slide-in"}`}>
+            <div className={`right ${isColumn && "show slide-in"}`}>
 
-            {width <= 1100 && <IconButton img="close" onClick={() => setColumn(!column)} className="icon" />}
+            {width <= 1100 && <IconButton img="close" onClick={() => setIsColumn(!isColumn)} className="icon" />}
 
                 <div className="navigation">
-                    {infoJson.Home.NavBar.Links.map(elm => <a id={elm.text.slice(0, 5).replaceAll(" ", "-")} href={elm.link}>{elm.text}</a>)}
+                    {infoJson.Home.NavBar.Links.map((elm, index) => <a id={`navbar-${index}`} key={elm} href="#">{elm}</a>)}
                 </div>
 
                 <div className="link">
-                    <Button value={infoJson.Home.NavBar.Boutton} onClick={() => navigate("/project")} className="nav-button" />
+                    <Button value={infoJson.Home.NavBar.Boutton} onClick={() => navigate("/project")} className="nav-button" id="navbar-button" />
                     <IconButton img="letter" onClick={() => {}} />
                 </div>
             </div>
 
-            {width <= 1100 && <IconButton img="menu" onClick={() => setColumn(!column)} className="icon" />}
+            {width <= 1100 && <IconButton img="menu" onClick={() => setIsColumn(!isColumn)} className="icon" />}
 
         </nav>
     )
