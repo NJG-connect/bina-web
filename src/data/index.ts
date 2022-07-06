@@ -28,6 +28,7 @@ const data: CmsPropsType = {
               id: "Links",
               referenceFieldKey: "title",
               canAdd: false,
+              canDelete: false,
               fields: [
                 //Link Item
                 {
