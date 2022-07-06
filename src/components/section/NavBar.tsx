@@ -27,11 +27,11 @@ const NavBar: React.FC = () => {
             {width <= 1100 && <IconButton img="close" onClick={() => setIsColumn(!isColumn)} className="icon" />}
 
                 <div className="navigation">
-                    {infoJson.Home.NavBar.Links.map((elm, index) => <div key={`div-${elm.title}`} id={`div-navbar${index}`}><a id={`navbar-${index}`} href="#">{elm.title}</a></div>)}
+                    {infoJson.NavBar.Links.map((elm, index) => <a id={`navbar${index}`} key={`link-${elm.title}`} href="#">{elm.title}</a>)}
                 </div>
 
                 <div className="link">  
-                    <Button value={infoJson.Home.NavBar.Boutton} onClick={() => navigate("/project")} className="nav-button" id="navbar-button" />
+                    <Button value={infoJson.NavBar.Boutton} onClick={() => navigate("/project")} className="nav-button" id="navbar-button" />
                     <IconButton img="letter" onClick={() => {}} />
                 </div>
             </div>

@@ -27,13 +27,14 @@ const data: CmsPropsType = {
               title: "Liens",
               id: "Links",
               referenceFieldKey: "title",
+              canAdd: false,
               fields: [
                 //Link Item
                 {
                   type: "input",
                   title: "Title",
                   id: "title",
-                  htmlId: "div-navbar"
+                  htmlId: "navbar"
                 },
               ],
             },

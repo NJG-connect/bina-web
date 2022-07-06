@@ -5,7 +5,7 @@ import infoJson from '../../data/data.json';
 const ProjectOrganism: React.FC = () => {
 
     return(
-        <h1>{infoJson.ProjectTitle}</h1>
+        <h1>vsjcopi</h1>
     )
 }
 
