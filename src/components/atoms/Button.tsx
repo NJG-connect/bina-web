@@ -11,9 +11,6 @@ interface Props {
 
 const Button: React.FC<Props> = ({value, className, onClick = () => {} }, id = "") => {
 
-    console.log(id);
-    
-
     return (
         <div id={`${id}`} className={`button ${className}`} onClick={onClick}>{value}</div>
     )

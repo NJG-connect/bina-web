@@ -16,6 +16,7 @@ const NavBar: React.FC = () => {
     const { height, width } = useWindowDimensions();
     
 
+
     return (
         <nav>
 
@@ -26,7 +27,7 @@ const NavBar: React.FC = () => {
             {width <= 1100 && <IconButton img="close" onClick={() => setIsColumn(!isColumn)} className="icon" />}
 
                 <div className="navigation">
-                    {infoJson.Home.NavBar.Links.map((elm, index) => <a id={`navbar-${index}`} key={elm} href="#">{elm}</a>)}
+                    {infoJson.Home.NavBar.Links.map((elm, index) => <div key={`div-${elm}`} id={`div-navbar`}><a id={`navbar-${index}`} href="#">{elm}</a></div>)}
                 </div>
 
                 <div className="link">
@@ -43,17 +44,3 @@ const NavBar: React.FC = () => {
 }
 
 export default NavBar;
-
-
-
-/*
-
-2 etat -> "clasic" & "side"
-
-1 section :
-
-    redistribue mon html -> nav -- Bina & reste 
-    Condition sur reste pour afficher ou non hamburger
-    responsive css en remaniant les display 
-
-*/

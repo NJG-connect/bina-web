@@ -2,7 +2,7 @@ import { CmsPropsType } from "lyatom-cms";
 
 const data: CmsPropsType = {
   //Master
-  branch: "dev", // Switch Branch to main for production
+  branch: "dev-navBar", // Switch Branch to main for production
   repo: "NJG-connect/bina-web",
   urlForLogin: "admin", 
   mediaFolder: "/src/assets/images",
@@ -25,14 +25,14 @@ const data: CmsPropsType = {
             {
               type: "array",
               title: "Liens",
-              id: "Home.NavBar.Links",
-              referenceFieldKey: "Home.NavBar.Links",
+              id: "div-navbar",
+              referenceFieldKey: "title",
               fields: [
                 //Link Item
                 {
                   type: "input",
                   title: "Title",
-                  id: "Home.NavBar.Links",
+                  id: "title",
                   htmlId: "navbar-"
                 },
               ],
