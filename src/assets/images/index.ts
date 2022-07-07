@@ -15,13 +15,15 @@ export type ImageType =
   | "sheild"
   | "letter"
   | "menu"
-  | "close";
+  | "close"
+  | "header";
 
 const images: { [key in ImageType]: any } = {
   user: require("./user.png"),
   letter: require("./letter.png"),
   menu: require("./menu.png"),
   close: require("./close.png"),
+  header: require("./header.jpeg"),
   collaboration,
   delay,
   handleshake,

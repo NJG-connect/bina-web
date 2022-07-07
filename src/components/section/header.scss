@@ -1,0 +1,87 @@
+@use '../..//utils/variables.scss';
+
+.header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    @include variables.img(cover);
+    z-index: 0;
+
+    h1 {
+        margin: 0;
+        position: relative;
+        font-size: 73px;
+        font-family: variables.$font;
+        color: variables.$white;
+        font-weight: 300;
+        animation: 1.5s onload;
+    }
+
+    #header-title1 {
+        padding: 15rem 0 0 10rem;
+    }
+
+    #header-title2 {
+        padding: 1.5rem 0 0 10rem;
+    }
+
+}
+
+
+@keyframes onload {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+
+    .header {
+
+        h1 {
+            padding-left: 5rem !important;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .header {
+        @include variables.dfp(row, center, start);
+
+        h1 {
+            padding-left: 0 !important;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .header {
+
+        h1 {
+            font-size: 50px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    .header {
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+}

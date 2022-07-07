@@ -15,12 +15,15 @@ const NavBar: React.FC = () => {
     const [isColumn, setIsColumn] = useState<Boolean>(false);
     const { height, width } = useWindowDimensions();
     
-
+    function test() {
+        const elm = document.querySelector("#header");
+        elm?.scrollIntoView()
+    }
 
     return (
         <nav>
 
-            <div className="bina-logo"></div>
+            <div className="bina-logo" onClick={test}></div>
 
             <div className={`right ${isColumn && "show slide-in"}`}>
 

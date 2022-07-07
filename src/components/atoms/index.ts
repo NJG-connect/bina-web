@@ -7,5 +7,6 @@ import Skills from './Skills';
 import IconButton from './IconButton';
 import Link from './Link';
 import ProgressBar from './ProgressBar';
+import ImgTemplate from './ImgTemplate';
 
-export { Title, Button, CardButton, Input, Img, Skills, IconButton, Link, ProgressBar };
+export { Title, Button, CardButton, Input, Img, Skills, IconButton, Link, ProgressBar, ImgTemplate };
