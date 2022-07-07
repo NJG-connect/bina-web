@@ -6,5 +6,12 @@
         { "title": "Votre Tranquilité" }    
       ],
       "Boutton": "Préparer mon projet"
+    },
+    "Header": {
+      "background": "header",
+      "title": {
+        "line1" : "Un projet préparé,",
+        "line2" : "Un projet réussi..."
+      }
     }
 }
