@@ -14,6 +14,7 @@ const ImgTemplate: React.FC<Props> = ({ img, className, children, htmlId }) => {
     <div
       className={className}
       style={{ backgroundImage: `url(` + images[img] + `)` }}
+      id={htmlId}
     >
       {children}
     </div>

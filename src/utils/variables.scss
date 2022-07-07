@@ -49,13 +49,19 @@ $font:  normal normal normal 52px/68px Lato;
 } 
 
 @mixin dxe($direction: row) {
-    @include fd($direction);
+    @include df($direction);
     align-items: flex-end;
 }
 
-@mixin img() {
+@mixin dfp($direction: row, $j: start, $a: start) {
+    @include df($direction);
+    justify-content: $j;
+    align-items: $a;
+}
+
+@mixin img($size: 100%) {
     background-position: center;
-    background-size: 100%;
+    background-size: $size;
     background-repeat: no-repeat;
 }
 

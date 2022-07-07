@@ -8,6 +8,7 @@ nav {
     height: 5rem;
     background-color: variables.$blue;
     @include variables.dxc(row);
+    z-index: 99;
  
 
     .bina-logo {
