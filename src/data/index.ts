@@ -78,6 +78,36 @@ const data: CmsPropsType = {
             },
           ],
         },
+        //Contact 
+        {
+          type: "object",
+          title: "Contact",
+          id: "Contact",
+          fields: [
+            //title
+            {
+              type: "input",
+              title: "Titre",
+              id: "title",
+              htmlId: "contact-title"
+            },
+            //title (line 2)
+            {
+              type: "input",
+              title: "Sous-title",
+              id: "subtitle",
+              htmlId: "contact-subtitle"
+            },
+            //Background Image
+            {
+              type: "image",
+              title: "Image",
+              mediaFolder: "src/assets/images",
+              id: "background",
+              htmlId: "contact-background"
+            },
+          ],
+        },
       ],
     },
   ],

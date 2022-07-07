@@ -33,8 +33,8 @@ const Contact: React.FC = () => {
             <ImgTemplate img="header" className="background" htmlId="contact-background">
 
                 <div className="main-container">
-                    <h3>Pas le temps pour un devis. Laisser vos coordonnées, on vous rappelle</h3>
-                    <p>Parce qu'il n'est pas toujours évident de savoir ce que l'on veut, on vous aide à faire votre choix avec un oeuil d'expert</p>
+                    <h3 id="contact-title">{infoJson.Contact.title}</h3>
+                    <p id="contact-subtitle">{infoJson.Contact.subtitle}</p>
 
                     <div className="form-container">
                         <div className="field-container">
