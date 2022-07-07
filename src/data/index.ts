@@ -59,14 +59,14 @@ const data: CmsPropsType = {
               type: "input",
               title: "Titre (ligne 1)",
               id: "title.line1",
-              htmlId: "header-title"
+              htmlId: "header-title1"
             },
             //title (line 2)
             {
               type: "input",
               title: "Titre (ligne 2)",
               id: "title.line2",
-              htmlId: "header-title"
+              htmlId: "header-title2"
             },
             //Background Image
             {

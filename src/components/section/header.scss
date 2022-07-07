@@ -10,13 +10,19 @@
     h1 {
         margin: 0;
         position: relative;
-        padding: 15rem 0 0 10rem;
         font-size: 73px;
         font-family: variables.$font;
         color: variables.$white;
         font-weight: 300;
-        line-height: 1.5;
         animation: 1.5s onload;
+    }
+
+    #header-title1 {
+        padding: 15rem 0 0 10rem;
+    }
+
+    #header-title2 {
+        padding: 1.5rem 0 0 10rem;
     }
 
 }
@@ -38,10 +44,9 @@
 @media only screen and (max-width: 1100px) {
 
     .header {
-        // @include variables.dfp(row, center, start);
 
         h1 {
-            padding-left: 5rem;
+            padding-left: 5rem !important;
         }
     }
 
@@ -53,7 +58,7 @@
         @include variables.dfp(row, center, start);
 
         h1 {
-            padding-left: 0;
+            padding-left: 0 !important;
         }
     }
 
