@@ -6,9 +6,10 @@ interface Props {
   img: ImageType;
   className: string;
   children: React.ReactNode;
+  htmlId: string;
 }
 
-const ImgTemplate: React.FC<Props> = ({ img, className, children }) => {
+const ImgTemplate: React.FC<Props> = ({ img, className, children, htmlId }) => {
   return (
     <div
       className={className}
