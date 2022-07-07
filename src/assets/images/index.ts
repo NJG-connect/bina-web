@@ -16,7 +16,8 @@ export type ImageType =
   | "letter"
   | "menu"
   | "close"
-  | "header";
+  | "header"
+  | "phone";
 
 const images: { [key in ImageType]: any } = {
   user: require("./user.png"),
@@ -24,6 +25,7 @@ const images: { [key in ImageType]: any } = {
   menu: require("./menu.png"),
   close: require("./close.png"),
   header: require("./header.jpeg"),
+  phone: require("./phone.png"),
   collaboration,
   delay,
   handleshake,
