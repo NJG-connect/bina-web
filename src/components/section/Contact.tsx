@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
                     <div className="form-container">
                         <div className="field-container">
                             <Input type="text" onChange={(value) => setName(value)} placeholder="Nom Prénom" icon="user" />
-                            <Input type="tel" onChange={(value) => setTel(value)} placeholder="Tél" icon="user" />
+                            <Input type="tel" onChange={(value) => setTel(value)} placeholder="Tél" icon="phone" />
                         </div>
                         <Button value="Envoyer" className="contact-button" onClick={verifForm} />
                     </div>

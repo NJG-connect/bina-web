@@ -22,7 +22,7 @@
     .main-container {
         position: absolute;
         right: 15rem;
-        width: calc(30% - 4rem);
+        width: 400px;
         height: calc(80% - 4rem);
         background-color: rgba(255, 255, 255, 0.575);
         padding: 2rem;
@@ -56,6 +56,51 @@
             &:first-child {
                 margin-bottom: 4rem;
             }
+        }
+
+    }
+
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+
+    #contact {
+        
+        .background {
+            @include variables.dcc(row);
+        }
+
+        .main-container {
+            position: relative;
+            right: 0;
+        }
+
+    }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    #contact {
+
+        h3 {
+            font-size: 25px !important;
+            margin-bottom: 1rem !important;
+        }
+
+        p {
+            font-size: 16px !important;
+        }
+
+        .field-container {
+
+            &:first-child {
+                margin-bottom: 2rem !important;
+            }
+
         }
 
     }
