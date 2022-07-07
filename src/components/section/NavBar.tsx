@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router";
 
 import './navBar.scss';
@@ -13,21 +13,29 @@ const NavBar: React.FC = () => {
     const navigate = useNavigate();
 
     const [isColumn, setIsColumn] = useState<Boolean>(false);
+    const navElm = useRef(null);
     const { height, width } = useWindowDimensions();
     
-    function test() {
+    function scrollToHeader() {
         const elm = document.querySelector("#header");
         elm?.scrollIntoView()
+    }
+
+
+    const onClose: () => void = () => {
+        const elm: any = navElm.current;
+        elm.className = "right show slide-out";
+        setTimeout(() => setIsColumn(!isColumn), 700);
     }
 
     return (
         <nav>
 
-            <div className="bina-logo" onClick={test}></div>
+            <div className="bina-logo" onClick={scrollToHeader}></div>
 
-            <div className={`right ${isColumn && "show slide-in"}`}>
+            <div className={`right ${isColumn && "show slide-in"}`} ref={navElm}>
 
-            {width <= 1100 && <IconButton img="close" onClick={() => setIsColumn(!isColumn)} className="icon" />}
+            {width <= 1100 && <IconButton img="close" onClick={onClose} className="icon" />}
 
                 <div className="navigation">
                     {infoJson.NavBar.Links.map((elm, index) => <a id={`navbar${index}`} key={`link-${elm.title}`} href="#">{elm.title}</a>)}
