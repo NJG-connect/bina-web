@@ -27,6 +27,7 @@ const NavBar: React.FC = () => {
         elm.className = "right show slide-out";
         setTimeout(() => setIsColumn(!isColumn), 700);
     }
+    
 
     return (
         <nav>
