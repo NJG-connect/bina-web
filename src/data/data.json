@@ -18,5 +18,13 @@
       "background": "header",
       "title": "Pas le temps pour un devis. Laisser vos coordonnées, on vous rappelle",
       "subtitle": "Parce qu'il n'est pas toujours évident de savoir ce que l'on veut, on vous aide à faire votre choix avec un oeuil d'expert"
+    },
+    "Footer": {
+      "social": [
+        { "title": "LinkedIn", "link": "#", "icon": "" },
+        { "title": "Instagram", "link": "#", "icon": "" },
+        { "title": "Facebook", "link": "#", "icon": "" }
+      ],
+      "copyright": "Bina © 2022" 
     }
 }

@@ -1,0 +1,64 @@
+@use '../../utils/variables.scss';
+
+#footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    @include variables.dcc(column);
+    padding: 4rem 0 2rem 0;
+    background-color: variables.$blue;
+    
+    a, p {
+        color: variables.$white;
+    }
+
+    a {
+        font-size: 17px;
+    }
+
+    .top {
+        width: 80%;
+        height: 5rem;
+        @include variables.dbc(row);
+
+        .left {
+            height: 100%;
+            @include variables.dfp(column, space-between, flex-start);
+        }
+
+        .right {
+            height: 100%;
+            @include variables.dfp(column, space-between, flex-end);
+        }
+
+    }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    #footer {
+
+        .top {
+            @include variables.dfp(column, flex-start, flex-start);
+            height: auto;
+
+            .left{
+                height: 5rem;
+            }
+            
+            .right {
+                height: 5rem;
+                @include variables.dfp(column, space-between, flex-start);
+                margin-top: 2rem;
+            }
+        }
+
+        p {
+            margin-top: 2rem;
+        }
+
+    }
+
+}

@@ -4,7 +4,7 @@ import { Navigate, useNavigate } from "react-router";
 import './link.scss';
 
 interface Props {
-    value: string;
+    value?: string;
     href: string;
     className?: string;
     link?: string;
