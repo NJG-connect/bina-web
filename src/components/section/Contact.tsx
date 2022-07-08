@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
   return (
     <section id="contact">
       <ImgTemplate
-        img="header"
+        img="contact"
         className="background"
         htmlId="contact-background"
       >
