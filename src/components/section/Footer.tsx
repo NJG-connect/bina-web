@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             
             <div className="top">
                 <div className="left">
-                    {infoJson.Footer.social.map(elm => <Link href={elm.link}>{elm.title}<Img img={elm.icon as ImageType} className="img" /></Link>)}
+                    {infoJson.Footer.social.map((elm, index) => <Link href={elm.link} htmlId={`social${index}`} >{elm.title}<Img img={elm.icon as ImageType} className="img" /></Link>)}
                 </div>
                 <div className="right">
                     <Link href="#" value="Déposez un devis" />
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="bottom">
-                <p>{infoJson.Footer.copyright}</p>
+                <p id="copyright">{infoJson.Footer.copyright}</p>
             </div>
 
         </footer>

@@ -108,6 +108,38 @@ const data: CmsPropsType = {
             },
           ],
         },
+        //Footer 
+        {
+          type: "object",
+          title: "Pied de page",
+          id: "Footer",
+          fields: [
+            //Copyright
+            {
+              type: "input",
+              title: "Copyright",
+              id: "copyright",
+              htmlId: "copyright"
+            },
+            //Social
+            {
+              type: "array",
+              title: "Liens réseaux sociaux",
+              id: "social",
+              referenceFieldKey: "title",
+              canAdd: true,
+              canDelete: true,
+              fields: [
+                {
+                  type: "input",
+                  htmlId: "social",
+                  id: "title",
+                  title: "Titre"
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
   ],
