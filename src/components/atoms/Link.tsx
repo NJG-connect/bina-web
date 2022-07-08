@@ -1,21 +1,22 @@
 import React from "react";
-import { useNavigate } from "react-router";
+import { Navigate, useNavigate } from "react-router";
 
 import './link.scss';
 
 interface Props {
     value: string;
-    link: string;
-    href?: string;
+    href: string;
+    className?: string;
+    link?: string;
 }
 
-const Link: React.FC<Props> = ({value, link, href}) => {
+const Link: React.FC<Props> = ({value, href, className, link}) => {
 
     const navigate = useNavigate()
 
     return (
     
-        <div className="link" onClick={() => navigate(link)}>{value}</div>
+        <a href={href} className={`link ${className}`} onClick={() => link && navigate(link)}>{value}</a>
         
     )
 
