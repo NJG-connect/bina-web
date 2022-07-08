@@ -8,7 +8,7 @@ interface Props {
 
 const Title: React.FC<Props> = ({value}) => {
 
-    return <h1 className="title">{value}</h1>
+    return <div className="title"><h1>{value}</h1></div>
 
 }
 
