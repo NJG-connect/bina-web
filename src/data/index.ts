@@ -136,6 +136,19 @@ const data: CmsPropsType = {
                   id: "title",
                   title: "Titre"
                 },
+                {
+                  type: "input",
+                  htmlId: "social",
+                  id: "link",
+                  title: "Lien de redirection"
+                },
+                {
+                  type: "image",
+                  title: "Icone",
+                  mediaFolder: "src/assets/images",
+                  id: "icon",
+                  htmlId: "social-icon"
+                },
               ],
             },
           ],

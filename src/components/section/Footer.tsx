@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
                 htmlId={`social${index}`}
                 value={elm.title}
                 />
-                <Img img={elm.icon as ImageType} className="img" />
+                <Img img={elm.icon as ImageType} className="img" htmlId="social-icon" />
               </div>
           ))}
         </div>
