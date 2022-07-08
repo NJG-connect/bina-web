@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 
 import './navBar.scss';
 import useWindowDimensions from "../../utils/windowSizeHook";
-import { IconButton, Button } from "../atoms";
+import { IconButton, Button, Link } from "../atoms";
 import infoJson from "../../data/data.json";
 
 
@@ -38,7 +38,8 @@ const NavBar: React.FC = () => {
             {width <= 1100 && <IconButton img="close" onClick={onClose} className="icon" />}
 
                 <div className="navigation">
-                    {infoJson.NavBar.Links.map((elm, index) => <a id={`navbar${index}`} key={`link-${elm.title}`} href="#">{elm.title}</a>)}
+                    {/* {infoJson.NavBar.Links.map((elm, index) => <a id={`navbar${index}`} key={`link-${elm.title}`} href="#">{elm.title}</a>)} */}
+                    {infoJson.NavBar.Links.map((elm, index) => <Link htmlId={`navbar${index}`} key={`link-${elm.title}`} href="#" value={elm.title} />)}
                 </div>
 
                 <div className="link">  

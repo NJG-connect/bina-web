@@ -1,10 +1,7 @@
 @use '../../utils/variables.scss';
 
-.link {
-    font-size: 14px;
+.Link {
     color: variables.$white;
-    text-transform: uppercase;
-    font-weight: bold;
     text-decoration: none;
 
     &:hover {
