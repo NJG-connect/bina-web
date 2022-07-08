@@ -11,10 +11,9 @@ const Footer: React.FC = () => {
       <div className="top">
         <div className="left">
           {infoJson.Footer.social.map((elm, index) => (
-              <div className="item">
+              <div className="item" key={`social${index}`}>
                 <Link
                 href={elm.link}
-                key={`social${index}`}
                 htmlId={`social${index}`}
                 value={elm.title}
                 />
