@@ -13,10 +13,10 @@ import corp3 from "./corp3.svg";
 import corp4 from "./corp4.svg";
 import crossair from "./crossair.svg";
 import key2 from "./key2.svg";
-import like from ".like.svg";
-import linkedin from ".linkedin.svg";
-import instagram from ".instagram.svg";
-import facebook from ".facebook.svg";
+import like from "./like.svg";
+import linkedin from "./linkedin.svg";
+import instagram from "./instagram.svg";
+import facebook from "./facebook.svg";
 
 export type ImageType =
   | "user"
