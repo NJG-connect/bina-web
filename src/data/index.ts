@@ -2,7 +2,7 @@ import { CmsPropsType } from "lyatom-cms";
 
 const data: CmsPropsType = {
   //Master
-  branch: "dev-contact", // Switch Branch to main for production
+  branch: "dev-footer", // Switch Branch to main for production
   repo: "NJG-connect/bina-web",
   urlForLogin: "admin", 
   mediaFolder: "/src/assets/images",
