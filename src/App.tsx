@@ -4,6 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import AdminPanel from "lyatom-cms";
 import data from "./data/";
 
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 import { HomeScreen, ProjectScreen } from "./components/screens/";
 
 function App() {
@@ -20,6 +23,8 @@ function App() {
         <Route path="/home" element={<HomeScreen />} />
         <Route path="/project" element={<ProjectScreen />} />
       </Routes>
+
+      <ToastContainer />
     </>
   );
 }
