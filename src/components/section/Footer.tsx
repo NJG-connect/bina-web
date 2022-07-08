@@ -2,7 +2,9 @@ import React from "react";
 
 import './footer.scss';
 import infoJson from '../../data/data.json';
-import { Link } from "../atoms";
+import { Link, Img } from "../atoms";
+import { ImageType } from "../../assets/images";
+
 
 const Footer: React.FC = () => {
 
@@ -12,7 +14,7 @@ const Footer: React.FC = () => {
             
             <div className="top">
                 <div className="left">
-                    {infoJson.Footer.social.map(elm => <Link href={elm.link}>{elm.title}</Link>)}
+                    {infoJson.Footer.social.map(elm => <Link href={elm.link}>{elm.title}<Img img={elm.icon as ImageType} className="img" /></Link>)}
                 </div>
                 <div className="right">
                     <Link href="#" value="Déposez un devis" />

@@ -21,9 +21,9 @@
     },
     "Footer": {
       "social": [
-        { "title": "LinkedIn", "link": "#", "icon": "" },
-        { "title": "Instagram", "link": "#", "icon": "" },
-        { "title": "Facebook", "link": "#", "icon": "" }
+        { "title": "LinkedIn", "link": "#", "icon": "linkedin" },
+        { "title": "Instagram", "link": "#", "icon": "instagram" },
+        { "title": "Facebook", "link": "#", "icon": "facebook" }
       ],
       "copyright": "Bina © 2022" 
     }

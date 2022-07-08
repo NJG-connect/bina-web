@@ -14,6 +14,7 @@
 
     a {
         font-size: 17px;
+        @include variables.dfp(row-reverse, flex-start, center);
     }
 
     .top {
@@ -24,6 +25,13 @@
         .left {
             height: 100%;
             @include variables.dfp(column, space-between, flex-start);
+            
+            .img {
+                width: 20px;
+                height: 20px;
+                @include variables.img();
+                margin-right: 10px;
+            }
         }
 
         .right {
