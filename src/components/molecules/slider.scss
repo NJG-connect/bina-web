@@ -3,16 +3,15 @@
 .slider-container {
 
     position: relative;
-    height: calc(100% - 9rem);
+    height: calc(100% - 92px);
     width: 100%;
     background-color: #F3F3F3;
     @include variables.dcc(row);
 
     h1 {
-        position: absolute;
+        position: relative;
         font-size: 50px;
         font-weight: 300;
-        transform: translateX(-50%);
 
         &:hover {
             cursor: pointer;
@@ -20,11 +19,11 @@
     }
 
     h1:first-child {
-        left: 25%;
+        margin-right: 4rem;
     }
 
     h1:last-child {
-        right: 25%;
+        margin-left: 4rem;
     }
     
     
@@ -54,4 +53,70 @@
         }
     }
     
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .slider-container {
+
+
+        .slider {
+            max-width: calc(270px + 8rem);
+        }
+
+
+    }
+
+
+}
+
+
+@media only screen and (max-width: 650px) {
+
+
+    .slider-container {
+
+
+        .slider {
+            max-width: calc(180px + 4rem);
+        }
+
+
+    }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+
+
+    .slider-container {
+
+
+        .slider {
+            max-width: calc(120px + 4rem);
+        }
+
+        .img {
+            min-width: 60px;
+            min-height: 60px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h1:first-child {
+            margin-right: 2.5rem;
+        }
+    
+        h1:last-child {
+            margin-left: 2.5rem;
+        }    
+
+
+    }
+
+
 }
