@@ -14,6 +14,19 @@
         "line2" : "Un projet réussi..."
       }
     },
+    "sponsor": {
+      "title": "Nos Partenaires",
+      "img": [
+        {"title": "corp1"},
+        {"title": "corp2"},
+        {"title": "corp3"},
+        {"title": "corp4"},
+        {"title": "corp1"},
+        {"title": "corp2"},
+        {"title": "corp3"},
+        {"title": "corp4"}
+      ]
+    },
     "Contact": {
       "background": "header",
       "title": "Pas le temps pour un devis. Laisser vos coordonnées, on vous rappelle",

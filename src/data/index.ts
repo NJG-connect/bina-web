@@ -81,6 +81,39 @@ const data: CmsPropsType = {
             },
           ],
         },
+        //Sponsor 
+        {
+          type: "object",
+          title: "Partenaires",
+          id: "sponsor",
+          fields: [
+            //Copyright
+            {
+              type: "input",
+              title: "Titre",
+              id: "title",
+              htmlId: "sponsor-title"
+            },
+            //Social
+            {
+              type: "array",
+              title: "Logo partenaires",
+              id: "img",
+              referenceFieldKey: "title",
+              canAdd: true,
+              canDelete: true,
+              fields: [
+                {
+                  type: "image",
+                  title: "Logo",
+                  mediaFolder: "src/assets/images",
+                  id: "title",
+                  htmlId: "sponsor-img"
+                },
+              ],
+            },
+          ],
+        },
         //Contact 
         {
           type: "object",
