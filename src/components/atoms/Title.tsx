@@ -4,11 +4,12 @@ import './title.scss';
 
 interface Props {
     value: string;
+    htmlId?: string;
 }
 
-const Title: React.FC<Props> = ({value}) => {
+const Title: React.FC<Props> = ({value, htmlId = ""}) => {
 
-    return <div className="title"><h1>{value}</h1></div>
+    return <div className="title"><h1 id={htmlId}>{value}</h1></div>
 
 }
 

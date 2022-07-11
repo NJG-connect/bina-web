@@ -39,7 +39,7 @@ const Slider: React.FC<Props> = ({ images }) => {
       <h1 onClick={() => scrollSlider("left")}>&#60;</h1>
       <div className="slider" ref={slider} id="test">
         {images.map((elm, index) => (
-          <Img img={elm} className="img" key={`slide-${elm}-${index}`} />
+          <Img img={elm} className="img" key={`slide-${elm}-${index}`} htmlId={`sponsor-img${elm}`} />
         ))}
       </div>
       <h1 onClick={() => scrollSlider("right")}>&gt;</h1>

@@ -11,7 +11,7 @@ const Sponsor: React.FC = () => {
     return (
         <section id="sponsor">
             
-            <Title value={infoJson.sponsor.title} />
+            <Title value={infoJson.sponsor.title} htmlId="sponsor-title" />
 
             <Slider images={infoJson.sponsor.img.map(({title}: {title: string}) => title as ImageType)} />
 
