@@ -1,0 +1,37 @@
+@use '../../utils/variables.scss';
+
+#quote {
+    width: 100%;
+    height: auto;
+    @include variables.dcc(column); 
+    background-color: variables.$blue;
+    color: variables.$white;
+    margin-top: 2rem;
+
+    h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    #quote-sentence {
+        font-weight: 200;
+        font-style: italic;
+        width: 80%;
+    }
+
+    #quote-author {
+        font-weight: 500;
+        color: #62B2AB;
+    }
+
+}
+
+
+//Responsive
+@media only screen and (max-width: 780px) {
+
+    #quote h3 {
+        font-size: 20px;
+    }
+
+}

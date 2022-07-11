@@ -27,6 +27,10 @@
         {"title": "corp4"}
       ]
     },
+    "quote": {
+      "sentence": "« Les meilleures choses qui arrivent dans le monde de l’entreprise ne sont pas le résultat du travail d’un seul homme. C’est le travail de toute une équipe…»",
+      "author": "Steve Jobs"
+    },
     "Contact": {
       "background": "header",
       "title": "Pas le temps pour un devis. Laisser vos coordonnées, on vous rappelle",
