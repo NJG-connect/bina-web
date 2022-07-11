@@ -1,0 +1,57 @@
+@use '../../utils/variables.scss';
+
+.slider-container {
+
+    position: relative;
+    height: calc(100% - 9rem);
+    width: 100%;
+    background-color: #F3F3F3;
+    @include variables.dcc(row);
+
+    h1 {
+        position: absolute;
+        font-size: 50px;
+        font-weight: 300;
+        transform: translateX(-50%);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    h1:first-child {
+        left: 25%;
+    }
+
+    h1:last-child {
+        right: 25%;
+    }
+    
+    
+    .slider {
+        position: relative;
+        width: 100%;
+        max-width: calc(360px + 12rem);
+        height: 100%;
+        padding: auto 0;
+        display: flex;   
+        overflow: scroll; 
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    
+    
+    .img {
+        min-width: 90px;
+        min-height: 90px;
+        @include variables.img(90%);
+        
+        &:not(:last-child) {
+            margin-right: 4rem;
+        }
+    }
+    
+}
