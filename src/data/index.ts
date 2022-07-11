@@ -114,6 +114,28 @@ const data: CmsPropsType = {
             },
           ],
         },
+        //Quote 
+        {
+          type: "object",
+          title: "Citation",
+          id: "quote",
+          fields: [
+            //Sentence
+            {
+              type: "input",
+              title: "Citation",
+              id: "sentence",
+              htmlId: "quote-sentence"
+            },
+            //Author
+            {
+              type: "input",
+              title: "Auteur",
+              id: "author",
+              htmlId: "quote-author"
+            },
+          ],
+        },
         //Contact 
         {
           type: "object",
