@@ -10,16 +10,15 @@ interface Props {
     link?: string;
     htmlId?: string;
     key?: string;
-    children?: React.ReactNode;
 }
 
-const Link: React.FC<Props> = ({value, href, className = "", link, htmlId = "", key = "", children}) => {
+const Link: React.FC<Props> = ({value, href, className = "", link, htmlId = "", key = ""}) => {
 
     const navigate = useNavigate()
 
     return (
     
-        <a href={href} id={htmlId} key={key} className={`Link ${className}`} onClick={() => link && navigate(link)}>{children ? children : value}</a>
+        <a href={href} id={htmlId} key={key} className={`Link ${className}`} onClick={() => link && navigate(link)}>{value}</a>
         
     )
 
