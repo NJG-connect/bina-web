@@ -22,9 +22,13 @@ const Footer: React.FC = () => {
           ))}
         </div>
         <div className="right">
-          <Link href="#" value="Déposez un devis" />
-          <Link href="#" value="Demande de contact" />
-          <Link href="#" value="Condition Générales d'Utilisation" />
+          {infoJson.Footer.additionalLink.map((elm, index) => (
+            <Link
+            href={elm.link}
+            htmlId={`addLink${index}`}
+            value={elm.title}
+            />
+          ))}
         </div>
       </div>
 

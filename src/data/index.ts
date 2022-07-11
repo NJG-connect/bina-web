@@ -209,6 +209,29 @@ const data: CmsPropsType = {
                 },
               ],
             },
+            //Additional Link
+            {
+              type: "array",
+              title: "Liens supplémentaires",
+              id: "additionalLink",
+              referenceFieldKey: "title",
+              canAdd: false,
+              canDelete: false,
+              fields: [
+                {
+                  type: "input",
+                  htmlId: "addLink",
+                  id: "title",
+                  title: "Titre"
+                },
+                {
+                  type: "input",
+                  htmlId: "addLink",
+                  id: "link",
+                  title: "Lien de redirection"
+                },
+              ],
+            },
           ],
         },
       ],

@@ -42,6 +42,11 @@
         { "title": "Instagram", "link": "#", "icon": "instagram" },
         { "title": "Facebook", "link": "#", "icon": "facebook" }
       ],
+      "additionalLink": [
+        { "title": "Déposez un devis", "link": "#"},
+        { "title": "Demande de contact", "link": "#"},
+        { "title": "Condition Générales d'Utilisation", "link": "#"}
+      ],
       "copyright": "Bina © 2022" 
     }
 }
