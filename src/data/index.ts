@@ -185,8 +185,8 @@ const data: CmsPropsType = {
               title: "Liens réseaux sociaux",
               id: "social",
               referenceFieldKey: "title",
-              canAdd: true,
-              canDelete: true,
+              canAdd: false,
+              canDelete: false,
               fields: [
                 {
                   type: "input",
