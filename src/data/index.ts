@@ -81,6 +81,43 @@ const data: CmsPropsType = {
             },
           ],
         },
+        //Presentation 
+        {
+          type: "object",
+          title: "Présentation",
+          id: "presentation",
+          fields: [
+            //title
+            {
+              type: "input",
+              title: "Titre",
+              id: "title",
+              htmlId: "presentation-title"
+            },
+            //P1
+            {
+              type: "input",
+              title: "Paragraphe 1",
+              id: "paragraph1",
+              htmlId: "presentation-p1"
+            },
+            //P2
+            {
+              type: "input",
+              title: "Paragraphe 2",
+              id: "paragraph2",
+              htmlId: "presentation-p2"
+            },
+            //Background Image
+            {
+              type: "image",
+              title: "Image",
+              mediaFolder: "src/assets/images",
+              id: "img",
+              htmlId: "presentation-img"
+            },
+          ],
+        },
         //Sponsor 
         {
           type: "object",
