@@ -118,6 +118,45 @@ const data: CmsPropsType = {
             },
           ],
         },
+        //Skills
+        {
+          type: "object",
+          title: "Compétences",
+          id: "skills",
+          fields: [
+            //Background Image
+            {
+              type: "image",
+              title: "Image",
+              mediaFolder: "src/assets/images",
+              id: "img",
+              htmlId: "skills"
+            },
+            {
+              type: "array",
+              title: "Compétences",
+              id: "skill",
+              referenceFieldKey: "title",
+              canAdd: false,
+              canDelete: false,
+              fields: [
+                {
+                  type: "input",
+                  htmlId: "skill-text",
+                  id: "title",
+                  title: "Titre"
+                },
+                {
+                  type: "image",
+                  title: "Icone",
+                  mediaFolder: "src/assets/images",
+                  id: "icon",
+                  htmlId: "skill-img"
+                },
+              ],
+            },
+          ],
+        },
         //Sponsor 
         {
           type: "object",

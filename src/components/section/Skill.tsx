@@ -13,7 +13,7 @@ const Skill: React.FC = () => {
         <ImgTemplate img={infoJson.skills.img as ImageType} htmlId="skills">
             <div className="content">
                 {infoJson.skills.skill.map((elm, index) => (
-                    <Skills title={elm.title} img={elm.icon as ImageType} />
+                    <Skills title={elm.title} img={elm.icon as ImageType} htmlIdImg={`skill-img${index}`} htmlIdText={`skill-text${index}`} />
                 ))}
             </div>
         </ImgTemplate>
