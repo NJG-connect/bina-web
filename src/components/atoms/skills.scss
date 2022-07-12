@@ -1,7 +1,6 @@
 @use '../../utils/variables.scss';
 
 .skills-item {
-    width: 25%;
     @include variables.dxc(row);
 
 
@@ -10,7 +9,7 @@
         font-weight: 400;
         font-family: variables.$font;
         color: variables.$black-color;
-        margin-left: 3rem;
+        margin: 0 0 0 3rem;
     }
 
     .img {

@@ -4,7 +4,7 @@ import images, { ImageType } from "../../assets/images/";
 
 interface Props {
   img: ImageType;
-  className: string;
+  className?: string;
   children: React.ReactNode;
   htmlId: string;
 }
