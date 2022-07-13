@@ -18,6 +18,11 @@ const NavBar: React.FC = () => {
     elm?.scrollIntoView();
   }
 
+  function scrollToContact() {
+    const elm = document.querySelector("#contact");
+    elm?.scrollIntoView();
+  }
+
   const onClose: () => void = () => {
     const elm: any = navElm.current;
     elm.className = "right show slide-out";
@@ -38,7 +43,7 @@ const NavBar: React.FC = () => {
             <Link
               htmlId={`navbar${index}`}
               key={`link-${elm.title}`}
-              href="#"
+              href={elm.href}
               value={elm.title}
             />
           ))}
@@ -51,7 +56,7 @@ const NavBar: React.FC = () => {
             className="nav-button"
             htmlId="navbar-button"
           />
-          <IconButton img="letter.png" onClick={() => {}} />
+          <IconButton img="letter.png" onClick={() => scrollToContact()} />
         </div>
       </div>
 

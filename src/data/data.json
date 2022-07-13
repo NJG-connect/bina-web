@@ -1,9 +1,9 @@
 {
   "NavBar": {
     "Links": [
-      { "title": "Nos Projets" },
-      { "title": "Nos Engagements" },
-      { "title": "Votre Tranquilité" }
+      { "title": "Nos Projets", "href": "#" },
+      { "title": "Nos Engagements", "href": "#know-how" },
+      { "title": "Votre Tranquilité", "href": "#skills" }
     ],
     "Boutton": "Préparer mon projet"
   },
