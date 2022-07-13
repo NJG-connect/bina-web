@@ -1,7 +1,7 @@
 import React from "react";
 
 import infoJson from '../../data/data.json';
-import { NavBar, Header, Contact, Footer, Sponsor, Quote, Presentation } from "../section";
+import { NavBar, Header, Contact, Footer, Sponsor, Quote, Presentation, Skill } from "../section";
 
 
 const HomeOrganism: React.FC = () => {
@@ -13,6 +13,8 @@ const HomeOrganism: React.FC = () => {
             <Header />
 
             <Presentation />
+
+            <Skill />
 
             <Sponsor />
 

@@ -44,7 +44,8 @@ export type ImageType =
   | "contact"
   | "linkedin"
   | "instagram"
-  | "facebook";
+  | "facebook"
+  | "skills";
 
 const images: { [key in ImageType]: any } = {
   user: require("./user.png"),
@@ -54,6 +55,7 @@ const images: { [key in ImageType]: any } = {
   header: require("./header.png"),
   phone: require("./phone.png"),
   contact: require("./contact.png"),
+  skills: require('./skills.png'),
   collaboration,
   delay,
   handleshake,
