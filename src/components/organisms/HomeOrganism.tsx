@@ -8,8 +8,7 @@ import {
   Footer,
   Sponsor,
   Quote,
-  Presentation,
-  Skill,
+  KnowHow,
 } from "../section";
 
 const HomeOrganism: React.FC = () => {
@@ -19,9 +18,7 @@ const HomeOrganism: React.FC = () => {
 
       <Header />
 
-      <Presentation />
-
-      <Skill />
+      <KnowHow />
 
       <Sponsor />
 
