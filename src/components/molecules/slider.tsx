@@ -24,7 +24,7 @@ const Slider: React.FC<Props> = ({ images }) => {
       step = 650;
     }
 
-    if (direction == "left") {
+    if (direction === "left") {
       slider.current!.scrollLeft -= step;
     } else {
       slider.current!.scrollLeft += step;
