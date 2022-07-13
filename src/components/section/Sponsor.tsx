@@ -10,7 +10,7 @@ const Sponsor: React.FC = () => {
   const { width } = useWindowDimensions();
 
   function isSliderShow() {
-    if (infoJson.sponsor.img.length > 4 || width <= 480) return true;
+    if (infoJson.sponsor.img.length > 4 || width <= 560) return true;
   }
 
   return (
