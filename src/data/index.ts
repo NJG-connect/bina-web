@@ -303,13 +303,13 @@ const data: CmsPropsType = {
               fields: [
                 {
                   type: "input",
-                  htmlId: "addLink",
+                  htmlId: "add-link",
                   id: "title",
                   title: "Titre",
                 },
                 {
                   type: "input",
-                  htmlId: "addLink",
+                  htmlId: "add-link",
                   id: "link",
                   title: "Lien de redirection",
                 },
