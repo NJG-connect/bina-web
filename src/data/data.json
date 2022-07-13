@@ -1,69 +1,78 @@
 {
-    "NavBar": {
-      "Links": [
-        { "title": "Nos Projets" },
-        { "title": "Nos Engagements" },
-        { "title": "Votre Tranquilité" }    
-      ],
-      "Boutton": "Préparer mon projet"
-    },
-    "Header": {
-      "background": "header",
-      "title": {
-        "line1" : "Un projet préparé,",
-        "line2" : "Un projet réussi..."
-      }
-    },
-    "presentation": {
-      "title": "Notre savoir-faire",
-      "img": "header",
-      "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet convallis dolor, vitae pharetra magna. Vivamus ac scelerisque risus. In hac habitasse platea dictumst. Curabitur malesuada id odio et rhoncus. Curabitur non ligula velit. Curabitur tristique tempor accumsan.", 
-      "paragraph2": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse justo risus, finibus nec feugiat lobortis, tincidunt vel ante.Suspendisse justo risus, finibus nec feugiat lobortis, tincidunt vel ante."
-    },
-    "skills": {
-      "img": "skills",
-      "skill": [
-        {"title": "Une solution clé en main", "icon": "key"},
-        {"title": "Un engagement contractuel sur le prix et les délais", "icon": "delay"},
-        {"title": "Une assurance décennale de vos ouvrages", "icon": "sheild"},
-        {"title": "Une sélection des entreprise sous traitantes", "icon": "handleshake"},
-        {"title": "Un interlocuteur unique", "icon": "collaboration"},
-        {"title": "Une obligation de résultat", "icon": "approve"}
-      ]
-    },
-    "sponsor": {
-      "title": "Nos Partenaires",
-      "img": [
-        {"title": "corp1"},
-        {"title": "corp2"},
-        {"title": "corp3"},
-        {"title": "corp4"},
-        {"title": "corp1"},
-        {"title": "corp2"},
-        {"title": "corp3"},
-        {"title": "corp4"}
-      ]
-    },
-    "quote": {
-      "sentence": "« Les meilleures choses qui arrivent dans le monde de l’entreprise ne sont pas le résultat du travail d’un seul homme. C’est le travail de toute une équipe…»",
-      "author": "Steve Jobs"
-    },
-    "Contact": {
-      "background": "header",
-      "title": "Pas le temps pour un devis. Laisser vos coordonnées, on vous rappelle",
-      "subtitle": "Parce qu'il n'est pas toujours évident de savoir ce que l'on veut, on vous aide à faire votre choix avec un oeuil d'expert"
-    },
-    "Footer": {
-      "social": [
-        { "title": "LinkedIn", "link": "#", "icon": "linkedin" },
-        { "title": "Instagram", "link": "#", "icon": "instagram" },
-        { "title": "Facebook", "link": "#", "icon": "facebook" }
-      ],
-      "additionalLink": [
-        { "title": "Déposez un devis", "link": "#"},
-        { "title": "Demande de contact", "link": "#"},
-        { "title": "Condition Générales d'Utilisation", "link": "#"}
-      ],
-      "copyright": "Bina © 2022" 
+  "NavBar": {
+    "Links": [
+      { "title": "Nos Projets" },
+      { "title": "Nos Engagements" },
+      { "title": "Votre Tranquilité" }
+    ],
+    "Boutton": "Préparer mon projet"
+  },
+  "Header": {
+    "background": "header.png",
+    "title": {
+      "line1": "Un projet préparé,",
+      "line2": "Un projet réussi..."
     }
+  },
+  "presentation": {
+    "title": "Notre savoir-faire",
+    "img": "header.png",
+    "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet convallis dolor, vitae pharetra magna. Vivamus ac scelerisque risus. In hac habitasse platea dictumst. Curabitur malesuada id odio et rhoncus. Curabitur non ligula velit. Curabitur tristique tempor accumsan.",
+    "paragraph2": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse justo risus, finibus nec feugiat lobortis, tincidunt vel ante.Suspendisse justo risus, finibus nec feugiat lobortis, tincidunt vel ante."
+  },
+  "skills": {
+    "img": "skills.png",
+    "skill": [
+      { "title": "Une solution clé en main", "icon": "key.svg" },
+      {
+        "title": "Un engagement contractuel sur le prix et les délais",
+        "icon": "delay.svg"
+      },
+      {
+        "title": "Une assurance décennale de vos ouvrages",
+        "icon": "sheild.svg"
+      },
+      {
+        "title": "Une sélection des entreprise sous traitantes",
+        "icon": "handleshake.svg"
+      },
+      { "title": "Un interlocuteur unique", "icon": "collaboration.svg" },
+      { "title": "Une obligation de résultat", "icon": "approve.svg" }
+    ]
+  },
+  "sponsor": {
+    "title": "Nos Partenaires",
+    "img": [
+      { "title": "corp1.svg" },
+      { "title": "corp2.svg" },
+      { "title": "corp3.svg" },
+      { "title": "corp4.svg" },
+      { "title": "corp1.svg" },
+      { "title": "corp2.svg" },
+      { "title": "corp3.svg" },
+      { "title": "corp4.svg" }
+    ]
+  },
+  "quote": {
+    "sentence": "« Les meilleures choses qui arrivent dans le monde de l’entreprise ne sont pas le résultat du travail d’un seul homme. C’est le travail de toute une équipe…»",
+    "author": "Steve Jobs"
+  },
+  "Contact": {
+    "background": "header.png",
+    "title": "Pas le temps pour un devis. Laisser vos coordonnées, on vous rappelle",
+    "subtitle": "Parce qu'il n'est pas toujours évident de savoir ce que l'on veut, on vous aide à faire votre choix avec un oeuil d'expert"
+  },
+  "Footer": {
+    "social": [
+      { "title": "LinkedIn", "link": "#", "icon": "linkedin.svg" },
+      { "title": "Instagram", "link": "#", "icon": "instagram.svg" },
+      { "title": "Facebook", "link": "#", "icon": "facebook.svg" }
+    ],
+    "additionalLink": [
+      { "title": "Déposez un devis", "link": "#" },
+      { "title": "Demande de contact", "link": "#" },
+      { "title": "Condition Générales d'Utilisation", "link": "#" }
+    ],
+    "copyright": "Bina © 2022"
+  }
 }

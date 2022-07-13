@@ -2,12 +2,10 @@ import React, { useRef } from "react";
 
 import "./slider.scss";
 import { Img } from "../atoms/";
-import { ImageType } from "../../assets/images";
-import { WSAEINVALIDPROCTABLE } from "constants";
 import useWindowDimensions from "../../utils/windowSizeHook";
 
 interface Props {
-  images: ImageType[];
+  images: string[];
 }
 
 const Slider: React.FC<Props> = ({ images }) => {
@@ -16,21 +14,20 @@ const Slider: React.FC<Props> = ({ images }) => {
   const { width } = useWindowDimensions();
 
   function scrollSlider(direction: string) {
-    let step = 0
+    let step = 0;
 
-    if(width <= 480) {
-        step = 250
-    } else if(width >= 480 && width <= 768) {
-        step = 460
+    if (width <= 480) {
+      step = 250;
+    } else if (width >= 480 && width <= 768) {
+      step = 460;
     } else {
-        step = 650
+      step = 650;
     }
 
-
     if (direction == "left") {
-        slider.current!.scrollLeft -= step;
+      slider.current!.scrollLeft -= step;
     } else {
-        slider.current!.scrollLeft += step;
+      slider.current!.scrollLeft += step;
     }
   }
 
@@ -39,7 +36,12 @@ const Slider: React.FC<Props> = ({ images }) => {
       <h1 onClick={() => scrollSlider("left")}>&#60;</h1>
       <div className="slider" ref={slider} id="test">
         {images.map((elm, index) => (
-          <Img img={elm} className="img" key={`slide-${elm}-${index}`} htmlId={`sponsor-img${elm}`} />
+          <Img
+            img={elm}
+            className="img"
+            key={`slide-${elm}-${index}`}
+            htmlId={`sponsor-img${elm}`}
+          />
         ))}
       </div>
       <h1 onClick={() => scrollSlider("right")}>&gt;</h1>

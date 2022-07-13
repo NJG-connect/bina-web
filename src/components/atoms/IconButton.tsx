@@ -1,19 +1,23 @@
 import React from "react";
 
-import { ImageType } from "../../assets/images";
-import './iconButton.scss';
+import "./iconButton.scss";
 import { Img } from "./";
 
 interface Props {
-    img: ImageType;
-    onClick: () => void;
-    className?: string
+  img: string;
+  onClick: () => void;
+  className?: string;
 }
 
-const IconButton: React.FC<Props> = ({img, onClick, className}) => {
-
-    return <div className={className ? className : "icon-button-container"} onClick={onClick}><Img img={img} className="img" /></div>
-
-}
+const IconButton: React.FC<Props> = ({ img, onClick, className }) => {
+  return (
+    <div
+      className={className ? className : "icon-button-container"}
+      onClick={onClick}
+    >
+      <Img img={img} className="img" />
+    </div>
+  );
+};
 
 export default IconButton;

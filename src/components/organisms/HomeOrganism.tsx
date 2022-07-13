@@ -1,30 +1,37 @@
 import React from "react";
 
-import infoJson from '../../data/data.json';
-import { NavBar, Header, Contact, Footer, Sponsor, Quote, Presentation, Skill } from "../section";
+import infoJson from "../../data/data.json";
+import {
+  NavBar,
+  Header,
+  Contact,
+  Footer,
+  Sponsor,
+  Quote,
+  Presentation,
+  Skill,
+} from "../section";
 
+const HomeOrganism: React.FC = () => {
+  return (
+    <>
+      <NavBar />
 
-const HomeOrganism: React.FC = () => {
+      <Header />
 
-    return (
-        <>
-            <NavBar />
+      <Presentation />
 
-            <Header />
+      <Skill />
 
-            <Presentation />
+      <Sponsor />
 
-            <Skill />
+      <Quote />
 
-            <Sponsor />
+      <Contact />
 
-            <Quote />
-
-            <Contact />
-
-            <Footer />
-        </>
-    )
-}
+      <Footer />
+    </>
+  );
+};
 
 export default HomeOrganism;

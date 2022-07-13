@@ -1,27 +1,21 @@
 import React from "react";
 import { useRef } from "react";
 
-import './header.scss';
+import "./header.scss";
 import infoJson from "../../data/data.json";
 import { ImgTemplate } from "../atoms";
 
-
 const Header: React.FC = () => {
-
-    return (
-
-        <header>
-            <ImgTemplate className="header" htmlId="header" img="header">
-                <div>
-                    <h1 id="header-title1">{infoJson.Header.title.line1}</h1>
-                    <h1 id="header-title2">{infoJson.Header.title.line2}</h1>
-                </div>
-            </ImgTemplate>
-        </header>
-
-    )
-
-}
-
+  return (
+    <header>
+      <ImgTemplate className="header" htmlId="header" img="header.png">
+        <div>
+          <h1 id="header-title1">{infoJson.Header.title.line1}</h1>
+          <h1 id="header-title2">{infoJson.Header.title.line2}</h1>
+        </div>
+      </ImgTemplate>
+    </header>
+  );
+};
 
 export default Header;

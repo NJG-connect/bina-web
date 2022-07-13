@@ -4,7 +4,6 @@ import "./presentation.scss";
 import infoJson from "../../data/data.json";
 
 import { Title, Img } from "../atoms";
-import { ImageType } from "../../assets/images";
 
 const Presentation: React.FC = () => {
   return (
@@ -13,7 +12,11 @@ const Presentation: React.FC = () => {
 
       <div className="content">
         <div className="img-container">
-          <Img img={infoJson.presentation.img as ImageType} className="img" htmlId="presentation-img" />
+          <Img
+            img={infoJson.presentation.img}
+            className="img"
+            htmlId="presentation-img"
+          />
         </div>
         <div className="text-container">
           <p id="presentation-p1">{infoJson.presentation.paragraph1}</p>
