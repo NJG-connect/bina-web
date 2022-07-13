@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import "./contact.scss";
-import images, { ImageType } from "../../assets/images";
 import infoJson from "../../data/data.json";
 import { ImgTemplate, Input, Button } from "../atoms";
 import { toast } from "react-toastify";
@@ -11,7 +10,7 @@ const Contact: React.FC = () => {
   const [tel, setTel] = useState<string>("");
 
   function isName(name: string) {
-    if (name.trim() != "") return true;
+    if (name.trim() !== "") return true;
   }
 
   function isTel(tel: string) {
@@ -37,7 +36,7 @@ const Contact: React.FC = () => {
   return (
     <section id="contact">
       <ImgTemplate
-        img="contact"
+        img="contact.png"
         className="background"
         htmlId="contact-background"
       >
@@ -51,13 +50,13 @@ const Contact: React.FC = () => {
                 type="text"
                 onChange={(value) => setName(value)}
                 placeholder="Nom Prénom"
-                icon="user"
+                icon="user.png"
               />
               <Input
                 type="tel"
                 onChange={(value) => setTel(value)}
                 placeholder="Tél"
-                icon="phone"
+                icon="phone.png"
               />
             </div>
             <Button

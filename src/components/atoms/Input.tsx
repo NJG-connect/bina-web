@@ -1,14 +1,13 @@
 import React from "react";
 
 import "./input.scss";
-import { ImageType } from "../../assets/images";
 import { Img } from "./";
 
 interface Props {
   type: "text" | "tel" | "email";
   placeholder?: string;
   label?: string;
-  icon?: ImageType;
+  icon?: string;
   onChange: (value: string) => void;
 }
 
