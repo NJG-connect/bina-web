@@ -25,8 +25,12 @@ const Sponsor: React.FC = () => {
         />
       ) : (
         <div className="slider-off">
-          {infoJson.sponsor.img.map((elm) => (
-            <Img img={elm.title} className="img" />
+          {infoJson.sponsor.img.map((elm, index) => (
+            <Img
+              img={elm.title}
+              className="img"
+              key={`slide-${elm}-${index}`}
+            />
           ))}
         </div>
       )}

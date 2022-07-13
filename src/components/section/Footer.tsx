@@ -24,8 +24,9 @@ const Footer: React.FC = () => {
           {infoJson.Footer.additionalLink.map((elm, index) => (
             <Link
               href={elm.link}
-              htmlId={`addLink${index}`}
+              htmlId={`add-link${index}`}
               value={elm.title}
+              key={`additional-link-${elm}-${index}`}
             />
           ))}
         </div>
