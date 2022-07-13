@@ -40,6 +40,7 @@ const KnowHow: React.FC = () => {
               img={elm.icon}
               htmlIdImg={`skill-img${index}`}
               htmlIdText={`skill-text${index}`}
+              key={`skills-${elm}-${index}`}
             />
           ))}
         </div>

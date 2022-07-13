@@ -26,6 +26,7 @@ const Footer: React.FC = () => {
               href={elm.link}
               htmlId={`addLink${index}`}
               value={elm.title}
+              key={`additional-lin-${elm}-${index}`}
             />
           ))}
         </div>
