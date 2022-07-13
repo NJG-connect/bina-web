@@ -1,218 +1,196 @@
-@use '../../utils/variables.scss';
+@use "../../utils/variables.scss";
 
 //Basic style
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 5rem;
-    background-color: variables.$blue;
-    @include variables.dxc(row);
-    z-index: 99;
- 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: variables.$blue;
+  @include variables.dxc(row);
+  z-index: 99;
 
-    .bina-logo {
-        width: 150px;
-        height: 50px;
-        border: 2px solid red;
-        margin-left: 5rem;
+  .bina-logo {
+    width: 150px;
+    height: 50px;
+    border: 2px solid red;
+    margin-left: 5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .right {
+    width: 80%;
+    @include variables.dbc(row);
+    margin-right: 5rem;
+
+    .navigation {
+      width: 60%;
+      @include variables.dxc(row);
     }
 
-    .right {
-        width: 80%;
-        @include variables.dbc(row);
-        margin-right: 5rem;
+    .navigation a {
+      @include variables.links(variables.$white);
+      position: relative;
+      text-transform: uppercase;
+      font-family: variables.$font;
+      font-size: 16px;
+      text-align: center;
+      padding: 7px 20px;
 
-        .navigation {
-            width: 60%;
-            @include variables.dxc(row);
-        }
-    
-        .navigation a {
-            @include variables.links(variables.$white);
-            position: relative;
-            text-transform: uppercase;
-            font-family: variables.$font;
-            font-size: 16px;
-            text-align: center;
-            padding: 7px 20px;
-            
-            &:hover {
-                text-shadow: 0 0 .01px variables.$white, 0 0 .01px variables.$white;
-            }
-        }
-    
-        .navigation a:nth-child(2) {
-            border-left: 2px solid variables.$white;
-            border-right: 2px solid variables.$white;
-        }
-
-        .link {
-            width: 30%;
-            @include variables.dac(row);
-        }
-
+      &:hover {
+        text-shadow: 0 0 0.01px variables.$white, 0 0 0.01px variables.$white;
+      }
     }
 
-    .icon {
-        position: absolute;
-        right: 5rem;
-        width: 30px;
-        height: 30px;
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        .img {
-            @include variables.img();
-            width: 100%;
-            height: 100%;
-        }
-
+    .navigation a:nth-child(2) {
+      border-left: 2px solid variables.$white;
+      border-right: 2px solid variables.$white;
     }
-    
+
+    .link {
+      width: 30%;
+      @include variables.dac(row);
+    }
+  }
+
+  .icon {
+    position: absolute;
+    right: 5rem;
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .img {
+      @include variables.img();
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
-
 
 //Keyframmes
 @keyframes slideIn {
-    from{
-        transform: translateX(100%);
-    }
-    to{
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideOut {
-    from{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(100%);
-    }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
-
-
 
 //Responsive
 @media only screen and (max-width: 1300px) {
+  nav {
+    .right {
+      .navigation {
+        width: 60%;
+      }
 
-    nav {
-
-        .right {
-
-            .navigation {
-                width: 60%;
-            }
-
-            .link {
-                width: 35%;
-            }
-
-        }
-
+      .link {
+        width: 35%;
+      }
     }
-
+  }
 }
-
 
 @media only screen and (max-width: 1100px) {
+  nav {
+    @include variables.dcc(row);
 
-    nav {
-        @include variables.dcc(row);
-
-        .bina-logo {
-            margin: 0;
-            z-index: 200;
-        }
-
-        .right {
-            display: none;
-        }
-
-        .show {
-            position: fixed;
-            z-index: 100;
-            width: 50%;
-            height: 100vh;
-            top: 0;
-            right: 0;
-            margin: 0;
-            background-color: variables.$blue;
-            @include variables.dac(column);
-            transform: translateX(100%);
-
-            .icon {
-                top: 2.5rem;
-                transform: translateY(-50%);
-            }
-
-            .navigation, .link {
-                width: 90%;
-            }
-
-            .navigation {
-                @include variables.dbc(column);
-                height: 20%;
-
-                & a {
-                    font-size: 18px;
-                }
-
-                & a:nth-child(2) {
-                    border: none;
-                }
-
-            }
-        }
-
-        .slide-in {
-            animation: .7s slideIn;
-            animation-play-state: ease-in;
-            animation-fill-mode: forwards;
-        }
-
-        .slide-out {
-            animation: .7s slideOut;
-            animation-play-state: ease-in;
-            animation-fill-mode: forwards;
-        }
-
+    .bina-logo {
+      margin: 0;
+      z-index: 200;
     }
 
+    .right {
+      display: none;
+    }
+
+    .show {
+      position: fixed;
+      z-index: 100;
+      width: 50%;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      margin: 0;
+      background-color: variables.$blue;
+      @include variables.dac(column);
+      transform: translateX(100%);
+
+      .icon {
+        top: 2.5rem;
+        transform: translateY(-50%);
+      }
+
+      .navigation,
+      .link {
+        width: 90%;
+      }
+
+      .navigation {
+        @include variables.dbc(column);
+        height: 20%;
+
+        & a {
+          font-size: 18px;
+        }
+
+        & a:nth-child(2) {
+          border: none;
+        }
+      }
+    }
+
+    .slide-in {
+      animation: 0.7s slideIn;
+      animation-play-state: ease-in;
+      animation-fill-mode: forwards;
+    }
+
+    .slide-out {
+      animation: 0.7s slideOut;
+      animation-play-state: ease-in;
+      animation-fill-mode: forwards;
+    }
+  }
 }
 
-
 @media only screen and (max-width: 800px) {
-
-    nav {
-
-        .show {
-            width: 75%;
-        }
-
-        .icon {
-            right: 2rem;
-        }
-
+  nav {
+    .show {
+      width: 75%;
     }
 
+    .icon {
+      right: 2rem;
+    }
+  }
 }
 
 @media only screen and (max-width: 400px) {
-
-    nav {
-
-        .show {
-            width: 100%;
-        }
-
-        .icon {
-            right: 1rem;
-        }
-
+  nav {
+    .show {
+      width: 100%;
     }
 
+    .icon {
+      right: 1rem;
+    }
+  }
 }
