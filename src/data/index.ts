@@ -2,7 +2,7 @@ import { CmsPropsType } from "lyatom-cms";
 
 const data: CmsPropsType = {
   //Master
-  branch: "dev", // Switch Branch to main for production
+  branch: "dev-project", // Switch Branch to main for production
   repo: "NJG-connect/bina-web",
   urlForLogin: "admin",
   mediaFolder: "/src/assets/images",
@@ -314,6 +314,74 @@ const data: CmsPropsType = {
                   title: "Lien de redirection",
                 },
               ],
+            },
+          ],
+        },
+      ],
+    },
+    //Poject Section
+    {
+      type: "section",
+      title: "Projet",
+      file: "/src/data/dataProject.json",
+      fields: [
+        {
+          type: "object",
+          id: "screen1",
+          title: "Clientèle",
+          fields: [
+            {
+              type: "input",
+              title: "Titre",
+              id: "title",
+              htmlId: "project-screen1-title",
+            },
+            {
+              type: "object",
+              id: "card1",
+              title: "Boutton Gauche",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "text",
+                  htmlId: "project-screen1-card1-title",
+                },
+                {
+                  type: "image",
+                  title: "Icone",
+                  mediaFolder: "src/assets/images",
+                  id: "icon",
+                  htmlId: "project-screen1-card1-img",
+                },
+              ],
+            },
+            {
+              type: "object",
+              id: "card2",
+              title: "Boutton Gauche",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "text",
+                  htmlId: "project-screen1-card2-title",
+                },
+                {
+                  type: "image",
+                  title: "Icone",
+                  mediaFolder: "src/assets/images",
+                  id: "icon",
+                  htmlId: "project-screen1-card2-img",
+                },
+              ],
+            },
+            {
+              type: "image",
+              title: "Image de fond",
+              mediaFolder: "src/assets/images",
+              id: "icon",
+              htmlId: "project-screen1-bg",
             },
           ],
         },
