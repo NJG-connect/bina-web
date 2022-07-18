@@ -2,6 +2,7 @@ import React from "react";
 
 import infoJson from "../../data/data.json";
 import { Data } from "../../types/Data";
+import { ChooseClient } from "../section";
 
 interface Props {
   data: Data;
@@ -19,9 +20,7 @@ const ProjectOrganism: React.FC<Props> = ({ data = {}, setData }) => {
     case "5":
       return <h1>Étape 5</h1>;
     default:
-      return (
-        <button onClick={() => setData({ ...data, step: "2" })}>Étape 1</button>
-      );
+      return <ChooseClient />;
   }
 };
 
