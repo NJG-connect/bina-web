@@ -11,12 +11,18 @@ interface Props {
 
 const ProjectOrganism: React.FC<Props> = ({ data = {}, setData }) => {
   const setClient: (client: "personal" | "professional") => void = (client) => {
-    setData({ ...data, step: "2", client: client });
+    setData((prevState) => ({
+      ...prevState,
+      step: "2",
+      client: client,
+    }));
   };
+
+  console.log({ ...data, step: "2" });
 
   switch (data.step) {
     case "2":
-      return <h1>Step 2 {data.client}</h1>;
+      return <h1>Step 2 {data.client}</h1>; // Return section with props (=> client type)
     case "3":
       return <h1>Étape 3</h1>;
     case "4":
@@ -24,7 +30,7 @@ const ProjectOrganism: React.FC<Props> = ({ data = {}, setData }) => {
     case "5":
       return <h1>Étape 5</h1>;
     default:
-      return <ChooseClient onChange={(client) => setClient(client)} />;
+      return <ChooseClient onClick={(client) => setClient(client)} />;
   }
 };
 

@@ -5,10 +5,10 @@ import infoJson from "../../data/dataProject.json";
 import { Img, CardButton, ProgressBar } from "../atoms/";
 
 interface Props {
-  onChange: (client: "personal" | "professional") => void;
+  onClick: (client: "personal" | "professional") => void;
 }
 
-const ChooseClient: React.FC<Props> = ({ onChange }) => {
+const ChooseClient: React.FC<Props> = ({ onClick }) => {
   return (
     <section id="choose">
       <div className="left-container">
@@ -16,7 +16,7 @@ const ChooseClient: React.FC<Props> = ({ onChange }) => {
         <h3 id="project-screen1-title">{infoJson.screen1.title}</h3>
         <div className="button-container">
           <CardButton
-            onClick={() => onChange("professional")}
+            onClick={() => onClick("professional")}
             className="card-button"
           >
             <Img
@@ -29,7 +29,7 @@ const ChooseClient: React.FC<Props> = ({ onChange }) => {
             </p>
           </CardButton>
           <CardButton
-            onClick={() => onChange("personal")}
+            onClick={() => onClick("personal")}
             className="card-button"
           >
             <Img
