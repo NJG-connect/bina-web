@@ -18,11 +18,7 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType }) => {
       <Img img="choose.png" className="left-img" />
       <div className="right-container">
         <div className="top">
-          <IconButton
-            img="arrow.svg"
-            onClick={back}
-            className="icon-button-container back-button"
-          />
+          <IconButton img="arrow.svg" onClick={back} className="back-button" />
           <div className="logo"></div>
         </div>
         <h3>Parlez nous de vous:</h3>
