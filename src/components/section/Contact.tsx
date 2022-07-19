@@ -2,36 +2,12 @@ import React, { useState } from "react";
 
 import "./contact.scss";
 import infoJson from "../../data/data.json";
+import { verifForm } from "../../utils/verifForm";
 import { ImgTemplate, Input, Button } from "../atoms";
-import { toast } from "react-toastify";
 
 const Contact: React.FC = () => {
   const [name, setName] = useState<string>("");
   const [tel, setTel] = useState<string>("");
-
-  function isName(name: string) {
-    if (name.trim() !== "") return true;
-  }
-
-  function isTel(tel: string) {
-    return tel.match(/^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/gim);
-  }
-
-  function verifForm() {
-    if (isName(name) && isTel(tel)) {
-      console.log(`Form Send : ${name} // ${tel}`);
-    } else {
-      toast.error("Veuillez remplir le formulaire correctement", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    }
-  }
 
   return (
     <section id="contact">
@@ -62,7 +38,7 @@ const Contact: React.FC = () => {
             <Button
               value="Envoyer"
               className="contact-button"
-              onClick={verifForm}
+              onClick={() => verifForm({ name, phone: tel })}
             />
           </div>
         </div>

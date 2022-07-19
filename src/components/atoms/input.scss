@@ -2,7 +2,7 @@
 
 .input-container {
   position: relative;
-  //   width: 100%;
+  width: 100%;
   @include variables.dfp(row, flex-end, center);
 
   label {
