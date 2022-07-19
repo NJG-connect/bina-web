@@ -9,7 +9,7 @@ export function isTel(tel: string) {
 }
 
 export function isPostal(postal: number) {
-  if (String(postal).length === 4 && String(postal) != "0000") return true;
+  if (String(postal).length === 5 && String(postal) != "00000") return true;
 }
 
 export function isEmail(email: string) {
