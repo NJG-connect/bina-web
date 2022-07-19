@@ -1,21 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { ProjectOrganism } from "../organisms/";
-import { Data } from "../../types/Data";
 
 const ProjectContainer: React.FC = () => {
-  const [data, setData] = useState<Data>({
-    step: "0",
-    client: "",
-    clientInfo: {
-      name: "",
-      mail: "",
-      phone: "",
-      postal: 0,
-    },
-  });
-
-  return <ProjectOrganism data={data} setData={setData} />;
+  return <ProjectOrganism />;
 };
 
 export default ProjectContainer;

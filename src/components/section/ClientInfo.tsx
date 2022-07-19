@@ -25,15 +25,20 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType }) => {
       <div className="right-container">
         <div className="top">
           <IconButton
-            img="close.png"
+            img="arrow.svg"
             onClick={back}
             className="icon-button-container back-button"
           />
           <div className="logo"></div>
         </div>
         <h3>Parlez nous de vous:</h3>
+
         <div className="bottom">
-          <IconButton img="close.png" onClick={() => {}} />
+          <IconButton
+            img="arrow.svg"
+            className="submit-button"
+            onClick={() => {}}
+          />
           <ProgressBar step={2} />
         </div>
       </div>

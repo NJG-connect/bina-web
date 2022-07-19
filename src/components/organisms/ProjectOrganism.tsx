@@ -1,28 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 
-import infoJson from "../../data/data.json";
 import { Data } from "../../types/Data";
 import { ChooseClient, ClientInfo } from "../section";
 
-interface Props {
-  data: Data;
-  setData: React.Dispatch<React.SetStateAction<Data>>;
-}
+interface Props {}
 
-const ProjectOrganism: React.FC<Props> = ({ data = {}, setData }) => {
+const ProjectOrganism: React.FC<Props> = ({}) => {
+  const [data, setData] = useState<Data>({
+    step: "0",
+    client: undefined,
+    clientInfo: {
+      name: "",
+      mail: "",
+      phone: "",
+      postal: 0,
+    },
+  });
+
   const setClient: (client: "personal" | "professional") => void = (client) => {
-    setData((prevState) => ({
-      ...prevState,
+    setData({
+      ...data,
       step: "2",
-      client: client,
-    }));
+      client,
+    });
   };
 
   const goBack: () => void = () => {
-    setData((prevState) => ({
-      ...prevState,
-      step: String(parseInt(prevState.step) - 1),
-    }));
+    setData({
+      ...data,
+      step: String(parseInt(data.step) - 1),
+    });
   };
 
   switch (data.step) {
@@ -31,7 +38,7 @@ const ProjectOrganism: React.FC<Props> = ({ data = {}, setData }) => {
         <ClientInfo
           onSubmit={(info) => console.log(info)}
           back={() => goBack()}
-          clientType={data.client as "personal" | "professional"} // Patch ??
+          clientType={data.client!}
         />
       );
     case "3":
