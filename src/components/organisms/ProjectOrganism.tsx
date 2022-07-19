@@ -33,7 +33,7 @@ const ProjectOrganism: React.FC<Props> = ({ data = {}, setData }) => {
           back={() => goBack()}
           clientType={data.client as "personal" | "professional"} // Patch ??
         />
-      ); // Return section with props (=> client type)
+      );
     case "3":
       return <h1>Étape 3</h1>;
     case "4":

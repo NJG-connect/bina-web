@@ -21,10 +21,14 @@ interface clientInfo {
 const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType }) => {
   return (
     <section id="clientInfo">
-      <Img img="choose.png" className="left" />
-      <div className="right">
+      <Img img="choose.png" className="left-img" />
+      <div className="right-container">
         <div className="top">
-          <IconButton img="close.png" onClick={back} />
+          <IconButton
+            img="close.png"
+            onClick={back}
+            className="icon-button-container back-button"
+          />
           <div className="logo"></div>
         </div>
         <h3>Parlez nous de vous:</h3>
