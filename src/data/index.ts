@@ -359,7 +359,7 @@ const data: CmsPropsType = {
             {
               type: "object",
               id: "card2",
-              title: "Boutton Gauche",
+              title: "Boutton Droite",
               fields: [
                 {
                   type: "input",

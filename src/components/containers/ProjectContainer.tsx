@@ -6,6 +6,7 @@ import { Data } from "../../types/Data";
 const ProjectContainer: React.FC = () => {
   const [data, setData] = useState({
     step: "0",
+    client: "",
   });
 
   return <ProjectOrganism data={data} setData={setData} />;
