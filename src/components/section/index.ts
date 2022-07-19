@@ -6,6 +6,7 @@ import Sponsor from "./Sponsor";
 import Quote from "./Quote";
 import KnowHow from "./KnowHow";
 import ChooseClient from "./ChooseClient";
+import ClientInfo from "./ClientInfo";
 
 export {
   NavBar,
@@ -16,4 +17,5 @@ export {
   Quote,
   KnowHow,
   ChooseClient,
+  ClientInfo,
 };

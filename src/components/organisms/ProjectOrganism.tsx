@@ -2,7 +2,7 @@ import React from "react";
 
 import infoJson from "../../data/data.json";
 import { Data } from "../../types/Data";
-import { ChooseClient } from "../section";
+import { ChooseClient, ClientInfo } from "../section";
 
 interface Props {
   data: Data;
@@ -18,11 +18,22 @@ const ProjectOrganism: React.FC<Props> = ({ data = {}, setData }) => {
     }));
   };
 
-  console.log({ ...data, step: "2" });
+  const goBack: () => void = () => {
+    setData((prevState) => ({
+      ...prevState,
+      step: String(parseInt(prevState.step) - 1),
+    }));
+  };
 
   switch (data.step) {
     case "2":
-      return <h1>Step 2 {data.client}</h1>; // Return section with props (=> client type)
+      return (
+        <ClientInfo
+          onSubmit={(info) => console.log(info)}
+          back={() => goBack()}
+          clientType={data.client as "personal" | "professional"} // Patch ??
+        />
+      ); // Return section with props (=> client type)
     case "3":
       return <h1>Étape 3</h1>;
     case "4":
