@@ -8,13 +8,6 @@ interface Props {}
 const ProjectOrganism: React.FC<Props> = ({}) => {
   const [data, setData] = useState<Data>({
     step: "0",
-    client: undefined,
-    clientInfo: {
-      name: "",
-      mail: "",
-      phone: "",
-      postal: 0,
-    },
   });
 
   const setClient: (client: "personal" | "professional") => void = (client) => {

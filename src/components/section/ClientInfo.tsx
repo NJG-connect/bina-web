@@ -2,20 +2,14 @@ import React from "react";
 
 import "./clientInfo.scss";
 import infoJson from "../../data/dataProject.json";
+import { clientInfo } from "../../types/Data";
 import { Img, ProgressBar, IconButton } from "../atoms/";
+import { ClientForm } from "../molecules/";
 
 interface Props {
   onSubmit: (info: clientInfo) => void;
   back: () => void;
   clientType: "personal" | "professional";
-}
-
-interface clientInfo {
-  name: string;
-  mail: string;
-  phone: string;
-  postal: number;
-  corporation?: string;
 }
 
 const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType }) => {
@@ -32,7 +26,7 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType }) => {
           <div className="logo"></div>
         </div>
         <h3>Parlez nous de vous:</h3>
-
+        <ClientForm client={clientType} />
         <div className="bottom">
           <IconButton
             img="arrow.svg"
