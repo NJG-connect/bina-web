@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-import { Data } from "../../types/Data";
+import { Data, clientInfo } from "../../types/Data";
 import { ChooseClient, ClientInfo } from "../section";
 
 interface Props {}
@@ -18,6 +18,14 @@ const ProjectOrganism: React.FC<Props> = ({}) => {
     });
   };
 
+  const setClientInfo: (ClientInfo: clientInfo) => void = (ClientInfo) => {
+    setData({
+      ...data,
+      step: "3",
+      clientInfo: ClientInfo,
+    });
+  };
+
   const goBack: () => void = () => {
     setData({
       ...data,
@@ -25,11 +33,15 @@ const ProjectOrganism: React.FC<Props> = ({}) => {
     });
   };
 
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
   switch (data.step) {
     case "2":
       return (
         <ClientInfo
-          onSubmit={(info) => console.log(info)}
+          onSubmit={(info) => setClientInfo(info)}
           back={() => goBack()}
           clientType={data.client!}
         />
