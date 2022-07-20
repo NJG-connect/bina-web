@@ -1,4 +1,4 @@
-import { isText, isTel, isEmail, isPostal } from "./verifForm";
+import { isText, isTel, isEmail, isPostal, verifForm } from "./verifForm";
 
 describe("Basic functions to test the fields individually", () => {
   describe("Is text function", () => {
@@ -72,5 +72,53 @@ describe("Basic functions to test the fields individually", () => {
       const result = isPostal(123456);
       expect(result).toBeFalsy;
     });
+  });
+});
+
+describe("Verifiction of form function", () => {
+  it("should be True", () => {
+    const result = verifForm({
+      corporation: "NJG-Connect",
+      name: "Random",
+      mail: "example@njg.fr",
+      postal: 75000,
+      phone: "06 12 34 45 67",
+    });
+    expect(result).toBeTruthy;
+  });
+  it("should be true", () => {
+    const result = verifForm({
+      name: "Random",
+      phone: "06 12 34 45 67",
+    });
+    expect(result).toBeTruthy;
+  });
+  it("should be true", () => {
+    const result = verifForm({
+      name: "Random",
+      mail: "example@njg.fr",
+      postal: 75000,
+      phone: "06 12 34 45 67",
+    });
+    expect(result).toBeTruthy;
+  });
+  it("should be False", () => {
+    const result = verifForm({
+      corporation: "NJG-Connect",
+      name: "Random",
+      mail: "example",
+      postal: 75000,
+      phone: "06 12 34 45 67",
+    });
+    expect(result).toBeTruthy;
+  });
+  it("should be False", () => {
+    const result = verifForm({
+      corporation: "NJG-Connect",
+      name: "Random",
+      postal: 750000,
+      phone: "06 12 34 45 67",
+    });
+    expect(result).toBeTruthy;
   });
 });

@@ -25,7 +25,7 @@ interface field {
   [key: string]: any;
 }
 
-const valueWithCheck = {
+const valueWithCheck: any = {
   corporation: isText,
   name: isText,
   mail: isEmail,
@@ -33,28 +33,19 @@ const valueWithCheck = {
   phone: isTel,
 };
 
-// export function verifForm(field: field) {
-//   Object.keys(field).forEach((elm: string) => {
-//     valueWithCheck[elm](field[elm]);
-//   });
-// }
-
-/*
-
-Function with an object as parameter for only check field inside the object as parameter
-
-I need to get all field and for each of them call the right function.
-If this function return false => call toast for the error
-
-How map field with right function ?
-
--> 
-
-*/
+export function verifForm(field: field) {
+  Object.keys(field).forEach((elm: string) => {
+    if (!valueWithCheck[elm](field[elm])) {
+      generateToast("Error");
+      return false;
+    }
+  });
+  return true;
+}
 
 type position = "top-right" | "top-left" | "bottom-right" | "bottom-left";
 
-function generateToast(text: string, position: position) {
+function generateToast(text: string, position: position = "top-right") {
   toast.error(text, {
     position: position,
     autoClose: 5000,
