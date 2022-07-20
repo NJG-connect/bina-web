@@ -11,9 +11,10 @@ interface Props {
   onSubmit: (info: clientInfo) => void;
   back: () => void;
   clientType: "personal" | "professional";
+  home: any;
 }
 
-const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType }) => {
+const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType, home }) => {
   const [clientInfo, setClientInfo] = useState<clientInfo>({});
 
   function verif() {
@@ -41,7 +42,7 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType }) => {
       <div className="right-container">
         <div className="top">
           <IconButton img="arrow.svg" onClick={back} className="back-button" />
-          <div className="logo"></div>
+          <div className="logo" onClick={home}></div>
         </div>
         <h3>Parlez nous de vous:</h3>
         <ClientForm

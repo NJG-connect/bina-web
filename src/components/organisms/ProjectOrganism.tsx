@@ -3,9 +3,11 @@ import React, { useState, useEffect } from "react";
 import { Data, clientInfo } from "../../types/Data";
 import { ChooseClient, ClientInfo } from "../section";
 
-interface Props {}
+interface Props {
+  goHome: any;
+}
 
-const ProjectOrganism: React.FC<Props> = ({}) => {
+const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
   const [data, setData] = useState<Data>({
     step: "0",
   });
@@ -44,6 +46,7 @@ const ProjectOrganism: React.FC<Props> = ({}) => {
           onSubmit={(info) => setClientInfo(info)}
           back={() => goBack()}
           clientType={data.client!}
+          home={goHome}
         />
       );
     case "3":
@@ -53,7 +56,9 @@ const ProjectOrganism: React.FC<Props> = ({}) => {
     case "5":
       return <h1>Étape 5</h1>;
     default:
-      return <ChooseClient onClick={(client) => setClient(client)} />;
+      return (
+        <ChooseClient onClick={(client) => setClient(client)} home={goHome} />
+      );
   }
 };
 
