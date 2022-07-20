@@ -114,7 +114,7 @@ describe("Verifiction of form function", () => {
       postal: 75000,
       phone: "06 12 34 45 67",
     });
-    expect(result).toBeFalsy();
+    expect(result).toEqual(["mail"]);
   });
   it("should be False (=> phone & postal fail)", () => {
     const result = verifForm({
@@ -123,15 +123,15 @@ describe("Verifiction of form function", () => {
       postal: 750000,
       phone: "06 12 34 45 67 00",
     });
-    expect(result).toBeFalsy();
+    expect(result).toEqual(["postal", "phone"]);
   });
-  it("should be False (=> all fail)", () => {
+  it("should be False (=> Empty)", () => {
     const result = verifForm({
-      name: "j",
-      mail: "j",
-      postal: "j",
-      phone: "j",
+      name: "",
+      mail: "",
+      postal: "",
+      phone: "",
     });
-    expect(result).toBeFalsy();
+    expect(result).toEqual(["name", "mail", "postal", "phone"]);
   });
 });

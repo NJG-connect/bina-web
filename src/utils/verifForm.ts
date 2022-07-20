@@ -1,11 +1,15 @@
 import { toast } from "react-toastify";
 
 export function isText(name: string) {
-  if (name.trim() !== "" && !name.match(/[0-9]/gm)) return true;
+  if (typeof name === "undefined") {
+    return false;
+  } else if (name.trim() !== "" && !name.match(/[0-9]/gm)) return true;
 }
 
 export function isTel(tel: string) {
-  return tel.match(/^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/gim);
+  if (typeof tel !== "undefined") {
+    return tel.match(/^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/gim);
+  }
 }
 
 export function isPostal(postal: number) {
@@ -13,7 +17,9 @@ export function isPostal(postal: number) {
 }
 
 export function isEmail(email: string) {
-  return email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+  if (typeof email !== "undefined") {
+    return email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+  }
 }
 
 interface field {
@@ -43,16 +49,23 @@ const valueWithCheck: vc = {
 };
 
 export function verifForm(field: field) {
-  let result = true;
+  let result: boolean = true;
+  let error: string[] = [];
+
   Object.keys(field).forEach((elm: string) => {
-    if (!valueWithCheck[elm](field[elm])) {
+    if (
+      field.elm == "" || // !field.elm ??????
+      !valueWithCheck[elm](field[elm])
+    ) {
       result = false;
+      error.push(elm);
     }
   });
+
   if (result) {
     return true;
   } else {
-    return false;
+    return error;
   }
 }
 
