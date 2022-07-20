@@ -34,18 +34,22 @@ const valueWithCheck: any = {
 };
 
 export function verifForm(field: field) {
+  let result = true;
   Object.keys(field).forEach((elm: string) => {
     if (!valueWithCheck[elm](field[elm])) {
-      generateToast("Error");
-      return false;
+      result = false;
     }
   });
-  return true;
+  if (result) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 type position = "top-right" | "top-left" | "bottom-right" | "bottom-left";
 
-function generateToast(text: string, position: position = "top-right") {
+export function generateToast(text: string, position: position = "top-right") {
   toast.error(text, {
     position: position,
     autoClose: 5000,

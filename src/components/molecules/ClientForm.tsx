@@ -1,57 +1,52 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./clientForm.scss";
 import infoJson from "../../data/dataProject.json";
-import { clientInfo } from "../../types/Data";
+import { clientInfoKey } from "../../types/Data";
 import { Input } from "../atoms";
 
 interface Props {
   client: "personal" | "professional";
+  update: (key: clientInfoKey, value: string | number) => void;
 }
 
-const ClientForm: React.FC<Props> = ({ client }) => {
-  const [clientInfo, setClientInfo] = useState<clientInfo>({});
-
+const ClientForm: React.FC<Props> = ({ client, update }) => {
   return (
     <div className="client-form-container">
       {client === "professional" && (
         <Input
           type="text"
           label="Votre entreprise (raison sociale)"
-          onChange={(value) =>
-            setClientInfo({ ...clientInfo, corporation: value })
-          }
+          onChange={(value) => update("corporation", value)}
         />
       )}
       {client === "personal" ? (
         <Input
           type="text"
           label="Nom"
-          onChange={(value) => setClientInfo({ ...clientInfo, name: value })}
+          onChange={(value) => update("name", value)}
         />
       ) : (
         <Input
           type="text"
           label="Nom du dirigeant"
-          onChange={(value) => setClientInfo({ ...clientInfo, name: value })}
+          onChange={(value) => update("name", value)}
         />
       )}
       <Input
         type="email"
         label="Adresse mail"
-        onChange={(value) => setClientInfo({ ...clientInfo, mail: value })}
+        onChange={(value) => update("mail", value)}
       />
       <Input
         type="text"
         label="Code postal"
-        onChange={(value) =>
-          setClientInfo({ ...clientInfo, postal: parseInt(value) })
-        }
+        onChange={(value) => update("postal", parseInt(value))}
       />
       <Input
         type="tel"
         label="Téléphone"
-        onChange={(value) => setClientInfo({ ...clientInfo, phone: value })}
+        onChange={(value) => update("phone", value)}
       />
     </div>
   );

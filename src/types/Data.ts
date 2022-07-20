@@ -17,3 +17,10 @@ export interface clientInfo {
   postal?: number;
   corporation?: string;
 }
+
+export type clientInfoKey =
+  | "name"
+  | "corporation"
+  | "mail"
+  | "postal"
+  | "phone";
