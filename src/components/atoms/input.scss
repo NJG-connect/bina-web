@@ -1,46 +1,48 @@
-@use '../../utils/variables.scss';
+@use "../../utils/variables.scss";
 
 .input-container {
-    position: relative;
-    width: 100%;
-    @include variables.dxc(row);
+  position: relative;
+  width: 100%;
+  @include variables.dfp(row, flex-end, center);
 
-    label {
-        font-size: 20px;
-        color: variables.$gray;
+  label {
+    font-size: 20px;
+    color: variables.$gray;
+    text-align: right;
+    width: auto;
+  }
+
+  input {
+    width: 90%;
+    border: none;
+    height: 100%;
+    font-size: 20px;
+    padding: 5px 0 5px 6px;
+    color: variables.$black-color;
+
+    &::placeholder {
+      color: variables.$secondary-color;
     }
 
-    input {
-        width: 90%;
-        border: none;
-        height: 100%;
-        font-size: 20px;
-        padding: 9px 0 9px 10px;
-        color: variables.$black-color;
-
-        &::placeholder {
-            color: variables.$secondary-color;
-        }
-
-        &:focus {
-            outline: none;
-        }
+    &:focus {
+      outline: none;
     }
+  }
 
-    .icon {
-        width: 39px;
-        height: 39px;
-        @include variables.img();
-    }
+  .icon {
+    width: 39px;
+    height: 39px;
+    @include variables.img();
+  }
 }
 
 .icon-mode {
-    border: 3px solid variables.$blue;
-    background-color: white;
+  border: 3px solid variables.$blue;
+  background-color: white;
 }
 
 .input {
-    width: 60% !important;
-    border-bottom: 1.5px solid #707070 !important;
-    margin-left: .5rem;
+  width: 320px !important;
+  border-bottom: 1.5px solid #707070 !important;
+  margin-left: 0.5rem;
 }

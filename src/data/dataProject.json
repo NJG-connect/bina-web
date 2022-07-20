@@ -1,0 +1,14 @@
+{
+  "screen1": {
+    "background": "choose.png",
+    "title": "Votre projet concerne:",
+    "card1": {
+      "icon": "key.svg",
+      "text": "Professionnel"
+    },
+    "card2": {
+      "icon": "key.svg",
+      "text": "Particuliers"
+    }
+  }
+}

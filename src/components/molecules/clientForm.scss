@@ -1,0 +1,10 @@
+@use "../../utils/variables.scss";
+
+.client-form-container {
+  width: 80%;
+  transform: translateX(-25%);
+
+  .input-container:not(:last-child) {
+    margin-bottom: 0.7rem;
+  }
+}
