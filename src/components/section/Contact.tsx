@@ -2,12 +2,34 @@ import React, { useState } from "react";
 
 import "./contact.scss";
 import infoJson from "../../data/data.json";
-import { verifForm } from "../../utils/verifForm";
+import { verifForm, generateToast } from "../../utils/verifForm";
 import { ImgTemplate, Input, Button } from "../atoms";
 
+interface translate {
+  name: string;
+  phone: string;
+  [key: string]: string;
+}
+
 const Contact: React.FC = () => {
-  const [name, setName] = useState<string>("");
-  const [tel, setTel] = useState<string>("");
+  const [name, setName] = useState<string>();
+  const [tel, setTel] = useState<string>();
+
+  const translate: translate = {
+    name: "Nom Prénom",
+    phone: "Téléphone",
+  };
+
+  function verif() {
+    if (verifForm({ name: name, phone: tel }) !== true) {
+      const error: string[] = verifForm({ name, phone: tel }) as string[];
+      if (error.length >= 2) {
+        generateToast("Plusieurs champs sont incorrect.");
+      } else {
+        generateToast(`Le champs "${translate[error[0]]}" est incorrect.`);
+      }
+    }
+  }
 
   return (
     <section id="contact">
@@ -38,7 +60,7 @@ const Contact: React.FC = () => {
             <Button
               value="Envoyer"
               className="contact-button"
-              onClick={() => verifForm({ name, phone: tel })}
+              onClick={() => verif()}
             />
           </div>
         </div>
