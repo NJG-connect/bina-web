@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
 export function isText(name: string) {
-  if (name.trim() !== "") return true;
+  if (name.trim() !== "" && !name.match(/[0-9]/gm)) return true;
 }
 
 export function isTel(tel: string) {
