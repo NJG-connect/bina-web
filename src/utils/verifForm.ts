@@ -25,7 +25,16 @@ interface field {
   [key: string]: any;
 }
 
-const valueWithCheck: any = {
+interface vc {
+  corporation?: (name: string) => void;
+  name?: (name: string) => void;
+  mail?: (mail: string) => void;
+  postal?: (postal: number) => void;
+  phone?: (phone: string) => void;
+  [key: string]: any;
+}
+
+const valueWithCheck: vc = {
   corporation: isText,
   name: isText,
   mail: isEmail,
