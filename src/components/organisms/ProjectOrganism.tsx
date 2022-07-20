@@ -4,7 +4,7 @@ import { Data, clientInfo } from "../../types/Data";
 import { ChooseClient, ClientInfo } from "../section";
 
 interface Props {
-  goHome: any;
+  goHome: () => void;
 }
 
 const ProjectOrganism: React.FC<Props> = ({ goHome }) => {

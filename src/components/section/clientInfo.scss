@@ -82,3 +82,66 @@
     }
   }
 }
+
+@media only screen and (max-width: 880px) {
+  #clientInfo {
+    .left-img {
+      display: none;
+    }
+
+    .right-container {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #clientInfo {
+    .right-container {
+      .top .back-button {
+        width: 30px;
+        height: 30px;
+      }
+
+      .bottom {
+        justify-content: flex-end;
+        .progress-container {
+          position: relative;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #clientInfo {
+    .right-container {
+      .top {
+        justify-content: space-around;
+        .logo {
+          width: 200px;
+          height: 50px;
+        }
+
+        .back-button {
+          position: relative;
+        }
+      }
+
+      .bottom {
+        @include variables.dcc(column);
+        .submit-button .img {
+          width: 30px;
+          height: 30px;
+        }
+
+        .progress-container {
+          width: 200px;
+          margin-top: 2rem;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}

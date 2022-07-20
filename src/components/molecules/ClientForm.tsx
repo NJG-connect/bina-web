@@ -13,41 +13,43 @@ interface Props {
 const ClientForm: React.FC<Props> = ({ client, update }) => {
   return (
     <div className="client-form-container">
-      {client === "professional" && (
+      <div className="container">
+        {client === "professional" && (
+          <Input
+            type="text"
+            label="Votre entreprise (raison sociale)"
+            onChange={(value) => update("corporation", value)}
+          />
+        )}
+        {client === "personal" ? (
+          <Input
+            type="text"
+            label="Nom"
+            onChange={(value) => update("name", value)}
+          />
+        ) : (
+          <Input
+            type="text"
+            label="Nom du dirigeant"
+            onChange={(value) => update("name", value)}
+          />
+        )}
+        <Input
+          type="email"
+          label="Adresse mail"
+          onChange={(value) => update("mail", value)}
+        />
         <Input
           type="text"
-          label="Votre entreprise (raison sociale)"
-          onChange={(value) => update("corporation", value)}
+          label="Code postal"
+          onChange={(value) => update("postal", parseInt(value))}
         />
-      )}
-      {client === "personal" ? (
         <Input
-          type="text"
-          label="Nom"
-          onChange={(value) => update("name", value)}
+          type="tel"
+          label="Téléphone"
+          onChange={(value) => update("phone", value)}
         />
-      ) : (
-        <Input
-          type="text"
-          label="Nom du dirigeant"
-          onChange={(value) => update("name", value)}
-        />
-      )}
-      <Input
-        type="email"
-        label="Adresse mail"
-        onChange={(value) => update("mail", value)}
-      />
-      <Input
-        type="text"
-        label="Code postal"
-        onChange={(value) => update("postal", parseInt(value))}
-      />
-      <Input
-        type="tel"
-        label="Téléphone"
-        onChange={(value) => update("phone", value)}
-      />
+      </div>
     </div>
   );
 };

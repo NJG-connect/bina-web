@@ -6,7 +6,7 @@ import { Img, CardButton, ProgressBar } from "../atoms/";
 
 interface Props {
   onClick: (client: "personal" | "professional") => void;
-  home: any;
+  home: () => void;
 }
 
 const ChooseClient: React.FC<Props> = ({ onClick, home }) => {

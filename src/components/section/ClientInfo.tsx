@@ -11,7 +11,7 @@ interface Props {
   onSubmit: (info: clientInfo) => void;
   back: () => void;
   clientType: "personal" | "professional";
-  home: any;
+  home: () => void;
 }
 
 const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType, home }) => {

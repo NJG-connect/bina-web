@@ -3,7 +3,7 @@ import React from "react";
 import { ProjectOrganism } from "../organisms/";
 
 interface Props {
-  home: any;
+  home: () => void;
 }
 
 const ProjectContainer: React.FC<Props> = ({ home }) => {
