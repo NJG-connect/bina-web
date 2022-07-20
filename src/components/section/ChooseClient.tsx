@@ -6,13 +6,14 @@ import { Img, CardButton, ProgressBar } from "../atoms/";
 
 interface Props {
   onClick: (client: "personal" | "professional") => void;
+  home: () => void;
 }
 
-const ChooseClient: React.FC<Props> = ({ onClick }) => {
+const ChooseClient: React.FC<Props> = ({ onClick, home }) => {
   return (
     <section id="choose">
       <div className="left-container">
-        <div className="img"></div>
+        <div className="img" onClick={home}></div>
         <h3 id="project-screen1-title">{infoJson.screen1.title}</h3>
         <div className="button-container">
           <CardButton

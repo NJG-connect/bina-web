@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-import { Data } from "../../types/Data";
+import { Data, clientInfo } from "../../types/Data";
 import { ChooseClient, ClientInfo } from "../section";
 
-interface Props {}
+interface Props {
+  goHome: () => void;
+}
 
-const ProjectOrganism: React.FC<Props> = ({}) => {
+const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
   const [data, setData] = useState<Data>({
     step: "0",
   });
@@ -18,6 +20,14 @@ const ProjectOrganism: React.FC<Props> = ({}) => {
     });
   };
 
+  const setClientInfo: (ClientInfo: clientInfo) => void = (ClientInfo) => {
+    setData({
+      ...data,
+      step: "3",
+      clientInfo: ClientInfo,
+    });
+  };
+
   const goBack: () => void = () => {
     setData({
       ...data,
@@ -25,13 +35,18 @@ const ProjectOrganism: React.FC<Props> = ({}) => {
     });
   };
 
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
   switch (data.step) {
     case "2":
       return (
         <ClientInfo
-          onSubmit={(info) => console.log(info)}
+          onSubmit={(info) => setClientInfo(info)}
           back={() => goBack()}
           clientType={data.client!}
+          home={goHome}
         />
       );
     case "3":
@@ -41,7 +56,9 @@ const ProjectOrganism: React.FC<Props> = ({}) => {
     case "5":
       return <h1>Étape 5</h1>;
     default:
-      return <ChooseClient onClick={(client) => setClient(client)} />;
+      return (
+        <ChooseClient onClick={(client) => setClient(client)} home={goHome} />
+      );
   }
 };
 

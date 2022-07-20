@@ -2,8 +2,12 @@ import React from "react";
 
 import { ProjectOrganism } from "../organisms/";
 
-const ProjectContainer: React.FC = () => {
-  return <ProjectOrganism />;
+interface Props {
+  home: () => void;
+}
+
+const ProjectContainer: React.FC<Props> = ({ home }) => {
+  return <ProjectOrganism goHome={home} />;
 };
 
 export default ProjectContainer;

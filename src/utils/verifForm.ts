@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
 export function isText(name: string) {
-  if (name.trim() !== "") return true;
+  if (name.trim() !== "" && !name.match(/[0-9]/gm)) return true;
 }
 
 export function isTel(tel: string) {
@@ -25,7 +25,16 @@ interface field {
   [key: string]: any;
 }
 
-const valueWithCheck: any = {
+interface vc {
+  corporation?: (name: string) => void;
+  name?: (name: string) => void;
+  mail?: (mail: string) => void;
+  postal?: (postal: number) => void;
+  phone?: (phone: string) => void;
+  [key: string]: any;
+}
+
+const valueWithCheck: vc = {
   corporation: isText,
   name: isText,
   mail: isEmail,
@@ -34,18 +43,22 @@ const valueWithCheck: any = {
 };
 
 export function verifForm(field: field) {
+  let result = true;
   Object.keys(field).forEach((elm: string) => {
     if (!valueWithCheck[elm](field[elm])) {
-      generateToast("Error");
-      return false;
+      result = false;
     }
   });
-  return true;
+  if (result) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 type position = "top-right" | "top-left" | "bottom-right" | "bottom-left";
 
-function generateToast(text: string, position: position = "top-right") {
+export function generateToast(text: string, position: position = "top-right") {
   toast.error(text, {
     position: position,
     autoClose: 5000,
