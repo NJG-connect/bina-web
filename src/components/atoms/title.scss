@@ -17,8 +17,7 @@
     &::after {
       content: "";
       position: absolute;
-      width: 150px;
-      height: 4px;
+      @include variables.wh(150px, 4px);
       background-color: variables.$primary-color;
       border-radius: 5px;
       top: 50%;

@@ -1,5 +1,4 @@
 import React from "react";
-import { useRef } from "react";
 
 import "./header.scss";
 import infoJson from "../../data/data.json";

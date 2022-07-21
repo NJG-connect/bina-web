@@ -30,7 +30,7 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav>
+    <nav id="home-nav">
       <div className="bina-logo" onClick={scrollToHeader}></div>
 
       <div className={`right ${isColumn && "show slide-in"}`} ref={navElm}>

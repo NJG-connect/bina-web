@@ -1,7 +1,5 @@
 @use "../../utils/variables.scss";
 
 .Link {
-  color: variables.$secondary-color;
-  text-decoration: none;
-  @include variables.pointer();
+  @include variables.links(variables.$secondary-color);
 }

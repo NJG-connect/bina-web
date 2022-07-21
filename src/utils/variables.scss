@@ -78,3 +78,8 @@ $font: normal normal normal 52px/68px Lato;
   color: $color;
   @include pointer();
 }
+
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}

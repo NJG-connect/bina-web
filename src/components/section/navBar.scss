@@ -1,7 +1,7 @@
 @use "../../utils/variables.scss";
 
 //Basic style
-nav {
+#home-nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -29,7 +29,6 @@ nav {
     }
 
     .navigation a {
-      @include variables.links(variables.$secondary-color);
       position: relative;
       text-transform: uppercase;
       font-family: variables.$font;
@@ -90,7 +89,7 @@ nav {
 
 //Responsive
 @media only screen and (max-width: 1300px) {
-  nav {
+  #home-nav {
     .right {
       .navigation {
         width: 60%;
@@ -104,7 +103,7 @@ nav {
 }
 
 @media only screen and (max-width: 1100px) {
-  nav {
+  #home-nav {
     @include variables.dcc(row);
 
     .bina-logo {
@@ -167,7 +166,7 @@ nav {
 }
 
 @media only screen and (max-width: 800px) {
-  nav {
+  #home-nav {
     .show {
       width: 75%;
     }
@@ -179,7 +178,7 @@ nav {
 }
 
 @media only screen and (max-width: 400px) {
-  nav {
+  #home-nav {
     .show {
       width: 100%;
     }
