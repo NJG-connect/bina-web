@@ -10,8 +10,8 @@
     color: variables.$primary-color;
     position: relative;
     text-transform: uppercase;
-    font-family: variables.$font;
     font-weight: 400;
+    margin: 2rem 0;
 
     &::before,
     &::after {

@@ -2,8 +2,7 @@
 
 #contact {
   position: relative;
-  width: 100%;
-  height: calc(100vh - 9rem);
+  @include variables.wh(100%, calc(100vh - 5rem));
   padding: 2rem 0;
 
   .background {
@@ -12,11 +11,6 @@
     height: 100%;
     @include variables.dxc(row);
     @include variables.img(cover);
-  }
-
-  h3,
-  p {
-    margin: 0;
   }
 
   .main-container {
@@ -31,14 +25,12 @@
     h3 {
       color: variables.$primary-color;
       font-size: 30px;
-      font-family: variables.$font;
       margin-bottom: 3rem;
     }
 
     p {
       font-size: 20px;
       line-height: 1.7;
-      font-family: variables.$font;
       margin-bottom: 3rem;
     }
 
@@ -54,7 +46,7 @@
       }
 
       &:first-child {
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
       }
     }
   }

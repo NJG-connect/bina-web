@@ -3,6 +3,7 @@
 .progress-container {
   @include variables.wh(250px, 40px);
   @include variables.dcc(row);
+  box-sizing: content-box;
 
   .left {
     @include variables.wh(180px, 10px);
@@ -10,11 +11,13 @@
     border-radius: 50px;
     transform: translateX(20px);
     z-index: 0;
+    box-sizing: content-box;
 
     .progress {
       height: 100%;
       background-color: variables.$blue-color;
       border-radius: 4px;
+      box-sizing: content-box;
     }
   }
 
