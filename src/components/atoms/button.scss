@@ -1,40 +1,40 @@
-@use '../../utils/variables.scss';
+@use "../../utils/variables.scss";
 
 .button {
-    font-family: variables.$font;
-    text-transform: uppercase;
-    background-color: transparent;
-    font-weight: bold;
-    display: inline-block;
-    text-align: center;
+  font-family: variables.$font;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  @include variables.pointer();
 
-    &:hover {
-        cursor: pointer;
-        transition: all .3s ease;
-    }
+  &:hover {
+    transition: all 0.3s ease;
+  }
 }
 
 .nav-button {
-    font-size: 16px;
-    padding: 8px 15px;
-    color: variables.$white;
-    border: 3px solid variables.$white;
+  font-size: 16px;
+  padding: 8px 15px;
+  color: variables.$white;
+  border: 3px solid variables.$white;
 
-    &:hover {
-        color: variables.$blue;
-        background-color: variables.$white;
-    }
+  &:hover {
+    color: variables.$blue;
+    background-color: variables.$white;
+  }
 }
 
 .contact-button {
-    @include variables.dcc(row);
-    padding: 12px 0;
-    font-size: 29px;
-    background-color: variables.$blue;
-    color: variables.$white;
+  @include variables.dcc(row);
+  padding: 12px 0;
+  font-size: 29px;
+  background-color: variables.$blue;
+  color: variables.$white;
 
-    &:hover {
-        color: variables.$blue;
-        background-color: variables.$white;
-    }
+  &:hover {
+    color: variables.$blue;
+    background-color: variables.$white;
+  }
 }

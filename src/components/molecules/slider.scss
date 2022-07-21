@@ -11,10 +11,7 @@
     position: relative;
     font-size: 50px;
     font-weight: 300;
-
-    &:hover {
-      cursor: pointer;
-    }
+    @include variables.pointer();
   }
 
   h1:first-child {

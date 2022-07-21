@@ -15,10 +15,7 @@ nav {
     height: 50px;
     border: 2px solid red;
     margin-left: 5rem;
-
-    &:hover {
-      cursor: pointer;
-    }
+    @include variables.pointer();
   }
 
   .right {
@@ -61,10 +58,7 @@ nav {
     right: 5rem;
     width: 30px;
     height: 30px;
-
-    &:hover {
-      cursor: pointer;
-    }
+    @include variables.pointer();
 
     .img {
       @include variables.img();

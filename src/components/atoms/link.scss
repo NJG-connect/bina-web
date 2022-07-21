@@ -1,10 +1,7 @@
-@use '../../utils/variables.scss';
+@use "../../utils/variables.scss";
 
 .Link {
-    color: variables.$white;
-    text-decoration: none;
-
-    &:hover {
-        cursor: pointer;
-    }
+  color: variables.$white;
+  text-decoration: none;
+  @include variables.pointer();
 }
