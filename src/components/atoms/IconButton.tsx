@@ -4,17 +4,21 @@ import "./iconButton.scss";
 import { Img } from "./";
 
 interface style {
-  border: string;
-  background: string;
+  border?: string;
+  background?: string;
 }
 
 interface Props {
   img: string;
   onClick: () => void;
-  style: style;
+  style?: style;
 }
 
-const IconButton: React.FC<Props> = ({ img, onClick, style }) => {
+const IconButton: React.FC<Props> = ({
+  img,
+  onClick,
+  style = { border: "", background: "" },
+}) => {
   return (
     <div
       className="icon-button-container"

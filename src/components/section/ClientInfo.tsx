@@ -69,11 +69,7 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType, home }) => {
       <div className="right-container">
         <div className="top">
           <div className="back-button">
-            <IconButton
-              img="arrow.svg"
-              onClick={back}
-              style={{ border: "", background: "" }}
-            />
+            <IconButton img="arrow.svg" onClick={back} />
           </div>
           <div className="logo" onClick={home}></div>
         </div>
@@ -88,7 +84,7 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType, home }) => {
           <div className="submit-button">
             <IconButton
               img="arrow.svg"
-              style={{ border: "", background: "#62b2ab" }}
+              style={{ background: "#62b2ab" }}
               onClick={verif}
             />
           </div>
