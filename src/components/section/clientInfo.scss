@@ -19,9 +19,6 @@
 
       .back-button {
         position: absolute;
-        @include variables.wh(40px, 40px);
-        @include variables.pointer();
-        @include variables.dcc(row);
         left: 0;
         transform: rotate(180deg);
       }
@@ -44,19 +41,9 @@
       width: 80%;
       @include variables.dcc(row);
 
-      .submit-button {
-        padding: 10px;
-        background-color: variables.$blue-color;
-        border-radius: 50px;
-        @include variables.dcc(row);
-        @include variables.pointer();
-
-        .img {
-          @include variables.wh(40px, 40px);
-          transform: translateX(-5%);
-          filter: brightness(0) saturate(100%) invert(97%) sepia(1%)
-            saturate(202%) hue-rotate(35deg) brightness(117%) contrast(100%);
-        }
+      .submit-button .atom-img {
+        filter: brightness(0) saturate(100%) invert(97%) sepia(1%)
+          saturate(202%) hue-rotate(35deg) brightness(117%) contrast(100%);
       }
 
       .progress-container {

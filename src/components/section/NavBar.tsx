@@ -35,7 +35,13 @@ const NavBar: React.FC = () => {
 
       <div className={`right ${isColumn && "show slide-in"}`} ref={navElm}>
         {width <= 1100 && (
-          <IconButton img="close.png" onClick={onClose} className="icon" />
+          <div className="icon">
+            <IconButton
+              img="close.png"
+              onClick={onClose}
+              style={{ background: "", border: "" }}
+            />
+          </div>
         )}
 
         <div className="navigation">
@@ -56,16 +62,22 @@ const NavBar: React.FC = () => {
             className="nav-button"
             htmlId="navbar-button"
           />
-          <IconButton img="letter.png" onClick={() => scrollToContact()} />
+          <IconButton
+            img="letter.png"
+            onClick={() => scrollToContact()}
+            style={{ border: "#f1e8d6", background: "" }}
+          />
         </div>
       </div>
 
       {width <= 1100 && (
-        <IconButton
-          img="menu.png"
-          onClick={() => setIsColumn(!isColumn)}
-          className="icon"
-        />
+        <div className="icon">
+          <IconButton
+            img="menu.png"
+            onClick={() => setIsColumn(!isColumn)}
+            style={{ border: "", background: "" }}
+          />
+        </div>
       )}
     </nav>
   );

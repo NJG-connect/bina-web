@@ -53,12 +53,6 @@
   .icon {
     position: absolute;
     right: 5rem;
-    @include variables.wh(30px, 30px);
-    @include variables.pointer();
-
-    .img {
-      @include variables.wh(100%, 100%);
-    }
   }
 }
 
