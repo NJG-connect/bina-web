@@ -28,9 +28,8 @@
     }
   }
 
-  .icon {
+  .atom-input-icon {
     @include variables.wh(39px, 39px);
-    @include variables.img();
   }
 }
 

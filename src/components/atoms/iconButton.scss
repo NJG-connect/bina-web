@@ -5,10 +5,12 @@
   border: 3px solid variables.$secondary-color;
   border-radius: 50%;
   @include variables.dcc();
-  @include variables.pointer();
+}
 
-  .img {
-    @include variables.wh(22px, 22px);
-    @include variables.img();
-  }
+.pointer {
+  @include variables.pointer();
+}
+
+.icon-button-img {
+  @include variables.wh(22px, 22px);
 }

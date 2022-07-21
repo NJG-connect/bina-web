@@ -2,10 +2,9 @@
 
 .slider-container {
   position: relative;
-  height: 228px;
-  width: 100%;
-  background-color: variables.$white-color;
+  @include variables.wh(100%, 228px);
   @include variables.dcc(row);
+  background-color: variables.$white-color;
 
   h1 {
     position: relative;
@@ -24,9 +23,8 @@
 
   .slider {
     position: relative;
-    width: 100%;
+    @include variables.wh(100%, 100%);
     max-width: calc(360px + 12rem);
-    height: 100%;
     padding: auto 0;
     display: flex;
     overflow: scroll;
@@ -40,7 +38,6 @@
   .img {
     min-width: 90px;
     min-height: 90px;
-    @include variables.img(90%);
 
     &:not(:last-child) {
       margin-right: 4rem;

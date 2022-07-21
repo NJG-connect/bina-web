@@ -1,8 +1,7 @@
 @use "../../utils/variables.scss";
 
 #quote {
-  width: 100%;
-  height: auto;
+  @include variables.wh(100%, auto);
   @include variables.dcc(column);
   background-color: variables.$primary-color;
   color: variables.$secondary-color;

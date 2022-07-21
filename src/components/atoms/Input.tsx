@@ -27,7 +27,7 @@ const Input: React.FC<Props> = ({
         placeholder={placeholder}
         onChange={(e) => onChange(e.target.value)}
       />
-      {icon && <Img img={icon} className="icon" />}
+      {icon && <Img img={icon} className="atom-input-icon" />}
     </div>
   );
 };

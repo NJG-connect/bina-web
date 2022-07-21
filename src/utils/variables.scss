@@ -61,9 +61,8 @@ $font: normal normal normal 52px/68px Lato;
   align-items: $a;
 }
 
-@mixin img($size: 100%) {
+@mixin img() {
   background-position: center;
-  background-size: $size;
   background-repeat: no-repeat;
 }
 

@@ -1,10 +1,8 @@
 @use "../..//utils/variables.scss";
 
 #header {
-  width: 100%;
-  height: 100vh;
+  @include variables.wh(100%, 100vh);
   position: relative;
-  @include variables.img(cover);
   z-index: 0;
 
   h1 {

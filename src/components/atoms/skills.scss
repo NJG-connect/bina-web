@@ -12,6 +12,5 @@
 
   .img {
     @include variables.wh(35px, 35px);
-    @include variables.img(contain);
   }
 }

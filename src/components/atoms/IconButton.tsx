@@ -12,10 +12,10 @@ interface Props {
 const IconButton: React.FC<Props> = ({ img, onClick, className }) => {
   return (
     <div
-      className={className ? className : "icon-button-container"}
+      className={`${className ? className : "icon-button-container"} pointer`}
       onClick={onClick}
     >
-      <Img img={img} className="img" />
+      <Img img={img} className="icon-button-img" size="100%" />
     </div>
   );
 };

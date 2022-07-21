@@ -65,7 +65,7 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType, home }) => {
 
   return (
     <section id="clientInfo">
-      <Img img="choose.png" className="left-img" />
+      <Img img="choose.png" className="left-img" size="cover" />
       <div className="right-container">
         <div className="top">
           <IconButton img="arrow.svg" onClick={back} className="back-button" />

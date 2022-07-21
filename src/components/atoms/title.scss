@@ -1,6 +1,6 @@
 @use "../../utils/variables";
 
-.title {
+.atom-title {
   position: relative;
   @include variables.dcc(row);
   width: 100%;
@@ -35,7 +35,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .title h1 {
+  .atom-title h1 {
     font-size: 35px;
 
     &::after,
@@ -46,7 +46,7 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .title h1 {
+  .atom-title h1 {
     font-size: 28px;
 
     &::after,
@@ -57,8 +57,8 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .title h1 {
-    font-size: 25px;
+  .atom-title h1 {
+    font-size: 22px;
 
     &::after,
     &::before {

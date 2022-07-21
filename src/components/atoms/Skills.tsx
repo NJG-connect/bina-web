@@ -13,7 +13,7 @@ interface Props {
 const Skills: React.FC<Props> = ({ title, img, htmlIdImg, htmlIdText }) => {
   return (
     <div className="skills-item">
-      <Img img={img} className="img" htmlId={htmlIdImg} />
+      <Img img={img} className="img" htmlId={htmlIdImg} size="contain" />
       <h4 id={htmlIdText}>{title}</h4>
     </div>
   );

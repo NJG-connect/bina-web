@@ -2,8 +2,7 @@
 
 #footer {
   position: relative;
-  width: 100%;
-  height: auto;
+  @include variables.wh(100%, auto);
   @include variables.dcc(column);
   padding: 4rem 0 2rem 0;
   background-color: variables.$primary-color;
@@ -18,8 +17,7 @@
   }
 
   .top {
-    width: 80%;
-    height: 5rem;
+    @include variables.wh(80%, 5rem);
     @include variables.dbc(row);
 
     .left {
@@ -31,9 +29,7 @@
       }
 
       .img {
-        width: 20px;
-        height: 20px;
-        @include variables.img();
+        @include variables.wh(20px, 20px);
         margin-right: 10px;
       }
     }
