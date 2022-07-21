@@ -17,12 +17,12 @@
 .nav-button {
   font-size: 16px;
   padding: 8px 15px;
-  color: variables.$white;
-  border: 3px solid variables.$white;
+  color: variables.$secondary-color;
+  border: 3px solid variables.$secondary-color;
 
   &:hover {
-    color: variables.$blue;
-    background-color: variables.$white;
+    color: variables.$primary-color;
+    background-color: variables.$secondary-color;
   }
 }
 
@@ -30,11 +30,11 @@
   @include variables.dcc(row);
   padding: 12px 0;
   font-size: 29px;
-  background-color: variables.$blue;
-  color: variables.$white;
+  background-color: variables.$primary-color;
+  color: variables.$secondary-color;
 
   &:hover {
-    color: variables.$blue;
-    background-color: variables.$white;
+    color: variables.$primary-color;
+    background-color: variables.$secondary-color;
   }
 }

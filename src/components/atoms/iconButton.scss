@@ -3,7 +3,7 @@
 .icon-button-container {
   width: 40px;
   height: 40px;
-  border: 3px solid variables.$white;
+  border: 3px solid variables.$secondary-color;
   border-radius: 50%;
   @include variables.dcc();
   @include variables.pointer();

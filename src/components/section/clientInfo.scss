@@ -44,6 +44,12 @@
       }
     }
 
+    h3 {
+      color: variables.$gray-color;
+      font-size: 23px;
+      font-weight: 500;
+    }
+
     .bottom {
       position: relative;
       width: 80%;
@@ -51,7 +57,7 @@
 
       .submit-button {
         padding: 10px;
-        background-color: #62b2ab;
+        background-color: variables.$blue-color;
         border-radius: 50px;
         @include variables.dcc(row);
         @include variables.pointer();

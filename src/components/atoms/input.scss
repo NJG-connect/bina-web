@@ -7,7 +7,7 @@
 
   label {
     font-size: 20px;
-    color: variables.$gray;
+    color: variables.$gray-color;
     text-align: right;
     width: auto;
   }
@@ -21,7 +21,7 @@
     color: variables.$black-color;
 
     &::placeholder {
-      color: variables.$secondary-color;
+      color: variables.$gray-color;
     }
 
     &:focus {
@@ -37,7 +37,7 @@
 }
 
 .icon-mode {
-  border: 3px solid variables.$blue;
+  border: 3px solid variables.$primary-color;
   background-color: white;
 }
 

@@ -14,7 +14,7 @@
     .img-container {
       width: 50%;
       height: 70%;
-      background-color: variables.$blue;
+      background-color: variables.$primary-color;
       z-index: 0;
       @include variables.dcc();
 

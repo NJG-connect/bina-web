@@ -6,7 +6,7 @@ nav {
   top: 0;
   width: 100%;
   height: 5rem;
-  background-color: variables.$blue;
+  background-color: variables.$primary-color;
   @include variables.dxc(row);
   z-index: 99;
 
@@ -29,7 +29,7 @@ nav {
     }
 
     .navigation a {
-      @include variables.links(variables.$white);
+      @include variables.links(variables.$secondary-color);
       position: relative;
       text-transform: uppercase;
       font-family: variables.$font;
@@ -38,13 +38,14 @@ nav {
       padding: 7px 20px;
 
       &:hover {
-        text-shadow: 0 0 0.01px variables.$white, 0 0 0.01px variables.$white;
+        text-shadow: 0 0 0.01px variables.$secondary-color,
+          0 0 0.01px variables.$secondary-color;
       }
     }
 
     .navigation a:nth-child(2) {
-      border-left: 2px solid variables.$white;
-      border-right: 2px solid variables.$white;
+      border-left: 2px solid variables.$secondary-color;
+      border-right: 2px solid variables.$secondary-color;
     }
 
     .link {
@@ -123,7 +124,7 @@ nav {
       top: 0;
       right: 0;
       margin: 0;
-      background-color: variables.$blue;
+      background-color: variables.$primary-color;
       @include variables.dac(column);
       transform: translateX(100%);
 
