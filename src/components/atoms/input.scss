@@ -7,21 +7,20 @@
 
   label {
     font-size: 20px;
-    color: variables.$gray;
+    color: variables.$gray-color;
     text-align: right;
     width: auto;
   }
 
   input {
-    width: 90%;
+    @include variables.wh(90%, 100%);
     border: none;
-    height: 100%;
     font-size: 20px;
     padding: 5px 0 5px 6px;
     color: variables.$black-color;
 
     &::placeholder {
-      color: variables.$secondary-color;
+      color: variables.$gray-color;
     }
 
     &:focus {
@@ -29,15 +28,13 @@
     }
   }
 
-  .icon {
-    width: 39px;
-    height: 39px;
-    @include variables.img();
+  .atom-input-icon {
+    @include variables.wh(39px, 39px);
   }
 }
 
 .icon-mode {
-  border: 3px solid variables.$blue;
+  border: 3px solid variables.$primary-color;
   background-color: white;
 }
 
@@ -45,6 +42,19 @@
   width: 320px !important;
   border-bottom: 1.5px solid #707070 !important;
   margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 510px) {
+  .input-container {
+    input,
+    label {
+      font-size: 20px;
+    }
+
+    .input {
+      width: 200px !important;
+    }
+  }
 }
 
 @media only screen and (max-width: 480px) {

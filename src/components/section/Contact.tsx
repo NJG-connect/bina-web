@@ -37,6 +37,7 @@ const Contact: React.FC = () => {
         img="contact.png"
         className="background"
         htmlId="contact-background"
+        size="cover"
       >
         <div className="main-container">
           <h3 id="contact-title">{infoJson.Contact.title}</h3>

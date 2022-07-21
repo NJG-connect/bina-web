@@ -1,75 +1,84 @@
 /* Set All Style Variables Here */
 
-$black-color: #4F4F4F;
-$secondary-color: rgba(0, 0, 0, 0.37);
-$blue: #3A504E;
-$white: #F1E8D6;
-$gray: #707070;
-$green: #53a49b;
+$primary-color: #3a504e;
+$secondary-color: #f1e8d6;
+$white-color: #f3f3f3;
+$blue-color: #62b2ab;
+$black-color: #4f4f4f;
+$gray-color: #707070;
+$bg-contact: #ffffff93;
+$blue-shadow1: #62b2ab80;
+$blue-shadow2: #62b2abad;
 
 $header-size: 73px;
 $title-size: 52px;
 
-$font:  normal normal normal 52px/68px Lato;
-
+$font: normal normal normal 52px/68px Lato;
 
 /* Set all mixins Here */
 
 @mixin df($direction: row) {
-    display: flex;
-    flex-direction: $direction;
+  display: flex;
+  flex-direction: $direction;
 }
 
 @mixin dcc($direction: row) {
-    @include df($direction);
-    align-items: center;
-    justify-content: center;
-} 
+  @include df($direction);
+  align-items: center;
+  justify-content: center;
+}
 
 @mixin dbc($direction: row) {
-    @include df($direction);
-    justify-content: space-between;
-    align-items: center; 
+  @include df($direction);
+  justify-content: space-between;
+  align-items: center;
 }
 
 @mixin dac($direction: row) {
-    @include df($direction);
-    justify-content: space-around;
-    align-items: center;
+  @include df($direction);
+  justify-content: space-around;
+  align-items: center;
 }
 
 @mixin dxc($direction: row) {
-    @include df($direction);
-    align-items: center;
+  @include df($direction);
+  align-items: center;
 }
 
 @mixin dxs($direction: row) {
-    @include df($direction);
-    align-items: flex-start;
-} 
+  @include df($direction);
+  align-items: flex-start;
+}
 
 @mixin dxe($direction: row) {
-    @include df($direction);
-    align-items: flex-end;
+  @include df($direction);
+  align-items: flex-end;
 }
 
 @mixin dfp($direction: row, $j: start, $a: start) {
-    @include df($direction);
-    justify-content: $j;
-    align-items: $a;
+  @include df($direction);
+  justify-content: $j;
+  align-items: $a;
 }
 
-@mixin img($size: 100%) {
-    background-position: center;
-    background-size: $size;
-    background-repeat: no-repeat;
+@mixin img() {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin pointer() {
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 @mixin links($color) {
-    text-decoration: none;
-    color: $color;
-    
-    &:hover {
-        cursor: pointer;
-    }
+  text-decoration: none;
+  color: $color;
+  @include pointer();
+}
+
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
 }

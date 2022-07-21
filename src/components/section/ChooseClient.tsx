@@ -49,6 +49,7 @@ const ChooseClient: React.FC<Props> = ({ onClick, home }) => {
         img={infoJson.screen1.background}
         className="right-img"
         htmlId="project-screen1-bg"
+        size="cover"
       />
     </section>
   );

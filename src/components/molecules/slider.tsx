@@ -41,6 +41,7 @@ const Slider: React.FC<Props> = ({ images }) => {
             className="img"
             key={`slide-${elm}-${index}`}
             htmlId={`sponsor-img${elm}`}
+            size="90%"
           />
         ))}
       </div>

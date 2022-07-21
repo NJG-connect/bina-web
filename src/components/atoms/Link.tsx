@@ -24,7 +24,7 @@ const Link: React.FC<Props> = ({
     <a
       href={href}
       id={htmlId}
-      className={`Link ${className}`}
+      className={`atom-link ${className}`}
       onClick={() => link && navigate(link)}
     >
       {value}
