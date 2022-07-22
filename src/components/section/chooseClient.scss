@@ -25,32 +25,6 @@
     .button-container {
       width: 60%;
       @include variables.dac(row);
-
-      .card-button {
-        box-shadow: 0px 3px 6px variables.$blue-shadow1;
-        border-radius: 39px;
-        @include variables.wh(222px, 222px);
-        @include variables.dcc(column);
-        @include variables.pointer();
-
-        &:hover {
-          box-shadow: 0px 6px 10px variables.$blue-shadow2;
-        }
-
-        .button-img {
-          @include variables.wh(50px, 50px);
-          filter: brightness(0) saturate(100%) invert(68%) sepia(21%)
-            saturate(733%) hue-rotate(126deg) brightness(91%) contrast(84%);
-        }
-
-        p {
-          font-size: 20px;
-          text-transform: uppercase;
-          font-weight: 300;
-          margin-top: 3rem;
-          margin-bottom: 0;
-        }
-      }
     }
 
     .progress-container {
@@ -86,18 +60,6 @@
 @media only screen and (max-width: 580px) {
   #choose {
     .left-container {
-      .button-container .card-button {
-        @include variables.wh(170px, 160px);
-
-        .button-img {
-          @include variables.wh(40px, 40px);
-        }
-
-        p {
-          font-size: 18px;
-        }
-      }
-
       .progress-container {
         margin-right: 2rem;
       }

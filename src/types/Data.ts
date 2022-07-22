@@ -8,6 +8,7 @@ export interface Data {
     phone?: string;
     postal?: number;
   };
+  service?: services;
 }
 
 export interface clientInfo {
@@ -24,3 +25,5 @@ export type clientInfoKey =
   | "mail"
   | "postal"
   | "phone";
+
+export type services = "Hôtellerie / Restauration" | "Retail" | "Autre Projet";

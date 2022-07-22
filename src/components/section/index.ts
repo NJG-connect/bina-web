@@ -7,6 +7,7 @@ import Quote from "./Quote";
 import KnowHow from "./KnowHow";
 import ChooseClient from "./ChooseClient";
 import ClientInfo from "./ClientInfo";
+import Service from "./Service";
 
 export {
   NavBar,
@@ -18,4 +19,5 @@ export {
   KnowHow,
   ChooseClient,
   ClientInfo,
+  Service,
 };
