@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import { Data, clientInfo } from "../../types/Data";
-import { ChooseClient, ClientInfo } from "../section";
+import { Data, clientInfo, services } from "../../types/Data";
+import { ChooseClient, ClientInfo, Service } from "../section";
 
 interface Props {
   goHome: () => void;
@@ -28,6 +28,14 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
     });
   };
 
+  const setService: (service: services) => void = (service) => {
+    setData({
+      ...data,
+      step: "4",
+      service: service,
+    });
+  };
+
   const goBack: () => void = () => {
     setData({
       ...data,
@@ -50,7 +58,7 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
         />
       );
     case "3":
-      return <h1>Étape 3</h1>;
+      return <Service />;
     case "4":
       return <h1>Étape 4</h1>;
     case "5":
