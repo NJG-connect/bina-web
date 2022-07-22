@@ -4,4 +4,46 @@
   position: relative;
   @include variables.wh(100%, 100vh);
   @include variables.dcc(row);
+
+  .left {
+    @include variables.wh(70%, 100%);
+    @include variables.dac(column);
+
+    .top {
+      position: relative;
+      @include variables.dcc(row);
+      width: 80%;
+
+      .arrow {
+        position: absolute;
+        left: 0;
+        transform: rotate(180deg);
+      }
+
+      .bina-logo {
+        @include variables.wh(250px, 80px);
+        border: 2px solid red;
+      }
+    }
+
+    h3 {
+      color: variables.$gray-color;
+      font-size: 23px;
+      font-weight: 500;
+    }
+
+    .card-button-container {
+      width: 80%;
+      @include variables.dbc(row);
+    }
+
+    .bottom {
+      width: 80%;
+      @include variables.dfp(row, flex-end, center);
+    }
+  }
+
+  .right {
+    @include variables.wh(30%, 100%);
+  }
 }
