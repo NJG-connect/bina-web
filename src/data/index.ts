@@ -441,7 +441,7 @@ const data: CmsPropsType = {
             },
             {
               type: "object",
-              id: "card1",
+              id: "card2",
               title: "Boutton Centrale",
               fields: [
                 {
@@ -461,7 +461,7 @@ const data: CmsPropsType = {
             },
             {
               type: "object",
-              id: "card2",
+              id: "card3",
               title: "Boutton Droite",
               fields: [
                 {

@@ -33,7 +33,7 @@ export const Service: React.FC<Props> = ({ back, onClick }) => {
             onClick={() => onClick("Retail")}
             img={infoJson.screen3.card2.icon}
             text={infoJson.screen3.card2.text}
-            htmlId="project-screen3-card3"
+            htmlId="project-screen3-card2"
           />
           <ProjectButton
             onClick={() => onClick("Autre Projet")}
