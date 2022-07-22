@@ -26,20 +26,20 @@ export const Service: React.FC<Props> = ({ back, onClick }) => {
           <ProjectButton
             onClick={() => onClick("Hôtellerie / Restauration")}
             img={infoJson.screen3.card1.icon}
-            text="Hotellerie / restauration"
-            htmlId={infoJson.screen3.card1.text}
+            text={infoJson.screen3.card1.text}
+            htmlId="project-screen3-card1"
           />
           <ProjectButton
             onClick={() => onClick("Retail")}
             img={infoJson.screen3.card2.icon}
-            text="Retail"
-            htmlId={infoJson.screen3.card2.text}
+            text={infoJson.screen3.card2.text}
+            htmlId="project-screen3-card3"
           />
           <ProjectButton
             onClick={() => onClick("Autre Projet")}
             img={infoJson.screen3.card3.icon}
             text={infoJson.screen3.card3.text}
-            htmlId="project-screen2-card3"
+            htmlId="project-screen3-card3"
           />
         </div>
         <div className="bottom">
@@ -50,7 +50,7 @@ export const Service: React.FC<Props> = ({ back, onClick }) => {
         img="choose.png"
         className="right"
         size="cover"
-        htmlId="project-screen2-bg"
+        htmlId="project-screen3-bg"
       />
     </section>
   );

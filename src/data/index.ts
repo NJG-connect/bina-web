@@ -2,7 +2,7 @@ import { CmsPropsType } from "lyatom-cms";
 
 const data: CmsPropsType = {
   //Master
-  branch: "dev-project", // Switch Branch to main for production
+  branch: "dev", // Switch Branch to main for production
   repo: "NJG-connect/bina-web",
   urlForLogin: "admin",
   mediaFolder: "/src/assets/images",
@@ -390,7 +390,7 @@ const data: CmsPropsType = {
         {
           type: "object",
           id: "screen2",
-          title: "Clientèle",
+          title: "Information client",
           fields: [
             {
               type: "input",
@@ -408,11 +408,10 @@ const data: CmsPropsType = {
           ],
         },
         //Screen 3 (=> Service)
-        //Screen 1 (=> Type of client)
         {
           type: "object",
-          id: "screen1",
-          title: "Clientèle",
+          id: "screen3",
+          title: "Service",
           fields: [
             {
               type: "input",
