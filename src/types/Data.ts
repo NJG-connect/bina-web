@@ -26,4 +26,4 @@ export type clientInfoKey =
   | "postal"
   | "phone";
 
-export type services = "Hôtellerie / Restauration" | "Reatil" | "Autre Projet";
+export type services = "Hôtellerie / Restauration" | "Retail" | "Autre Projet";

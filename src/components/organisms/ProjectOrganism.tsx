@@ -58,9 +58,14 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
         />
       );
     case "3":
-      return <Service />;
+      return (
+        <Service
+          back={() => goBack()}
+          onClick={(service: services) => setService(service)}
+        />
+      );
     case "4":
-      return <h1>Étape 4</h1>;
+      return <h1>Étape 4 {data.service}</h1>;
     case "5":
       return <h1>Étape 5</h1>;
     default:
