@@ -15,7 +15,7 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
   const setClient: (client: "personal" | "professional") => void = (client) => {
     setData({
       ...data,
-      step: "3",
+      step: "2",
       client,
     });
   };
@@ -62,6 +62,7 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
         <Service
           back={() => goBack()}
           onClick={(service: services) => setService(service)}
+          home={goHome}
         />
       );
     case "4":

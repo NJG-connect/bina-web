@@ -9,9 +9,10 @@ import { ProjectButton } from "../molecules";
 interface Props {
   back: () => void;
   onClick: (service: services) => void;
+  home: () => void;
 }
 
-export const Service: React.FC<Props> = ({ back, onClick }) => {
+export const Service: React.FC<Props> = ({ back, onClick, home }) => {
   return (
     <section id="service">
       <div className="left">
@@ -19,7 +20,7 @@ export const Service: React.FC<Props> = ({ back, onClick }) => {
           <div className="arrow">
             <IconButton img="arrow.svg" onClick={back} />
           </div>
-          <div className="bina-logo"></div>
+          <div className="bina-logo" onClick={home}></div>
         </div>
         <h3 id="project-screen3-title">{infoJson.screen3.title}</h3>
         <div className="card-button-container">
