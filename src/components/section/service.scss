@@ -22,6 +22,7 @@
 
       .bina-logo {
         @include variables.wh(250px, 80px);
+        @include variables.pointer();
         border: 2px solid red;
       }
     }
