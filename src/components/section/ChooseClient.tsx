@@ -21,11 +21,13 @@ const ChooseClient: React.FC<Props> = ({ onClick, home }) => {
             onClick={(client) => onClick("professional")}
             img={infoJson.screen1.card1.icon}
             text={infoJson.screen1.card1.text}
+            htmlId="project-screen1-card1"
           />
           <ProjectButton
             onClick={(client) => onClick("personal")}
             img={infoJson.screen1.card2.icon}
             text={infoJson.screen1.card2.text}
+            htmlId="project-screen1-card2"
           />
         </div>
         <ProgressBar step={1} />

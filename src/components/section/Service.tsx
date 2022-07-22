@@ -21,29 +21,37 @@ export const Service: React.FC<Props> = ({ back, onClick }) => {
           </div>
           <div className="bina-logo"></div>
         </div>
-        <h3>Dans quel domaine d'activité êtes-vous ?</h3>
+        <h3 id="project-screen3-title">{infoJson.screen3.title}</h3>
         <div className="card-button-container">
           <ProjectButton
             onClick={() => onClick("Hôtellerie / Restauration")}
-            img="key.svg"
+            img={infoJson.screen3.card1.icon}
             text="Hotellerie / restauration"
+            htmlId={infoJson.screen3.card1.text}
           />
           <ProjectButton
             onClick={() => onClick("Retail")}
-            img="key.svg"
+            img={infoJson.screen3.card2.icon}
             text="Retail"
+            htmlId={infoJson.screen3.card2.text}
           />
           <ProjectButton
             onClick={() => onClick("Autre Projet")}
-            img="key.svg"
-            text="Autre project"
+            img={infoJson.screen3.card3.icon}
+            text={infoJson.screen3.card3.text}
+            htmlId="project-screen2-card3"
           />
         </div>
         <div className="bottom">
           <ProgressBar step={3} />
         </div>
       </div>
-      <Img img="choose.png" className="right" size="cover" />
+      <Img
+        img="choose.png"
+        className="right"
+        size="cover"
+        htmlId="project-screen2-bg"
+      />
     </section>
   );
 };

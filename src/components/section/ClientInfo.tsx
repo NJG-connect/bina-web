@@ -65,7 +65,12 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType, home }) => {
 
   return (
     <section id="clientInfo">
-      <Img img="choose.png" className="left-img" size="cover" />
+      <Img
+        img={infoJson.screen2.background}
+        className="left-img"
+        size="cover"
+        htmlId="project-screen2-bg"
+      />
       <div className="right-container">
         <div className="top">
           <div className="back-button">
@@ -73,7 +78,7 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType, home }) => {
           </div>
           <div className="logo" onClick={home}></div>
         </div>
-        <h3>Parlez nous de vous:</h3>
+        <h3 id="project-screen2-title">{infoJson.screen2.title}</h3>
         <ClientForm
           client={clientType}
           update={(key: clientInfoKey, value: string | number) =>

@@ -10,5 +10,25 @@
       "icon": "key.svg",
       "text": "Particuliers"
     }
+  },
+  "screen2": {
+    "background": "choose.png",
+    "title": "Parlez nous de vous:"
+  },
+  "screen3": {
+    "background": "choose.png",
+    "title": "Dans quel domaine d'activité êtes-vous ?",
+    "card1": {
+      "icon": "key.svg",
+      "text": "Hôtellerie / Restaurant"
+    },
+    "card2": {
+      "icon": "key.svg",
+      "text": "Retail"
+    },
+    "card3": {
+      "icon": "key.svg",
+      "text": "Autre Projet"
+    }
   }
 }

@@ -69,10 +69,6 @@
 @media only screen and (max-width: 600px) {
   #clientInfo {
     .right-container {
-      .top .back-button {
-        @include variables.wh(30px, 30px);
-      }
-
       .bottom {
         justify-content: flex-end;
         .progress-container {
@@ -88,13 +84,10 @@
   #clientInfo {
     .right-container {
       .top {
-        justify-content: space-around;
+        width: 95%;
+
         .logo {
           @include variables.wh(200px, 50px);
-        }
-
-        .back-button {
-          position: relative;
         }
       }
 

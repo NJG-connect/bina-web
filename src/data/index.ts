@@ -325,6 +325,7 @@ const data: CmsPropsType = {
       title: "Projet",
       file: "/src/data/dataProject.json",
       fields: [
+        //Screen 1 (=> Type of client)
         {
           type: "object",
           id: "screen1",
@@ -382,6 +383,109 @@ const data: CmsPropsType = {
               mediaFolder: "src/assets/images",
               id: "icon",
               htmlId: "project-screen1-bg",
+            },
+          ],
+        },
+        //Screen 2 (=> Client info)
+        {
+          type: "object",
+          id: "screen2",
+          title: "Clientèle",
+          fields: [
+            {
+              type: "input",
+              title: "Titre",
+              id: "title",
+              htmlId: "project-screen2-title",
+            },
+            {
+              type: "image",
+              title: "Image de fond",
+              mediaFolder: "src/assets/images",
+              id: "icon",
+              htmlId: "project-screen2-bg",
+            },
+          ],
+        },
+        //Screen 3 (=> Service)
+        //Screen 1 (=> Type of client)
+        {
+          type: "object",
+          id: "screen1",
+          title: "Clientèle",
+          fields: [
+            {
+              type: "input",
+              title: "Titre",
+              id: "title",
+              htmlId: "project-screen3-title",
+            },
+            {
+              type: "object",
+              id: "card1",
+              title: "Boutton Gauche",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "text",
+                  htmlId: "project-screen3-card1-title",
+                },
+                {
+                  type: "image",
+                  title: "Icone",
+                  mediaFolder: "src/assets/images",
+                  id: "icon",
+                  htmlId: "project-screen3-card1-img",
+                },
+              ],
+            },
+            {
+              type: "object",
+              id: "card1",
+              title: "Boutton Centrale",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "text",
+                  htmlId: "project-screen3-card2-title",
+                },
+                {
+                  type: "image",
+                  title: "Icone",
+                  mediaFolder: "src/assets/images",
+                  id: "icon",
+                  htmlId: "project-screen3-card2-img",
+                },
+              ],
+            },
+            {
+              type: "object",
+              id: "card2",
+              title: "Boutton Droite",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "text",
+                  htmlId: "project-screen3-card3-title",
+                },
+                {
+                  type: "image",
+                  title: "Icone",
+                  mediaFolder: "src/assets/images",
+                  id: "icon",
+                  htmlId: "project-screen3-card3-img",
+                },
+              ],
+            },
+            {
+              type: "image",
+              title: "Image de fond",
+              mediaFolder: "src/assets/images",
+              id: "icon",
+              htmlId: "project-screen3-bg",
             },
           ],
         },

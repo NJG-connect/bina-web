@@ -7,20 +7,22 @@ interface Props {
   onClick: (client: "personal" | "professional") => void;
   img: string;
   text: string;
+  htmlId?: string;
 }
 
-const ProjectButton: React.FC<Props> = ({ onClick, img, text }) => {
+const ProjectButton: React.FC<Props> = ({
+  onClick,
+  img,
+  text,
+  htmlId = "",
+}) => {
   return (
     <CardButton
       onClick={() => onClick("professional")}
       className="project-card-button"
     >
-      <Img
-        img={img}
-        className="button-img"
-        htmlId="project-screen1-card1-img"
-      />
-      <p id="project-screen1-card1-title">{text}</p>
+      <Img img={img} className="button-img" htmlId={`${htmlId}-img`} />
+      <p id={`${htmlId}-title`}>{text}</p>
     </CardButton>
   );
 };
