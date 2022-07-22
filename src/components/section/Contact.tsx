@@ -21,8 +21,8 @@ const Contact: React.FC = () => {
   };
 
   function verif() {
-    if (verifForm({ name: name, phone: tel }) !== true) {
-      const error: string[] = verifForm({ name, phone: tel }) as string[];
+    if (verifForm({ name: name, phone: tel }).success !== true) {
+      const { error } = verifForm({ name, phone: tel });
       if (error.length >= 2) {
         generateToast("Plusieurs champs sont incorrect.");
       } else {

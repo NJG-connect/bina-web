@@ -1,5 +1,4 @@
 import React from "react";
-import { Navigate, useNavigate } from "react-router";
 
 import "./link.scss";
 
@@ -15,18 +14,10 @@ const Link: React.FC<Props> = ({
   value,
   href,
   className = "",
-  link,
   htmlId = "",
 }) => {
-  const navigate = useNavigate();
-
   return (
-    <a
-      href={href}
-      id={htmlId}
-      className={`atom-link ${className}`}
-      onClick={() => link && navigate(link)}
-    >
+    <a href={href} id={htmlId} className={`atom-link ${className}`}>
       {value}
     </a>
   );

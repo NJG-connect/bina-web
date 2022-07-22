@@ -13,7 +13,7 @@ export function isTel(tel: string) {
 }
 
 export function isPostal(postal: number) {
-  if (String(postal).length === 5 && String(postal) != "00000") return true;
+  if (String(postal).length === 5 && String(postal) !== "00000") return true;
 }
 
 export function isEmail(email: string) {
@@ -53,20 +53,13 @@ export function verifForm(field: field) {
   let error: string[] = [];
 
   Object.keys(field).forEach((elm: string) => {
-    if (
-      field.elm == "" || // !field.elm ??????
-      !valueWithCheck[elm](field[elm])
-    ) {
+    if (!!field.elm || !valueWithCheck[elm](field[elm])) {
       result = false;
       error.push(elm);
     }
   });
 
-  if (result) {
-    return true;
-  } else {
-    return error;
-  }
+  return { success: result, error };
 }
 
 type position = "top-right" | "top-left" | "bottom-right" | "bottom-left";

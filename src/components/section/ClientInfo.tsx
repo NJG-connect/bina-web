@@ -35,26 +35,13 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType, home }) => {
   };
 
   function verif() {
-    //Basic fields
-    const field: clientInfo = {
-      name: clientInfo.name,
-      mail: clientInfo.mail,
-      postal: clientInfo.postal,
-      phone: clientInfo.phone,
-    };
-
-    //Additionnal field
-    if (clientType === "professional") {
-      field.corporation = clientInfo.corporation;
-    }
-
     //Test if form is valid
-    if (verifForm(field) === true) {
+    if (verifForm(clientInfo).success === true) {
       //Submit result
       onSubmit(clientInfo);
     } else {
       //Send Error
-      const error: string[] = verifForm(field) as string[];
+      const { error } = verifForm(clientInfo);
       if (error.length >= 2) {
         generateToast("Plusieurs champs sont incorrect.");
       } else {
