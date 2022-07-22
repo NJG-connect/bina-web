@@ -15,7 +15,7 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
   const setClient: (client: "personal" | "professional") => void = (client) => {
     setData({
       ...data,
-      step: "2",
+      step: "3",
       client,
     });
   };

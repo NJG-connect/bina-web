@@ -1,0 +1,7 @@
+@use "../../utils/variables.scss";
+
+#service {
+  position: relative;
+  @include variables.wh(100%, 100vh);
+  @include variables.dcc(row);
+}

@@ -6,7 +6,11 @@ import { ImgTemplate, Skills as Skill } from "../atoms";
 
 export default function Skills() {
   return (
-    <ImgTemplate img={infoJson.knowhow.skills.img} htmlId="skills">
+    <ImgTemplate
+      img={infoJson.knowhow.skills.img}
+      htmlId="skills"
+      size="1650px auto"
+    >
       <div className="content">
         {infoJson.knowhow.skills.skill.map((elm, index) => (
           <Skill

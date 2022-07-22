@@ -65,10 +65,12 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType, home }) => {
 
   return (
     <section id="clientInfo">
-      <Img img="choose.png" className="left-img" />
+      <Img img="choose.png" className="left-img" size="cover" />
       <div className="right-container">
         <div className="top">
-          <IconButton img="arrow.svg" onClick={back} className="back-button" />
+          <div className="back-button">
+            <IconButton img="arrow.svg" onClick={back} />
+          </div>
           <div className="logo" onClick={home}></div>
         </div>
         <h3>Parlez nous de vous:</h3>
@@ -79,11 +81,13 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType, home }) => {
           }
         />
         <div className="bottom">
-          <IconButton
-            img="arrow.svg"
-            className="submit-button"
-            onClick={verif}
-          />
+          <div className="submit-button">
+            <IconButton
+              img="arrow.svg"
+              style={{ background: "#62b2ab" }}
+              onClick={verif}
+            />
+          </div>
           <ProgressBar step={2} />
         </div>
       </div>

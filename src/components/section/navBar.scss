@@ -1,24 +1,19 @@
 @use "../../utils/variables.scss";
 
 //Basic style
-nav {
+#home-nav {
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 5rem;
-  background-color: variables.$blue;
+  background-color: variables.$primary-color;
+  @include variables.wh(100%, 5rem);
   @include variables.dxc(row);
   z-index: 99;
 
   .bina-logo {
-    width: 150px;
-    height: 50px;
+    @include variables.wh(150px, 50px);
+    @include variables.pointer();
     border: 2px solid red;
     margin-left: 5rem;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 
   .right {
@@ -32,22 +27,21 @@ nav {
     }
 
     .navigation a {
-      @include variables.links(variables.$white);
       position: relative;
       text-transform: uppercase;
-      font-family: variables.$font;
       font-size: 16px;
       text-align: center;
       padding: 7px 20px;
 
       &:hover {
-        text-shadow: 0 0 0.01px variables.$white, 0 0 0.01px variables.$white;
+        text-shadow: 0 0 0.01px variables.$secondary-color,
+          0 0 0.01px variables.$secondary-color;
       }
     }
 
     .navigation a:nth-child(2) {
-      border-left: 2px solid variables.$white;
-      border-right: 2px solid variables.$white;
+      border-left: 2px solid variables.$secondary-color;
+      border-right: 2px solid variables.$secondary-color;
     }
 
     .link {
@@ -59,18 +53,6 @@ nav {
   .icon {
     position: absolute;
     right: 5rem;
-    width: 30px;
-    height: 30px;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    .img {
-      @include variables.img();
-      width: 100%;
-      height: 100%;
-    }
   }
 }
 
@@ -95,7 +77,7 @@ nav {
 
 //Responsive
 @media only screen and (max-width: 1300px) {
-  nav {
+  #home-nav {
     .right {
       .navigation {
         width: 60%;
@@ -109,7 +91,7 @@ nav {
 }
 
 @media only screen and (max-width: 1100px) {
-  nav {
+  #home-nav {
     @include variables.dcc(row);
 
     .bina-logo {
@@ -124,12 +106,11 @@ nav {
     .show {
       position: fixed;
       z-index: 100;
-      width: 50%;
-      height: 100vh;
+      @include variables.wh(50%, 100vh);
       top: 0;
       right: 0;
       margin: 0;
-      background-color: variables.$blue;
+      background-color: variables.$primary-color;
       @include variables.dac(column);
       transform: translateX(100%);
 
@@ -172,7 +153,7 @@ nav {
 }
 
 @media only screen and (max-width: 800px) {
-  nav {
+  #home-nav {
     .show {
       width: 75%;
     }
@@ -184,7 +165,7 @@ nav {
 }
 
 @media only screen and (max-width: 400px) {
-  nav {
+  #home-nav {
     .show {
       width: 100%;
     }

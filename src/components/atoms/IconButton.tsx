@@ -3,19 +3,36 @@ import React from "react";
 import "./iconButton.scss";
 import { Img } from "./";
 
+interface style {
+  border?: string;
+  background?: string;
+}
+
 interface Props {
   img: string;
   onClick: () => void;
-  className?: string;
+  style?: style;
 }
 
-const IconButton: React.FC<Props> = ({ img, onClick, className }) => {
+const IconButton: React.FC<Props> = ({
+  img,
+  onClick,
+  style = { border: "", background: "" },
+}) => {
   return (
     <div
-      className={className ? className : "icon-button-container"}
+      className="icon-button-container"
       onClick={onClick}
+      style={{
+        border: `3px solid ${
+          style.border != "" ? style.border : "transparent"
+        }`,
+        backgroundColor: `${
+          style.background !== "" ? style.background : "transparent"
+        }`,
+      }}
     >
-      <Img img={img} className="img" />
+      <Img img={img} className="icon-button-img" size="100%" />
     </div>
   );
 };
