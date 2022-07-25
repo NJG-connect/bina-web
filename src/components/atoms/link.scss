@@ -1,5 +1,5 @@
 @use "../../utils/variables.scss";
 
 .atom-link {
-  @include variables.links(variables.$secondary-color);
+  @include variables.links(black);
 }

@@ -61,7 +61,7 @@ const NavBar: React.FC = () => {
           <IconButton
             img="letter.png"
             onClick={() => scrollToContact()}
-            style={{ border: "#f1e8d6" }}
+            style={{ border: "black" }}
           />
         </div>
       </div>
