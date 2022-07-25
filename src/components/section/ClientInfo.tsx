@@ -71,6 +71,7 @@ const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType, home }) => {
           update={(key: clientInfoKey, value: string | number) =>
             setClientInfo({ ...clientInfo, [key]: value })
           }
+          value={clientInfo}
         />
         <div className="bottom">
           <div className="submit-button">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Data, clientInfo, services, mesure } from "../../types/Data";
 import { ChooseClient, ClientInfo, Service, Surface } from "../section";
@@ -11,6 +11,10 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
   const [data, setData] = useState<Data>({
     step: "0",
   });
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
 
   const setClient: (client: "personal" | "professional") => void = (client) => {
     setData({

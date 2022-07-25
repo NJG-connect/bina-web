@@ -28,6 +28,9 @@ const Contact: React.FC = () => {
       } else {
         generateToast(`Le champs "${translate[error[0]]}" est incorrect.`);
       }
+    } else {
+      setName("");
+      setTel("");
     }
   }
 
@@ -50,12 +53,14 @@ const Contact: React.FC = () => {
                 onChange={(value) => setName(value)}
                 placeholder="Nom Prénom"
                 icon="user.png"
+                value={name}
               />
               <Input
                 type="tel"
                 onChange={(value) => setTel(value)}
                 placeholder="Tél"
                 icon="phone.png"
+                value={tel}
               />
             </div>
             <Button
