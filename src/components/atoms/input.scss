@@ -38,7 +38,21 @@
   background-color: white;
 }
 
-.input {
+.input-number-mode {
+  width: 80% !important;
+  border: 1px solid variables.$blue-color !important;
+  text-align: center;
+}
+
+.input-atom-arrow-mode-arrow {
+  width: 10%;
+  border: 1px solid variables.$blue-color;
+  color: variables.$blue-color;
+  padding: 5px 0;
+  @include variables.dcc(row);
+}
+
+.input-label-mode {
   width: 320px !important;
   border-bottom: 1.5px solid #707070 !important;
   margin-left: 0.5rem;
@@ -51,7 +65,7 @@
       font-size: 20px;
     }
 
-    .input {
+    .input-label-mode {
       width: 200px !important;
     }
   }
@@ -64,7 +78,7 @@
       font-size: 16px;
     }
 
-    .input {
+    .input-label-mode {
       width: 150px !important;
     }
   }
