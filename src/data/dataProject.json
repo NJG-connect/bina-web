@@ -30,5 +30,10 @@
       "icon": "key.svg",
       "text": "Autre Projet"
     }
+  },
+  "screen4": {
+    "background": "choose.png",
+    "title1": "De quel surface",
+    "title2": "Pour combien de pièces ?"
   }
 }

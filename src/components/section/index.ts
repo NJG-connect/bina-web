@@ -8,6 +8,7 @@ import KnowHow from "./KnowHow";
 import ChooseClient from "./ChooseClient";
 import ClientInfo from "./ClientInfo";
 import Service from "./Service";
+import Surface from "./Surface";
 
 export {
   NavBar,
@@ -20,4 +21,5 @@ export {
   ChooseClient,
   ClientInfo,
   Service,
+  Surface,
 };

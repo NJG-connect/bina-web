@@ -9,6 +9,16 @@ export interface Data {
     postal?: number;
   };
   service?: services;
+  mesure?: {
+    surfaceTotal?: number;
+    room?: {
+      bedroom?: number;
+      kitchen?: number;
+      livingRoom?: number;
+      bathroom?: number;
+      other?: number;
+    };
+  };
 }
 
 export interface clientInfo {
@@ -17,6 +27,17 @@ export interface clientInfo {
   phone?: string;
   postal?: number;
   corporation?: string;
+}
+
+export interface mesure {
+  surfaceTotal?: number;
+  room?: {
+    bedroom?: number;
+    kitchen?: number;
+    livingRoom?: number;
+    bathroom?: number;
+    other?: number;
+  };
 }
 
 export type clientInfoKey =

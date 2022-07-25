@@ -1,6 +1,6 @@
 @use "../../utils/variables.scss";
 
-.input-container {
+.atom-input-container {
   position: relative;
   width: 100%;
   @include variables.dfp(row, flex-end, center);
@@ -38,34 +38,54 @@
   background-color: white;
 }
 
-.input {
+.input-number-mode {
+  width: 70% !important;
+  border-top: 1px solid variables.$blue-color !important;
+  border-bottom: 1px solid variables.$blue-color !important;
+  text-align: center;
+}
+
+.input-atom-arrow-mode-arrow {
+  @include variables.dcc(row);
+  @include variables.pointer();
+  width: 20%;
+  border: 1px solid variables.$blue-color;
+  color: variables.$blue-color;
+  padding: 5px 0;
+}
+
+.input-label-mode {
   width: 320px !important;
   border-bottom: 1.5px solid #707070 !important;
   margin-left: 0.5rem;
 }
 
 @media only screen and (max-width: 510px) {
-  .input-container {
+  .atom-input-container {
     input,
     label {
       font-size: 20px;
     }
 
-    .input {
+    .input-label-mode {
       width: 200px !important;
     }
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .input-container {
+  .atom-input-container {
     input,
     label {
       font-size: 16px;
     }
 
-    .input {
+    .input-label-mode {
       width: 150px !important;
+    }
+
+    .input-atom-arrow-mode-arrow {
+      height: 30px;
     }
   }
 }

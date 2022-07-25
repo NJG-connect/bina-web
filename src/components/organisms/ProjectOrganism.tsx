@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-import { Data, clientInfo, services } from "../../types/Data";
-import { ChooseClient, ClientInfo, Service } from "../section";
+import { Data, clientInfo, services, mesure } from "../../types/Data";
+import { ChooseClient, ClientInfo, Service, Surface } from "../section";
 
 interface Props {
   goHome: () => void;
@@ -36,16 +36,16 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
     });
   };
 
+  const setSurface: (surface: mesure) => void = (surface) => {
+    setData({ ...data, step: "5", mesure: surface });
+  };
+
   const goBack: () => void = () => {
     setData({
       ...data,
       step: String(parseInt(data.step) - 1),
     });
   };
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   switch (data.step) {
     case "2":
@@ -66,7 +66,13 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
         />
       );
     case "4":
-      return <h1>Étape 4 {data.service}</h1>;
+      return (
+        <Surface
+          back={() => goBack()}
+          home={goHome}
+          onSubmit={(surface: mesure) => setSurface(surface)}
+        />
+      );
     case "5":
       return <h1>Étape 5</h1>;
     default:

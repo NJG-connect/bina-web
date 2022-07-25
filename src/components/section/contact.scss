@@ -15,7 +15,7 @@
     position: absolute;
     right: 15rem;
     @include variables.wh(400px, calc(80% - 4rem));
-    @include variables.dfp(column, center);
+    @include variables.dcc(column);
     background-color: variables.$bg-contact;
     padding: 2rem;
 
@@ -36,9 +36,9 @@
     }
 
     .field-container {
-      @include variables.dfp(column);
+      @include variables.dbc(column);
 
-      .input-container:first-child {
+      .atom-input-container:first-child {
         margin-bottom: 1rem;
       }
 
