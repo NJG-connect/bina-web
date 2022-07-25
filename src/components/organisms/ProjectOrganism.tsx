@@ -9,7 +9,7 @@ interface Props {
 
 const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
   const [data, setData] = useState<Data>({
-    step: "4",
+    step: "0",
   });
 
   const setClient: (client: "personal" | "professional") => void = (client) => {
