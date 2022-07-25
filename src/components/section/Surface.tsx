@@ -19,12 +19,14 @@ const Surface: React.FC<Props> = ({}) => {
     <section id="surface">
       <div className="left">
         <div className="top">
-          <IconButton img="arrow.svg" onClick={() => {}} />
+          <div className="arrow">
+            <IconButton img="arrow.svg" onClick={() => {}} />
+          </div>
           <div className="bina-logo"></div>
         </div>
         <div className="mid">
-          <div className="top">
-            <h3>De quel surface</h3>
+          <div className="sub-top">
+            <h3 className="container-title">De quel surface</h3>
             <NumberProjectCard
               img="key.svg"
               text="Surface"
@@ -35,8 +37,8 @@ const Surface: React.FC<Props> = ({}) => {
               }
             />
           </div>
-          <div className="bottom">
-            <h3>Pour combien de pièces ?</h3>
+          <div className="sub-bottom">
+            <h3 className="container-title">Pour combien de pièces ?</h3>
             <div className="container">
               <NumberProjectCard
                 img="key.svg"
@@ -49,15 +51,67 @@ const Surface: React.FC<Props> = ({}) => {
                   })
                 }
               />
+              <NumberProjectCard
+                img="key.svg"
+                text="Cuisine"
+                value={mesure.room?.kitchen ? String(mesure.room.kitchen) : "0"}
+                update={(number) =>
+                  setMesure({
+                    ...mesure,
+                    room: { ...mesure.room, kitchen: parseInt(number) },
+                  })
+                }
+              />
+              <NumberProjectCard
+                img="key.svg"
+                text="Salon"
+                value={
+                  mesure.room?.livingRoom ? String(mesure.room.livingRoom) : "0"
+                }
+                update={(number) =>
+                  setMesure({
+                    ...mesure,
+                    room: { ...mesure.room, livingRoom: parseInt(number) },
+                  })
+                }
+              />
+              <NumberProjectCard
+                img="key.svg"
+                text="Salle de bain"
+                value={
+                  mesure.room?.bathroom ? String(mesure.room.bathroom) : "0"
+                }
+                update={(number) =>
+                  setMesure({
+                    ...mesure,
+                    room: { ...mesure.room, bathroom: parseInt(number) },
+                  })
+                }
+              />
+              <NumberProjectCard
+                img="key.svg"
+                text="Autre"
+                value={mesure.room?.other ? String(mesure.room.other) : "0"}
+                update={(number) =>
+                  setMesure({
+                    ...mesure,
+                    room: { ...mesure.room, other: parseInt(number) },
+                  })
+                }
+              />
             </div>
           </div>
         </div>
         <div className="bottom">
-          <IconButton img="arrow.svg" onClick={() => {}} />
+          <IconButton
+            img="arrow.svg"
+            onClick={() => {}}
+            style={{ background: "#63B2AB" }}
+          />
           <ProgressBar step={4} />
         </div>
       </div>
-      <Img img="choose.png" className="right" />
+      <Img img="choose.png" className="right" size="cover" />
     </section>
   );
 };

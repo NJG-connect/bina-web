@@ -1,0 +1,65 @@
+@use "../../utils/variables.scss";
+
+#surface {
+  @include variables.wh(100%, 100vh);
+  @include variables.dcc(row);
+
+  .left {
+    @include variables.wh(70%, 100%);
+    @include variables.dac(column);
+
+    .mid {
+      width: 100%;
+      @include variables.dac(column);
+      .sub-bottom {
+        @include variables.dbc(column);
+        @include variables.wh(90%, auto);
+        .container {
+          @include variables.wh(100%, 100%);
+          @include variables.dac(row);
+          flex-wrap: wrap;
+        }
+      }
+
+      .container-title {
+        margin: 3rem 0;
+        text-align: center;
+      }
+    }
+
+    .bottom,
+    .top {
+      position: relative;
+      width: 90%;
+      @include variables.dcc(row);
+
+      .arrow,
+      .progress-container {
+        position: absolute;
+      }
+
+      .progress-container {
+        right: 0;
+      }
+
+      .arrow {
+        left: 0;
+        transform: rotate(180deg);
+      }
+    }
+    .bina-logo {
+      @include variables.wh(250px, 80px);
+      @include variables.pointer();
+      border: 2px solid red;
+    }
+
+    .bottom .atom-img {
+      filter: brightness(0) saturate(100%) invert(97%) sepia(1%) saturate(202%)
+        hue-rotate(35deg) brightness(117%) contrast(100%);
+    }
+  }
+
+  .right {
+    @include variables.wh(30%, 100%);
+  }
+}

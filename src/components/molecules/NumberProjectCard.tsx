@@ -21,7 +21,10 @@ const NumberProjectCard: React.FC<Props> = ({
   htmlId = "",
 }) => {
   return (
-    <div className="project-number-card">
+    <div
+      className="project-number-card"
+      style={metter ? { padding: "1rem 0" } : { padding: "1.5rem 0" }}
+    >
       <p className="title" id={`${htmlId}-title`}>
         {text}
       </p>

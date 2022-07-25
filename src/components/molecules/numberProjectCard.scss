@@ -1,18 +1,17 @@
 @use "../../utils/variables.scss";
 
 .project-number-card {
-  @include variables.wh(200px, 200px);
+  @include variables.wh(170px, 170px);
   @include variables.dbc(column);
   box-shadow: 0px 3px 6px #62b2ab80;
   border-radius: 39px;
-  padding: 1rem 0;
 
   &:hover {
     box-shadow: 0px 6px 10px #62b2abad;
   }
 
   .button-img {
-    @include variables.wh(30px, 30px);
+    @include variables.wh(25px, 25px);
     @include variables.img();
     filter: brightness(0) saturate(100%) invert(68%) sepia(21%) saturate(733%)
       hue-rotate(126deg) brightness(91%) contrast(84%);
