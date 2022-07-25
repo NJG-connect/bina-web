@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import "./surface.scss";
 import infoJson from "../../data/dataProject.json";
@@ -9,14 +9,11 @@ import { mesure } from "../../types/Data";
 interface Props {
   back: () => void;
   home: () => void;
+  onSubmit: (surface: mesure) => void;
 }
 
-const Surface: React.FC<Props> = ({ back, home }) => {
+const Surface: React.FC<Props> = ({ back, home, onSubmit }) => {
   const [mesure, setMesure] = useState<mesure>({});
-
-  useEffect(() => {
-    console.log(mesure);
-  }, [mesure]);
 
   return (
     <section id="surface">
@@ -112,7 +109,7 @@ const Surface: React.FC<Props> = ({ back, home }) => {
         <div className="bottom">
           <IconButton
             img="arrow.svg"
-            onClick={() => {}}
+            onClick={() => onSubmit(mesure)}
             style={{ background: "#63B2AB" }}
           />
           <ProgressBar step={4} />
