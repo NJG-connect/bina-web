@@ -18,13 +18,13 @@ const ChooseClient: React.FC<Props> = ({ onClick, home }) => {
         <h3 id="project-screen1-title">{infoJson.screen1.title}</h3>
         <div className="button-container">
           <ProjectButton
-            onClick={(client) => onClick("professional")}
+            onClick={() => onClick("professional")}
             img={infoJson.screen1.card1.icon}
             text={infoJson.screen1.card1.text}
             htmlId="project-screen1-card1"
           />
           <ProjectButton
-            onClick={(client) => onClick("personal")}
+            onClick={() => onClick("personal")}
             img={infoJson.screen1.card2.icon}
             text={infoJson.screen1.card2.text}
             htmlId="project-screen1-card2"

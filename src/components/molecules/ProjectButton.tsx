@@ -4,7 +4,7 @@ import "./projectButton.scss";
 import { CardButton, Img } from "../atoms/";
 
 interface Props {
-  onClick: (client: "personal" | "professional") => void;
+  onClick: () => void;
   img: string;
   text: string;
   htmlId?: string;
@@ -17,10 +17,7 @@ const ProjectButton: React.FC<Props> = ({
   htmlId = "",
 }) => {
   return (
-    <CardButton
-      onClick={() => onClick("professional")}
-      className="project-card-button"
-    >
+    <CardButton onClick={() => onClick()} className="project-card-button">
       <Img img={img} className="button-img" htmlId={`${htmlId}-img`} />
       <p id={`${htmlId}-title`}>{text}</p>
     </CardButton>
