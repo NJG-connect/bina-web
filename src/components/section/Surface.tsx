@@ -6,9 +6,12 @@ import { Img, IconButton, ProgressBar } from "../atoms/";
 import { NumberProjectCard } from "../molecules/";
 import { mesure } from "../../types/Data";
 
-interface Props {}
+interface Props {
+  back: () => void;
+  home: () => void;
+}
 
-const Surface: React.FC<Props> = ({}) => {
+const Surface: React.FC<Props> = ({ back, home }) => {
   const [mesure, setMesure] = useState<mesure>({});
 
   useEffect(() => {
@@ -20,13 +23,15 @@ const Surface: React.FC<Props> = ({}) => {
       <div className="left">
         <div className="top">
           <div className="arrow">
-            <IconButton img="arrow.svg" onClick={() => {}} />
+            <IconButton img="arrow.svg" onClick={back} />
           </div>
-          <div className="bina-logo"></div>
+          <div className="bina-logo" onClick={home}></div>
         </div>
         <div className="mid">
           <div className="sub-top">
-            <h3 className="container-title">De quel surface</h3>
+            <h3 className="container-title" id="project-screen4-title1">
+              {infoJson.screen4.title1}
+            </h3>
             <NumberProjectCard
               img="key.svg"
               text="Surface"
@@ -38,7 +43,9 @@ const Surface: React.FC<Props> = ({}) => {
             />
           </div>
           <div className="sub-bottom">
-            <h3 className="container-title">Pour combien de pièces ?</h3>
+            <h3 className="container-title" id="project-screen4-title2">
+              {infoJson.screen4.title2}
+            </h3>
             <div className="container">
               <NumberProjectCard
                 img="key.svg"
@@ -111,7 +118,12 @@ const Surface: React.FC<Props> = ({}) => {
           <ProgressBar step={4} />
         </div>
       </div>
-      <Img img="choose.png" className="right" size="cover" />
+      <Img
+        img={infoJson.screen4.background}
+        className="right"
+        size="cover"
+        htmlId="project-screen4-bg"
+      />
     </section>
   );
 };

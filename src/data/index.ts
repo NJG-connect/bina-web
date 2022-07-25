@@ -488,6 +488,33 @@ const data: CmsPropsType = {
             },
           ],
         },
+        //Screen 4 (=> Surface)
+        {
+          type: "object",
+          id: "screen4",
+          title: "Surface & Nombre de pièce",
+          fields: [
+            {
+              type: "input",
+              title: "Titre",
+              id: "title1",
+              htmlId: "project-screen4-title1",
+            },
+            {
+              type: "input",
+              title: "Titre",
+              id: "title2",
+              htmlId: "project-screen4-title2",
+            },
+            {
+              type: "image",
+              title: "Image de fond",
+              mediaFolder: "src/assets/images",
+              id: "icon",
+              htmlId: "project-screen4-bg",
+            },
+          ],
+        },
       ],
     },
   ],

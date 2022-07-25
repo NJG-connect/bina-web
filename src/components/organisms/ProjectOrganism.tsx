@@ -66,7 +66,7 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
         />
       );
     case "4":
-      return <Surface />;
+      return <Surface back={() => goBack()} home={goHome} />;
     case "5":
       return <h1>Étape 5</h1>;
     default:
