@@ -21,7 +21,7 @@ const Input: React.FC<Props> = ({
   value = "",
 }) => {
   return (
-    <div className={`input-container ${icon && "icon-mode"}`}>
+    <div className={`atom-input-container ${icon && "icon-mode"}`}>
       {label && <label>{label} :</label>}
       {type === "number" && (
         <h3
