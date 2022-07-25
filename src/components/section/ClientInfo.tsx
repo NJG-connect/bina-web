@@ -12,6 +12,7 @@ interface Props {
   back: () => void;
   clientType: "personal" | "professional";
   home: () => void;
+  intialValue: clientInfo;
 }
 
 interface translate {
@@ -23,8 +24,14 @@ interface translate {
   [key: string]: string;
 }
 
-const ClientInfo: React.FC<Props> = ({ onSubmit, back, clientType, home }) => {
-  const [clientInfo, setClientInfo] = useState<clientInfo>({});
+const ClientInfo: React.FC<Props> = ({
+  onSubmit,
+  back,
+  clientType,
+  home,
+  intialValue,
+}) => {
+  const [clientInfo, setClientInfo] = useState<clientInfo>(intialValue);
 
   const translate: translate = {
     corporation: "Votre entreprise",

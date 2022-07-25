@@ -59,6 +59,7 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
           back={() => goBack()}
           clientType={data.client!}
           home={goHome}
+          intialValue={data.clientInfo ? data.clientInfo : {}}
         />
       );
     case "3":
