@@ -31,6 +31,7 @@ const Contact: React.FC = () => {
     } else {
       setName("");
       setTel("");
+      generateToast("Le formulaire à bien été envoyé", "success");
     }
   }
 

@@ -64,8 +64,12 @@ export function verifForm(field: field) {
 
 type position = "top-right" | "top-left" | "bottom-right" | "bottom-left";
 
-export function generateToast(text: string, position: position = "top-right") {
-  toast.error(text, {
+export function generateToast(
+  text: string,
+  type: "error" | "success" = "error",
+  position: position = "top-right"
+) {
+  toast[type](text, {
     position: position,
     autoClose: 5000,
     hideProgressBar: false,

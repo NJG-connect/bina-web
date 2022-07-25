@@ -46,6 +46,7 @@ const ClientInfo: React.FC<Props> = ({
     if (verifForm(clientInfo).success === true) {
       //Submit result
       onSubmit(clientInfo);
+      generateToast("Vos informations ont bien été enregistré", "success");
     } else {
       //Send Error
       const { error } = verifForm(clientInfo);
