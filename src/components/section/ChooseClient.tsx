@@ -2,7 +2,7 @@ import React from "react";
 
 import "./chooseClient.scss";
 import infoJson from "../../data/dataProject.json";
-import { Img, CardButton, ProgressBar } from "../atoms/";
+import { Img, ProgressBar } from "../atoms/";
 import { ProjectButton } from "../molecules/";
 
 interface Props {

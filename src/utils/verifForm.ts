@@ -18,7 +18,7 @@ export function isPostal(postal: number) {
 
 export function isEmail(email: string) {
   if (typeof email !== "undefined") {
-    return email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    return email.match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
   }
 }
 

@@ -1,7 +1,6 @@
 import React from "react";
 
 import "./clientForm.scss";
-import infoJson from "../../data/dataProject.json";
 import { clientInfo, clientInfoKey } from "../../types/Data";
 import { Input } from "../atoms";
 
