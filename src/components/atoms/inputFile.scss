@@ -3,6 +3,7 @@
 .atom-input-file {
   @include variables.wh(auto, auto);
   @include variables.dcc(row);
+  margin: 4rem 0;
 
   label {
     @include variables.pointer();

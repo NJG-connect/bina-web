@@ -5,6 +5,7 @@
   @include variables.dac(row);
   border-radius: 46px;
   border: 1px solid variables.$gray-color;
+  margin: 2rem 0;
 
   .check-img {
     @include variables.wh(40px, 40px);
