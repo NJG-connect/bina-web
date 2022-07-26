@@ -2,7 +2,7 @@ import { CmsPropsType } from "lyatom-cms";
 
 const data: CmsPropsType = {
   //Master
-  branch: "dev", // Switch Branch to main for production
+  branch: "dev-project-last-screen", // Switch Branch to main for production
   repo: "NJG-connect/bina-web",
   urlForLogin: "admin",
   mediaFolder: "/src/assets/images",
@@ -535,8 +535,8 @@ const data: CmsPropsType = {
             },
             {
               type: "input",
-              title: "Titre import de fichier",
-              id: "emptyFileText",
+              title: "Titre (Aucun fichier importé)",
+              id: "emptyFileTitle",
               htmlId: "project-screen5-empty-title",
             },
             {

@@ -39,7 +39,7 @@
   "screen5": {
     "background": "choose.png",
     "title": "Déposez vos documents",
-    "intputText": "Chargez vos documents",
+    "inputText": "Chargez vos documents",
     "emptyFileTitle": "Aucun document chargé",
     "button": "Confier mon projet"
   }

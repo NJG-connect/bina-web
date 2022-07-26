@@ -40,7 +40,7 @@ const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
           <h3 id="project-screen5-title">{infoJson.screen5.title}</h3>
           <InputFile
             htmlId="project-screen5-input-title"
-            text={infoJson.screen5.intputText}
+            text={infoJson.screen5.inputText}
             onChange={(file) => setFiles([...files, file])}
           />
           <div className="file-container">
