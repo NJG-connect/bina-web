@@ -34,7 +34,7 @@ const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
           <div className="arrow">
             <IconButton img="arrow.svg" onClick={back} />
           </div>
-          <div className="bina-logo"></div>
+          <div className="bina-logo" onClick={home}></div>
         </div>
         <div className="mid">
           <h3 id="project-screen5-title">{infoJson.screen5.title}</h3>
@@ -61,6 +61,7 @@ const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
                   <UploadedFile
                     fileName={elm.name}
                     onRemove={() => remove(index)}
+                    key={`uploaded-file-${elm.name}-${index}`}
                   />
                 ))
               ) : (
@@ -75,7 +76,7 @@ const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
           <Button
             value={infoJson.screen5.button}
             onClick={() => onSubmit(files)}
-            className="nav-button"
+            className="submit-button"
             htmlId="project-screen5-button-text"
           />
         </div>
