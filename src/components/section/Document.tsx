@@ -16,8 +16,6 @@ interface Props {
 const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
   const [files, setFiles] = useState<File[]>(initialValue);
 
-  console.log(files);
-
   const remove: (index: number) => void = (index) => {
     const arr = [...files];
     setFiles(arr.filter((elm, i) => i !== index));

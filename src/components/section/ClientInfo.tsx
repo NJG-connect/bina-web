@@ -42,14 +42,27 @@ const ClientInfo: React.FC<Props> = ({
   };
 
   function verif() {
+    //Basic fields (=> clientInfo is empty by default)
+    const field: clientInfo = {
+      name: clientInfo.name,
+      mail: clientInfo.mail,
+      postal: clientInfo.postal,
+      phone: clientInfo.phone,
+    };
+
+    //Additionnal field
+    if (clientType === "professional") {
+      field.corporation = clientInfo.corporation;
+    }
+
     //Test if form is valid
-    if (verifForm(clientInfo).success === true) {
+    if (verifForm(field).success === true) {
       //Submit result
       onSubmit(clientInfo);
       generateToast("Vos informations ont bien été enregistré", "success");
     } else {
       //Send Error
-      const { error } = verifForm(clientInfo);
+      const { error } = verifForm(field);
       if (error.length >= 2) {
         generateToast("Plusieurs champs sont incorrect.");
       } else {

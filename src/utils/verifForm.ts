@@ -1,9 +1,11 @@
 import { toast } from "react-toastify";
 
 export function isText(name: string) {
-  if (typeof name === "undefined") {
+  if (typeof name !== "undefined") {
+    return name.trim() !== "" && !name.match(/[0-9]/gm);
+  } else {
     return false;
-  } else if (name.trim() !== "" && !name.match(/[0-9]/gm)) return true;
+  }
 }
 
 export function isTel(tel: string) {
