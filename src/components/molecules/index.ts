@@ -4,6 +4,7 @@ import Skills from "./Skills";
 import ClientForm from "./ClientForm";
 import ProjectButton from "./ProjectButton";
 import NumberProjectCard from "./NumberProjectCard";
+import UploadedFile from "./UploadedFile";
 
 export {
   Slider,
@@ -12,4 +13,5 @@ export {
   ClientForm,
   ProjectButton,
   NumberProjectCard,
+  UploadedFile,
 };
