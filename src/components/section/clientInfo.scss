@@ -41,7 +41,7 @@
       width: 80%;
       @include variables.dcc(row);
 
-      .submit-button .atom-img {
+      .bottom-submit-button .atom-img {
         filter: brightness(0) saturate(100%) invert(97%) sepia(1%)
           saturate(202%) hue-rotate(35deg) brightness(117%) contrast(100%);
       }
@@ -93,7 +93,7 @@
 
       .bottom {
         @include variables.dcc(column);
-        .submit-button .img {
+        .bottom-submit-button .img {
           @include variables.wh(30px, 30px);
         }
 

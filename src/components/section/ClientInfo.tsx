@@ -82,7 +82,7 @@ const ClientInfo: React.FC<Props> = ({
           value={clientInfo}
         />
         <div className="bottom">
-          <div className="submit-button">
+          <div className="bottom-submit-button">
             <IconButton
               img="arrow.svg"
               style={{ background: "#62b2ab" }}

@@ -4,6 +4,7 @@ import infoJson from "../../data/dataProject.json";
 import "./document.scss";
 import { Img, Button, IconButton, InputFile } from "../atoms";
 import { UploadedFile } from "../molecules";
+import createId from "../../utils/createId";
 
 interface Props {
   home: () => void;
@@ -15,10 +16,11 @@ interface Props {
 const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
   const [files, setFiles] = useState<File[]>(initialValue);
 
+  console.log(files);
+
   const remove: (index: number) => void = (index) => {
     const arr = [...files];
-    arr.splice(index, 1);
-    setFiles(arr);
+    setFiles(arr.filter((elm, i) => i !== index));
   };
 
   return (
@@ -41,7 +43,7 @@ const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
           <InputFile
             htmlId="project-screen5-input-title"
             text={infoJson.screen5.inputText}
-            onChange={(file) => setFiles([...files, file])}
+            onChange={(file) => setFiles([...files, ...(file as any)])}
           />
           <div className="file-container">
             <div
@@ -61,7 +63,7 @@ const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
                   <UploadedFile
                     fileName={elm.name}
                     onRemove={() => remove(index)}
-                    key={`uploaded-file-${elm.name}-${index}`}
+                    key={`uploaded-file-${createId()}`}
                   />
                 ))
               ) : (

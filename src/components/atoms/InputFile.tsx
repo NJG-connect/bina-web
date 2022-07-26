@@ -5,7 +5,7 @@ import "./inputFile.scss";
 interface Props {
   text: string;
   htmlId: string;
-  onChange: (files: File) => void;
+  onChange: (files: FileList) => void;
 }
 
 const InputFile: React.FC<Props> = ({ text, htmlId, onChange }) => {
@@ -17,7 +17,11 @@ const InputFile: React.FC<Props> = ({ text, htmlId, onChange }) => {
           type="file"
           name="file"
           id="input-file"
-          onChange={(e) => onChange(e.target.files![0])}
+          multiple
+          onChange={(e) => {
+            console.log(e.target);
+            onChange(e.target.files!);
+          }}
         />
       </label>
     </div>
