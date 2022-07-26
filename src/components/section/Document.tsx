@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 import infoJson from "../../data/dataProject.json";
 import "./document.scss";
-import { Img, Button, IconButton } from "../atoms";
+import { Img, Button, IconButton, InputFile } from "../atoms";
 
 interface Props {
   home: () => void;
@@ -12,9 +12,15 @@ interface Props {
 }
 
 const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
+  const [files, setFiles] = useState<File[]>([]);
+
   return (
     <section id="document">
-      <h1>blabla</h1>
+      <InputFile
+        htmlId="project-screen5-input-title"
+        text="Chargez vos documents"
+        onChange={(file) => setFiles([...files, file])}
+      />
     </section>
   );
 };
