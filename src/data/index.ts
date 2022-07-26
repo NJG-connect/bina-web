@@ -510,8 +510,47 @@ const data: CmsPropsType = {
               type: "image",
               title: "Image de fond",
               mediaFolder: "src/assets/images",
-              id: "icon",
+              id: "background",
               htmlId: "project-screen4-bg",
+            },
+          ],
+        },
+        //Screen 5 (=> File)
+        {
+          type: "object",
+          id: "screen5",
+          title: "Import de document",
+          fields: [
+            {
+              type: "input",
+              title: "Titre",
+              id: "title",
+              htmlId: "project-screen5-title",
+            },
+            {
+              type: "input",
+              title: "Titre import de fichier",
+              id: "inputText",
+              htmlId: "project-screen5-input-title",
+            },
+            {
+              type: "input",
+              title: "Titre (Aucun fichier importé)",
+              id: "emptyFileTitle",
+              htmlId: "project-screen5-empty-title",
+            },
+            {
+              type: "input",
+              title: "Titre bouton",
+              id: "button",
+              htmlId: "project-screen5-button-text",
+            },
+            {
+              type: "image",
+              title: "Image de fond",
+              mediaFolder: "src/assets/images",
+              id: "background",
+              htmlId: "project-screen5-bg",
             },
           ],
         },

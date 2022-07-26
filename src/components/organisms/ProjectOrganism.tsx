@@ -1,7 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { Data, clientInfo, services, mesure } from "../../types/Data";
-import { ChooseClient, ClientInfo, Service, Surface } from "../section";
+import {
+  ChooseClient,
+  ClientInfo,
+  Service,
+  Surface,
+  Document,
+} from "../section";
 
 interface Props {
   goHome: () => void;
@@ -11,10 +17,6 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
   const [data, setData] = useState<Data>({
     step: "0",
   });
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   const setClient: (client: "personal" | "professional") => void = (client) => {
     setData({
@@ -42,6 +44,10 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
 
   const setSurface: (surface: mesure) => void = (surface) => {
     setData({ ...data, step: "5", mesure: surface });
+  };
+
+  const setFile: (files: File[]) => void = (files) => {
+    setData({ ...data, step: "6", file: files });
   };
 
   const goBack: () => void = () => {
@@ -79,7 +85,14 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
         />
       );
     case "5":
-      return <h1>Étape 5</h1>;
+      return (
+        <Document
+          back={() => goBack()}
+          home={goHome}
+          onSubmit={(files: File[]) => setFile(files)}
+          initialValue={data.file ? data.file : []}
+        />
+      );
     default:
       return (
         <ChooseClient onClick={(client) => setClient(client)} home={goHome} />

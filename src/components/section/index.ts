@@ -9,6 +9,7 @@ import ChooseClient from "./ChooseClient";
 import ClientInfo from "./ClientInfo";
 import Service from "./Service";
 import Surface from "./Surface";
+import Document from "./Document";
 
 export {
   NavBar,
@@ -22,4 +23,5 @@ export {
   ClientInfo,
   Service,
   Surface,
+  Document,
 };

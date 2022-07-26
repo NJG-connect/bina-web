@@ -19,6 +19,7 @@ export interface Data {
       other?: number;
     };
   };
+  file?: File[];
 }
 
 export interface clientInfo {

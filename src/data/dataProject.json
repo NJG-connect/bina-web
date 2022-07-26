@@ -35,5 +35,12 @@
     "background": "choose.png",
     "title1": "De quel surface",
     "title2": "Pour combien de pièces ?"
+  },
+  "screen5": {
+    "background": "choose.png",
+    "title": "Déposez vos documents",
+    "inputText": "Chargez vos documents",
+    "emptyFileTitle": "Aucun document chargé",
+    "button": "Confier mon projet"
   }
 }
