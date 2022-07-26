@@ -70,3 +70,36 @@
     }
   }
 }
+
+@media only screen and (max-width: 780px) {
+  #document {
+    .left {
+      display: none;
+    }
+
+    .right {
+      width: 100%;
+
+      .mid {
+        margin: 2rem 0;
+        .file-container {
+          height: 15rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #document {
+    .right {
+      .top {
+        width: 90%;
+
+        .bina-logo {
+          @include variables.wh(200px, 50px);
+        }
+      }
+    }
+  }
+}
