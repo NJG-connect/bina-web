@@ -23,7 +23,12 @@ const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
 
   return (
     <section id="document">
-      <Img img="choose.png" className="left" size="cover" />
+      <Img
+        img={infoJson.screen5.background}
+        className="left"
+        size="cover"
+        htmlId="project-screen5-bg"
+      />
       <div className="right">
         <div className="top">
           <div className="arrow">
@@ -32,17 +37,17 @@ const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
           <div className="bina-logo"></div>
         </div>
         <div className="mid">
-          <h3>Déposez vos documents</h3>
+          <h3 id="project-screen5-title">{infoJson.screen5.title}</h3>
           <InputFile
             htmlId="project-screen5-input-title"
-            text="Chargez vos documents"
+            text={infoJson.screen5.intputText}
             onChange={(file) => setFiles([...files, file])}
           />
           <div className="file-container">
             <div
               className="wrapper"
               style={
-                files.length == 0
+                files.length === 0
                   ? {
                       display: "flex",
                       justifyContent: "center",
@@ -59,16 +64,19 @@ const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
                   />
                 ))
               ) : (
-                <h1 className="title">Aucun document chargé</h1>
+                <h1 className="title" id="project-screen5-empty-title">
+                  {infoJson.screen5.emptyFileTitle}
+                </h1>
               )}
             </div>
           </div>
         </div>
         <div className="bottom">
           <Button
-            value="Confier mon projet"
+            value={infoJson.screen5.button}
             onClick={() => onSubmit(files)}
             className="nav-button"
+            htmlId="project-screen5-button-text"
           />
         </div>
       </div>
