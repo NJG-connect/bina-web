@@ -39,20 +39,20 @@ const ProjectGallery: React.FC<Props> = ({ bg, title, text, htmlId, img }) => {
         {title}
       </h1>
       {hover && (
-        <p id={`${htmlId}-text`} className="text">
-          {text}
-        </p>
-      )}
-      {hover && (
-        <div className="project-img-container">
-          {imgArr.map((elm, index) => (
-            <Img
-              className="project-img-item"
-              htmlId={`${htmlId}-img-item-${index}`}
-              img={elm}
-              size="cover"
-            />
-          ))}
+        <div className="bottom-container">
+          <p id={`${htmlId}-text`} className="text">
+            {text}
+          </p>
+          <div className="project-img-container">
+            {imgArr.map((elm, index) => (
+              <Img
+                className="project-img-item"
+                htmlId={`${htmlId}-img-item-${index}`}
+                img={elm}
+                size="cover"
+              />
+            ))}
+          </div>
         </div>
       )}
     </ImgTemplate>
