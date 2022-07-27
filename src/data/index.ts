@@ -89,10 +89,25 @@ const data: CmsPropsType = {
           fields: [
             //Title
             {
-              type: "input",
-              title: "Titre",
+              type: "object",
+              title: "Title",
               id: "title",
-              htmlId: "about-title",
+              fields: [
+                //Main
+                {
+                  type: "input",
+                  title: "Grand Format",
+                  id: "main",
+                  htmlId: "about-title",
+                },
+                //Reduce
+                {
+                  type: "input",
+                  title: "Petit Format",
+                  id: "reduce",
+                  htmlId: "about-title",
+                },
+              ],
             },
             //Text
             {
