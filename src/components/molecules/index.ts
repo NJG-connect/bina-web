@@ -4,6 +4,7 @@ import ProjectButton from "./ProjectButton";
 import NumberProjectCard from "./NumberProjectCard";
 import UploadedFile from "./UploadedFile";
 import AboutImg from "./AboutImg";
+import ProjectGallery from "./ProjectGallery";
 
 export {
   Slider,
@@ -12,4 +13,5 @@ export {
   NumberProjectCard,
   UploadedFile,
   AboutImg,
+  ProjectGallery,
 };

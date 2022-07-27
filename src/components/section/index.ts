@@ -10,6 +10,7 @@ import Service from "./Service";
 import Surface from "./Surface";
 import Document from "./Document";
 import About from "./About";
+import Project from "./Project";
 
 export {
   NavBar,
@@ -24,4 +25,5 @@ export {
   Surface,
   Document,
   About,
+  Project,
 };

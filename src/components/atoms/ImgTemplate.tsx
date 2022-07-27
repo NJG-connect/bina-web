@@ -8,6 +8,8 @@ interface Props {
   children: React.ReactNode;
   htmlId: string;
   size?: string;
+  onMouseOver?: () => void;
+  onMouseOut?: () => void;
 }
 
 const ImgTemplate: React.FC<Props> = ({
@@ -16,6 +18,8 @@ const ImgTemplate: React.FC<Props> = ({
   children,
   htmlId,
   size = "100%",
+  onMouseOver,
+  onMouseOut,
 }) => {
   return (
     <div
@@ -25,6 +29,8 @@ const ImgTemplate: React.FC<Props> = ({
         backgroundSize: `${size}`,
       }}
       id={htmlId}
+      onMouseOver={onMouseOver}
+      onMouseOut={onMouseOut}
     >
       {children}
     </div>

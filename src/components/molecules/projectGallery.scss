@@ -1,0 +1,62 @@
+@use "../../utils/variables.scss";
+
+.project-gallery-container {
+  @include variables.wh(420px, 800px);
+  position: relative;
+
+  .title {
+    color: white;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  .title-default-mode {
+    font-size: 50px;
+    font-weight: 200;
+    line-height: 2;
+  }
+
+  .title-hover-mode {
+    font-size: 35px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .project-img-container {
+    @include variables.wh(100%, 50%);
+    @include variables.dcc(row);
+    flex-wrap: wrap;
+
+    .project-img-item {
+      @include variables.wh(110px, 110px);
+      @include variables.pointer();
+      border: 3px solid white;
+
+      &:nth-child(2) {
+        margin: 0 0.8rem;
+      }
+
+      &:nth-child(4) {
+        margin-right: 0.8rem;
+      }
+    }
+  }
+}
+
+.project-gallery-container-default-mode {
+  @include variables.dcc(row);
+}
+
+.project-gallery-container-hover-mode {
+  @include variables.dbc(column);
+  padding: 2rem;
+}

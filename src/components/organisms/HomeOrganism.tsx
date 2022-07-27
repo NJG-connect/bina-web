@@ -9,6 +9,7 @@ import {
   Sponsor,
   Quote,
   About,
+  Project,
 } from "../section";
 
 const HomeOrganism: React.FC = () => {
@@ -17,6 +18,8 @@ const HomeOrganism: React.FC = () => {
       <NavBar />
 
       <Header />
+
+      <Project />
 
       <About />
 
