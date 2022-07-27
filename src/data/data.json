@@ -14,6 +14,59 @@
       "line2": "Un projet réussi..."
     }
   },
+  "project": {
+    "title": "Nos projets",
+    "project": [
+      {
+        "title": "Hôtellerie & restauration",
+        "background": "choose.png",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!",
+        "img": [
+          { "item": "header.png" },
+          { "item": "header.png" },
+          { "item": "header.png" },
+          { "item": "header.png" },
+          { "item": "header.png" }
+        ]
+      },
+      {
+        "title": "Retail",
+        "background": "choose.png",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!",
+        "img": [
+          { "item": "header.png" },
+          { "item": "header.png" },
+          { "item": "header.png" },
+          { "item": "header.png" },
+          { "item": "header.png" }
+        ]
+      },
+      {
+        "title": "Résidentiel",
+        "background": "choose.png",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!",
+        "img": [
+          { "item": "header.png" },
+          { "item": "header.png" },
+          { "item": "header.png" },
+          { "item": "header.png" },
+          { "item": "header.png" }
+        ]
+      },
+      {
+        "title": "Autres Projets",
+        "background": "choose.png",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!",
+        "img": [
+          { "item": "header.png" },
+          { "item": "header.png" },
+          { "item": "header.png" },
+          { "item": "header.png" },
+          { "item": "header.png" }
+        ]
+      }
+    ]
+  },
   "about": {
     "title": {
       "main": "On fait les présentation",

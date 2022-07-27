@@ -8,58 +8,34 @@ import { ProjectGallery } from "../molecules";
 const Project: React.FC = () => {
   return (
     <section id="home-project">
-      <Title value="Nos projet" />
+      <Title value={infoJson.project.title} />
       <div className="gallery-container">
         <ProjectGallery
-          bg="choose.png"
-          title="Hôtellerie & Restauration"
-          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!"
-          img={[
-            "header.png",
-            "header.png",
-            "header.png",
-            "header.png",
-            "header.png",
-          ]}
+          bg={infoJson.project.project[0].background}
+          title={infoJson.project.project[0].title}
+          text={infoJson.project.project[0].text}
+          img={infoJson.project.project[0].img.map((elm) => elm.item)}
           htmlId="project-gallery1"
         />
         <ProjectGallery
-          bg="choose.png"
-          title="Hôtellerie & Restauration"
-          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!"
-          img={[
-            "header.png",
-            "header.png",
-            "header.png",
-            "header.png",
-            "header.png",
-          ]}
+          bg={infoJson.project.project[1].background}
+          title={infoJson.project.project[1].title}
+          text={infoJson.project.project[1].text}
+          img={infoJson.project.project[1].img.map((elm) => elm.item)}
           htmlId="project-gallery1"
         />
         <ProjectGallery
-          bg="choose.png"
-          title="Hôtellerie & Restauration"
-          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!"
-          img={[
-            "header.png",
-            "header.png",
-            "header.png",
-            "header.png",
-            "header.png",
-          ]}
+          bg={infoJson.project.project[2].background}
+          title={infoJson.project.project[2].title}
+          text={infoJson.project.project[2].text}
+          img={infoJson.project.project[2].img.map((elm) => elm.item)}
           htmlId="project-gallery1"
         />
         <ProjectGallery
-          bg="choose.png"
-          title="Hôtellerie & Restauration"
-          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!"
-          img={[
-            "header.png",
-            "header.png",
-            "header.png",
-            "header.png",
-            "header.png",
-          ]}
+          bg={infoJson.project.project[3].background}
+          title={infoJson.project.project[3].title}
+          text={infoJson.project.project[3].text}
+          img={infoJson.project.project[3].img.map((elm) => elm.item)}
           htmlId="project-gallery1"
         />
       </div>
