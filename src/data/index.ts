@@ -81,84 +81,67 @@ const data: CmsPropsType = {
             },
           ],
         },
+        //About
         {
           type: "object",
-          title: "Savoir-Faire",
-          id: "knowhow",
+          title: "Présentation",
+          id: "about",
           fields: [
-            //Presentation
+            //Title
+            {
+              type: "input",
+              title: "Titre",
+              id: "title",
+              htmlId: "about-title",
+            },
+            //Text
+            {
+              type: "input",
+              title: "Text",
+              id: "text",
+              htmlId: "about-text",
+            },
+            //Card 1
             {
               type: "object",
-              title: "Présentation",
-              id: "presentation",
+              title: "Card 1",
+              id: "card1",
               fields: [
-                //title
+                //Name
                 {
                   type: "input",
-                  title: "Titre",
-                  id: "title",
-                  htmlId: "presentation-title",
+                  title: "Name",
+                  id: "name",
+                  htmlId: "about-card1-name",
                 },
-                //P1
-                {
-                  type: "input",
-                  title: "Paragraphe 1",
-                  id: "paragraph1",
-                  htmlId: "presentation-p1",
-                },
-                //P2
-                {
-                  type: "input",
-                  title: "Paragraphe 2",
-                  id: "paragraph2",
-                  htmlId: "presentation-p2",
-                },
-                //Background Image
                 {
                   type: "image",
-                  title: "Image",
+                  title: "Photo",
                   mediaFolder: "src/assets/images",
                   id: "img",
-                  htmlId: "presentation-img",
+                  htmlId: "about-card1-img",
                 },
               ],
             },
-            //Skills
+            //Card 2
             {
               type: "object",
-              title: "Compétences",
-              id: "skills",
+              title: "Card 2",
+              id: "card2",
               fields: [
-                //Background Image
+                //Name
                 {
-                  type: "image",
-                  title: "Background",
-                  mediaFolder: "src/assets/images",
-                  id: "img",
-                  htmlId: "skills",
+                  type: "input",
+                  title: "Name",
+                  id: "name",
+                  htmlId: "about-card2-name",
                 },
                 {
-                  type: "array",
-                  title: "Compétences",
-                  id: "skill",
-                  referenceFieldKey: "title",
-                  canAdd: false,
-                  canDelete: false,
-                  fields: [
-                    {
-                      type: "input",
-                      htmlId: "skill-text",
-                      id: "title",
-                      title: "Titre",
-                    },
-                    {
-                      type: "image",
-                      title: "Icone",
-                      mediaFolder: "src/assets/images",
-                      id: "icon",
-                      htmlId: "skill-img",
-                    },
-                  ],
+                  type: "image",
+                  title: "Photo",
+                  mediaFolder: "src/assets/images",
+                  id: "img",
+                  htmlId: "about-card2-img",
                 },
               ],
             },
@@ -170,14 +153,14 @@ const data: CmsPropsType = {
           title: "Partenaires",
           id: "sponsor",
           fields: [
-            //Copyright
+            //Title
             {
               type: "input",
               title: "Titre",
               id: "title",
               htmlId: "sponsor-title",
             },
-            //Social
+            //Logo
             {
               type: "array",
               title: "Logo partenaires",

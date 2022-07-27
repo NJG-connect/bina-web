@@ -8,28 +8,22 @@ import { Title } from "../atoms";
 const About: React.FC = () => {
   return (
     <section id="about">
-      <Title value="On fait les présentation" />
+      <Title value={infoJson.about.title} htmlId="about-title" />
 
       <div className="about-main-container">
         <div className="left">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit
-            amet convallis dolor, vitae pharetra magna. Vivamus ac scelerisque
-            risus. In hac habitasse platea dictumst. Curabitur malesuada id odio
-            et rhoncus. Curabitur non ligula velit. Curabitur tristique tempor
-            accumsan.
-          </p>
+          <p id="about-text">{infoJson.about.text}</p>
         </div>
         <div className="right">
           <AboutImg
-            name="Fayçal Benchoira"
-            img="choose.png"
-            htmlId="about-img1"
+            name={infoJson.about.card1.name}
+            img={infoJson.about.card1.img}
+            htmlId="about-card1"
           />
           <AboutImg
-            name="Fayçal Benchoira"
-            img="choose.png"
-            htmlId="about-img2"
+            name={infoJson.about.card2.name}
+            img={infoJson.about.card2.img}
+            htmlId="about-card2"
           />
         </div>
       </div>
