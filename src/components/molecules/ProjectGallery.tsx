@@ -28,6 +28,7 @@ const ProjectGallery: React.FC<Props> = ({ bg, title, text, htmlId, img }) => {
       htmlId={`${htmlId}-bg`}
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
+      onClick={() => setHover(!hover)}
       size="cover"
     >
       <h1
