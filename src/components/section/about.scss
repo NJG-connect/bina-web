@@ -2,5 +2,34 @@
 
 #about {
   @include variables.wh(100%, calc(100vh - 4rem));
-  @include variables.dcc(row);
+  padding-top: 2rem;
+
+  .about-main-container {
+    @include variables.wh(100%, 90%);
+    @include variables.dfp(row, flex-start, center);
+
+    .left {
+      width: 50%;
+      background-color: variables.$primary-color;
+      padding: 3rem;
+      box-shadow: 0px 3px 6px #00000029;
+
+      p {
+        font-size: 25px;
+        text-align: center;
+        line-height: 2.5;
+        font-weight: 200;
+        color: variables.$gray-color;
+      }
+    }
+
+    .right {
+      @include variables.wh(40%, 100%);
+      @include variables.dxc(row);
+
+      .about-img-container:nth-child(2) {
+        margin-left: 2.5rem;
+      }
+    }
+  }
 }
