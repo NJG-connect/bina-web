@@ -1,0 +1,6 @@
+@use "../../utils/variables.scss";
+
+#about {
+  @include variables.wh(100%, calc(100vh - 4rem));
+  @include variables.dcc(row);
+}

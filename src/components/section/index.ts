@@ -4,12 +4,12 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import Sponsor from "./Sponsor";
 import Quote from "./Quote";
-import KnowHow from "./KnowHow";
 import ChooseClient from "./ChooseClient";
 import ClientInfo from "./ClientInfo";
 import Service from "./Service";
 import Surface from "./Surface";
 import Document from "./Document";
+import About from "./About";
 
 export {
   NavBar,
@@ -18,10 +18,10 @@ export {
   Footer,
   Sponsor,
   Quote,
-  KnowHow,
   ChooseClient,
   ClientInfo,
   Service,
   Surface,
   Document,
+  About,
 };
