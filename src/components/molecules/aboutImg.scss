@@ -1,7 +1,7 @@
 @use "../../utils/variables.scss";
 
 .about-img-container {
-  @include variables.wh(250px, 70%);
+  @include variables.wh(250px, 555px);
   position: relative;
   border-radius: 16px;
   box-shadow: 18px 20px 17px #00000029;
@@ -24,7 +24,7 @@
 
 @media only screen and (max-width: 780px) {
   .about-img-container {
-    @include variables.wh(200px, 60%);
+    @include variables.wh(200px, 450px);
 
     .about-img-name {
       font-size: 30px;
@@ -34,7 +34,7 @@
 
 @media only screen and (max-width: 580px) {
   .about-img-container {
-    @include variables.wh(160px, 60%);
+    @include variables.wh(160px, 400px);
 
     .about-img-name {
       font-size: 20px;
@@ -48,7 +48,7 @@
 
 @media only screen and (max-width: 580px) {
   .about-img-container {
-    @include variables.wh(125px, 50%);
+    @include variables.wh(125px, 350px);
 
     .about-img-name {
       font-size: 20px;

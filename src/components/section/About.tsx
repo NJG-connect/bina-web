@@ -2,13 +2,21 @@ import React from "react";
 
 import infoJson from "../../data/data.json";
 import "./about.scss";
+import useWindowDimensions from "../../utils/windowSizeHook";
 import { AboutImg } from "../molecules";
 import { Title } from "../atoms";
 
 const About: React.FC = () => {
+  const { width } = useWindowDimensions();
+
   return (
     <section id="about">
-      <Title value={infoJson.about.title} htmlId="about-title" />
+      <Title
+        value={
+          width >= 580 ? infoJson.about.title.main : infoJson.about.title.reduce
+        }
+        htmlId="about-title"
+      />
 
       <div className="about-main-container">
         <div className="left">

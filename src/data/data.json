@@ -15,7 +15,10 @@
     }
   },
   "about": {
-    "title": "On fait les présentation",
+    "title": {
+      "main": "On fait les présentation",
+      "reduce": "Présentation"
+    },
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet convallis dolor, vitae pharetra magna. Vivamus ac scelerisque risus. In hac habitasse platea dictumst. Curabitur malesuada id odio et rhoncus. Curabitur non ligula velit. Curabitur tristique tempor accumsan.",
     "card1": {
       "name": "Fayçal Benchoira",

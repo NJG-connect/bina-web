@@ -11,7 +11,7 @@
     .left {
       width: 50%;
       background-color: variables.$primary-color;
-      padding: 3rem;
+      padding: 2rem;
       box-shadow: 0px 3px 6px #00000029;
 
       p {
@@ -24,11 +24,67 @@
     }
 
     .right {
-      @include variables.wh(40%, 100%);
+      @include variables.wh(auto, auto);
       @include variables.dxc(row);
 
       .about-img-container:nth-child(2) {
         margin-left: 2.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1380px) {
+  #about {
+    .about-main-container {
+      .left {
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  #about {
+    .about-main-container {
+      .left {
+        width: 45%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  #about {
+    padding-top: 1rem;
+    height: auto;
+    .about-main-container {
+      @include variables.dfp(column-reverse, flex-start, center);
+      .left {
+        width: 90%;
+        padding: 5rem 2rem 2rem 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .right {
+        transform: translateY(10%);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #about {
+    .about-main-container {
+      .left {
+        width: 100%;
+
+        p {
+          line-height: 2;
+          font-size: 17px;
+        }
       }
     }
   }
