@@ -72,7 +72,7 @@ $font: normal normal normal 52px/68px Lato;
   }
 }
 
-@mixin links($color) {
+@mixin links($color: black) {
   text-decoration: none;
   color: $color;
   @include pointer();

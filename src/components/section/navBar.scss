@@ -1,10 +1,20 @@
 @use "../../utils/variables.scss";
 
+//Variant color styles
+.home-nav-default-color {
+  background-color: variables.$secondary-color;
+  transition: all 0.3s ease;
+}
+
+.home-nav-variant-color {
+  background-color: variables.$primary-color;
+  transition: all 0.3s ease;
+}
+
 //Basic style
 #home-nav {
   position: fixed;
   top: 0;
-  background-color: variables.$primary-color;
   @include variables.wh(100%, 5rem);
   @include variables.dxc(row);
   z-index: 99;
@@ -32,13 +42,24 @@
       font-size: 16px;
       text-align: center;
       padding: 7px 20px;
-
-      &:hover {
-        text-shadow: 0 0 0.01px black, 0 0 0.01px black;
-      }
+      transition: all 0.3s ease;
     }
 
-    .navigation a:nth-child(2) {
+    .navigation-default-color a:hover {
+      text-shadow: 0 0 0.02px variables.$primary-color,
+        0 0 0.02px variables.$primary-color;
+    }
+
+    .navigation-default-color a:nth-child(2) {
+      border-left: 2px solid variables.$primary-color;
+      border-right: 2px solid variables.$primary-color;
+    }
+
+    .navigation-variant-color a:hover {
+      text-shadow: 0 0 0.02px black, 0 0 0.02px black;
+    }
+
+    .navigation-variant-color a:nth-child(2) {
       border-left: 2px solid black;
       border-right: 2px solid black;
     }
@@ -46,6 +67,17 @@
     .link {
       width: 30%;
       @include variables.dac(row);
+
+      div {
+        transition: all 0.3s ease;
+      }
+    }
+
+    .link-default-color {
+      div {
+        filter: brightness(0) saturate(100%) invert(92%) sepia(22%)
+          saturate(153%) hue-rotate(354deg) brightness(99%) contrast(89%);
+      }
     }
   }
 

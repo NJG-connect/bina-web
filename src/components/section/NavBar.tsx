@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router";
 
 import "./navBar.scss";
@@ -10,8 +10,9 @@ const NavBar: React.FC = () => {
   const navigate = useNavigate();
 
   const [isColumn, setIsColumn] = useState<Boolean>(false);
+  const [isDefault, setIsDefault] = useState<Boolean>(true);
   const navElm = useRef(null);
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   function scrollToHeader() {
     const elm = document.querySelector("#header");
@@ -29,8 +30,27 @@ const NavBar: React.FC = () => {
     setTimeout(() => setIsColumn(!isColumn), 700);
   };
 
+  function changeColor() {
+    if (window.scrollY >= 900) {
+      setIsDefault(false);
+    } else {
+      setIsDefault(true);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => changeColor());
+
+    return window.removeEventListener("scroll", () => changeColor());
+  }, []);
+
   return (
-    <nav id="home-nav">
+    <nav
+      id="home-nav"
+      className={`${
+        isDefault ? "home-nav-default-color" : "home-nav-variant-color"
+      }`}
+    >
       <div className="bina-logo" onClick={scrollToHeader}></div>
 
       <div className={`right ${isColumn && "show slide-in"}`} ref={navElm}>
@@ -40,18 +60,23 @@ const NavBar: React.FC = () => {
           </div>
         )}
 
-        <div className="navigation">
+        <div
+          className={`navigation ${
+            isDefault ? "navigation-default-color" : "navigation-variant-color"
+          }`}
+        >
           {infoJson.NavBar.Links.map((elm, index) => (
             <Link
               htmlId={`navbar${index}`}
               key={`link-${elm.title}`}
               href={elm.href}
               value={elm.title}
+              colorStyle={isDefault ? "#F0E7D6" : "black"}
             />
           ))}
         </div>
 
-        <div className="link">
+        <div className={`link ${isDefault && "link-default-color"}`}>
           <Button
             value={infoJson.NavBar.Boutton}
             onClick={() => navigate("/project")}
@@ -61,7 +86,7 @@ const NavBar: React.FC = () => {
           <IconButton
             img="letter.png"
             onClick={() => scrollToContact()}
-            style={{ border: "black" }}
+            style={{ border: isDefault ? "#F0E7D6" : "black" }}
           />
         </div>
       </div>
