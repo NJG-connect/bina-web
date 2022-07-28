@@ -20,6 +20,10 @@ const Footer: React.FC = () => {
             </div>
           ))}
         </div>
+        <div className="mid">
+          <div className="bina-logo"></div>
+          <h3 id="footer-contact-mail">{infoJson.Footer.mail}</h3>
+        </div>
         <div className="right">
           {infoJson.Footer.additionalLink.map((elm, index) => (
             <Link

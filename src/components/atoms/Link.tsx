@@ -8,6 +8,7 @@ interface Props {
   className?: string;
   link?: string;
   htmlId?: string;
+  colorStyle?: string;
 }
 
 const Link: React.FC<Props> = ({
@@ -15,9 +16,15 @@ const Link: React.FC<Props> = ({
   href,
   className = "",
   htmlId = "",
+  colorStyle,
 }) => {
   return (
-    <a href={href} id={htmlId} className={`atom-link ${className}`}>
+    <a
+      href={href}
+      id={htmlId}
+      className={`atom-link ${className}`}
+      style={colorStyle ? { color: colorStyle } : {}}
+    >
       {value}
     </a>
   );
