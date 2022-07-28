@@ -5,7 +5,11 @@ import { Img } from "./";
 
 interface Props {
   value: string;
-  className: "nav-button" | "contact-button" | "submit-button";
+  className:
+    | "nav-button-default-color"
+    | "nav-button-variant-color"
+    | "contact-button"
+    | "submit-button";
   onClick: () => void;
   htmlId?: string;
 }

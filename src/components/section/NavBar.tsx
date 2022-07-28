@@ -80,7 +80,11 @@ const NavBar: React.FC = () => {
           <Button
             value={infoJson.NavBar.Boutton}
             onClick={() => navigate("/project")}
-            className="nav-button"
+            className={
+              isDefault
+                ? "nav-button-default-color"
+                : "nav-button-variant-color"
+            }
             htmlId="navbar-button"
           />
           <IconButton

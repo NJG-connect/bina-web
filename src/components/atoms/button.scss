@@ -13,7 +13,7 @@
   }
 }
 
-.nav-button {
+.nav-button-variant-color {
   font-size: 16px;
   padding: 8px 15px;
   color: black;
@@ -22,6 +22,17 @@
   &:hover {
     color: variables.$primary-color;
     background-color: black;
+  }
+}
+.nav-button-default-color {
+  font-size: 16px;
+  padding: 8px 15px;
+  color: variables.$primary-color;
+  border: 3px solid variables.$primary-color;
+
+  &:hover {
+    color: variables.$secondary-color;
+    background-color: variables.$primary-color;
   }
 }
 
