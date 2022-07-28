@@ -53,9 +53,21 @@ const NavBar: React.FC = () => {
     >
       <div className="bina-logo" onClick={scrollToHeader}></div>
 
-      <div className={`right ${isColumn && "show slide-in"}`} ref={navElm}>
+      <div
+        className={`right ${isColumn && "show slide-in"}`}
+        ref={navElm}
+        style={
+          isDefault
+            ? { backgroundColor: "#3A4F4E" }
+            : { backgroundColor: "#f0e7d6" }
+        }
+      >
         {width <= 1100 && (
-          <div className="icon">
+          <div
+            className={`icon ${
+              isDefault ? "icon-default-color" : "icon-variant-color"
+            }`}
+          >
             <IconButton img="close.png" onClick={onClose} />
           </div>
         )}
@@ -96,7 +108,11 @@ const NavBar: React.FC = () => {
       </div>
 
       {width <= 1100 && (
-        <div className="icon">
+        <div
+          className={`icon ${
+            isDefault ? "icon-default-color" : "icon-variant-color"
+          }`}
+        >
           <IconButton img="menu.png" onClick={() => setIsColumn(!isColumn)} />
         </div>
       )}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "./projectGallery.scss";
-import { ImgTemplate, Img, ZoomImg } from "../atoms";
+import { ImgTemplate, ZoomImg } from "../atoms";
 import useWindowDimensions from "../../utils/windowSizeHook";
 
 interface Props {

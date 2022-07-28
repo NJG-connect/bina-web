@@ -1,6 +1,5 @@
 import React from "react";
 
-import infoJson from "../../data/data.json";
 import {
   NavBar,
   Header,

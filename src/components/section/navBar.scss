@@ -84,6 +84,14 @@
   .icon {
     position: absolute;
     right: 5rem;
+    transition: 0.3s ease;
+  }
+
+  .icon-default-color {
+    filter: brightness(0) saturate(100%) invert(92%) sepia(22%) saturate(153%)
+      hue-rotate(354deg) brightness(99%) contrast(89%);
+  }
+  .icon-variant-color {
     filter: brightness(0) saturate(100%);
   }
 }
@@ -139,12 +147,12 @@
       position: fixed;
       z-index: 100;
       @include variables.wh(50%, 100vh);
+      @include variables.dac(column);
       top: 0;
       right: 0;
       margin: 0;
-      background-color: variables.$primary-color;
-      @include variables.dac(column);
       transform: translateX(100%);
+      transition: all 0.3s ease;
 
       .icon {
         top: 2.5rem;
