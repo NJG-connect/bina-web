@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "./projectGallery.scss";
-import { ImgTemplate, Img } from "../atoms";
+import { ImgTemplate, Img, ZoomImg } from "../atoms";
 
 interface Props {
   bg: string;
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const ProjectGallery: React.FC<Props> = ({ bg, title, text, htmlId, img }) => {
-  const [hover, setHover] = useState<boolean>(true);
+  const [hover, setHover] = useState<boolean>(false);
 
   const imgArr: string[] = img;
   if (imgArr.length > 5) imgArr.length = 5;
@@ -28,7 +28,7 @@ const ProjectGallery: React.FC<Props> = ({ bg, title, text, htmlId, img }) => {
       htmlId={`${htmlId}-bg`}
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
-      onClick={() => setHover(!hover)}
+      // onClick={() => setHover(!hover)}
       size="cover"
     >
       <h1
@@ -46,11 +46,11 @@ const ProjectGallery: React.FC<Props> = ({ bg, title, text, htmlId, img }) => {
           </p>
           <div className="project-img-container">
             {imgArr.map((elm, index) => (
-              <Img
-                className="project-img-item"
-                htmlId={`${htmlId}-img-item-${index}`}
-                img={elm}
+              <ZoomImg
+                defaultStyle="project-img-item"
                 size="cover"
+                img={elm}
+                htmlId={`${htmlId}-img-item-${index}`}
               />
             ))}
           </div>

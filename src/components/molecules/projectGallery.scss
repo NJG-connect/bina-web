@@ -45,7 +45,6 @@
 
     .project-img-item {
       @include variables.wh(110px, 110px);
-      @include variables.pointer();
       border: 3px solid white;
 
       &:nth-child(4) {
