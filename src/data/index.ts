@@ -81,6 +81,61 @@ const data: CmsPropsType = {
             },
           ],
         },
+        //Projects
+        {
+          type: "object",
+          title: "Projets",
+          id: "project",
+          fields: [
+            {
+              type: "input",
+              title: "Titre",
+              id: "title",
+              htmlId: "project-gallery-title",
+            },
+            {
+              type: "object",
+              title: "Type de Projet 1",
+              id: "projectType1",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "title",
+                  htmlId: "project-gallery1-title",
+                },
+                {
+                  type: "input",
+                  title: "Text",
+                  id: "text",
+                  htmlId: "project-gallery1-text",
+                },
+                {
+                  type: "image",
+                  title: "Fond",
+                  mediaFolder: "src/assets/images",
+                  id: "background",
+                  htmlId: "project-gallery-bg",
+                },
+                {
+                  type: "array",
+                  title: "Images",
+                  id: "img",
+                  referenceFieldKey: "item",
+                  fields: [
+                    {
+                      type: "image",
+                      title: "Image",
+                      mediaFolder: "src/assets/images",
+                      id: "item",
+                      htmlId: "project-gallery-img-item",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
         //About
         {
           type: "object",

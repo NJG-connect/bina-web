@@ -35,6 +35,7 @@ const ProjectGallery: React.FC<Props> = ({ bg, title, text, htmlId, img }) => {
         className={`title ${
           hover ? "title-hover-mode hover-animation" : "title-default-mode"
         }`}
+        id={`${htmlId}-title`}
       >
         {title}
       </h1>

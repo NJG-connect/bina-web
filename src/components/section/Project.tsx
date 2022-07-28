@@ -8,34 +8,34 @@ import { ProjectGallery } from "../molecules";
 const Project: React.FC = () => {
   return (
     <section id="home-project">
-      <Title value={infoJson.project.title} />
+      <Title value={infoJson.project.title} htmlId="project-gallery-title" />
       <div className="gallery-container">
         <ProjectGallery
-          bg={infoJson.project.project[0].background}
-          title={infoJson.project.project[0].title}
-          text={infoJson.project.project[0].text}
-          img={infoJson.project.project[0].img.map((elm) => elm.item)}
+          bg={infoJson.project.projectType1.background}
+          title={infoJson.project.projectType1.title}
+          text={infoJson.project.projectType1.text}
+          img={infoJson.project.projectType1.img.map((elm) => elm.item)}
           htmlId="project-gallery1"
         />
         <ProjectGallery
-          bg={infoJson.project.project[1].background}
-          title={infoJson.project.project[1].title}
-          text={infoJson.project.project[1].text}
-          img={infoJson.project.project[1].img.map((elm) => elm.item)}
+          bg={infoJson.project.projectType2.background}
+          title={infoJson.project.projectType2.title}
+          text={infoJson.project.projectType2.text}
+          img={infoJson.project.projectType2.img.map((elm) => elm.item)}
           htmlId="project-gallery1"
         />
         <ProjectGallery
-          bg={infoJson.project.project[2].background}
-          title={infoJson.project.project[2].title}
-          text={infoJson.project.project[2].text}
-          img={infoJson.project.project[2].img.map((elm) => elm.item)}
+          bg={infoJson.project.projectType3.background}
+          title={infoJson.project.projectType3.title}
+          text={infoJson.project.projectType3.text}
+          img={infoJson.project.projectType3.img.map((elm) => elm.item)}
           htmlId="project-gallery1"
         />
         <ProjectGallery
-          bg={infoJson.project.project[3].background}
-          title={infoJson.project.project[3].title}
-          text={infoJson.project.project[3].text}
-          img={infoJson.project.project[3].img.map((elm) => elm.item)}
+          bg={infoJson.project.projectType4.background}
+          title={infoJson.project.projectType4.title}
+          text={infoJson.project.projectType4.text}
+          img={infoJson.project.projectType4.img.map((elm) => elm.item)}
           htmlId="project-gallery1"
         />
       </div>
