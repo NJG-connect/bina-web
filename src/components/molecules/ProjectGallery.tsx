@@ -12,7 +12,7 @@ interface Props {
 }
 
 const ProjectGallery: React.FC<Props> = ({ bg, title, text, htmlId, img }) => {
-  const [hover, setHover] = useState<boolean>(false);
+  const [hover, setHover] = useState<boolean>(true);
 
   const imgArr: string[] = img;
   if (imgArr.length > 5) imgArr.length = 5;

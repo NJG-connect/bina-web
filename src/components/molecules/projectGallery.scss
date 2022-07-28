@@ -2,8 +2,6 @@
 
 .project-gallery-container {
   @include variables.wh(25%, 100%);
-  @include variables.dbc(column);
-  // min-width: 200px;
   min-height: 700px;
   position: relative;
 
@@ -24,6 +22,12 @@
     font-size: 35px;
     line-height: 1.5;
     font-weight: 500;
+  }
+
+  .bottom-container {
+    @include variables.dbc(column);
+    height: 90%;
+    min-height: 500px;
   }
 
   .text {
@@ -140,6 +144,7 @@
     }
 
     .bottom-container {
+      min-height: 0;
       background-color: variables.$gray-color;
       margin-top: 1rem;
       padding: 1rem 2rem;

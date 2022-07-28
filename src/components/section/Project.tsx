@@ -22,21 +22,21 @@ const Project: React.FC = () => {
           title={infoJson.project.projectType2.title}
           text={infoJson.project.projectType2.text}
           img={infoJson.project.projectType2.img.map((elm) => elm.item)}
-          htmlId="project-gallery1"
+          htmlId="project-gallery2"
         />
         <ProjectGallery
           bg={infoJson.project.projectType3.background}
           title={infoJson.project.projectType3.title}
           text={infoJson.project.projectType3.text}
           img={infoJson.project.projectType3.img.map((elm) => elm.item)}
-          htmlId="project-gallery1"
+          htmlId="project-gallery3"
         />
         <ProjectGallery
           bg={infoJson.project.projectType4.background}
           title={infoJson.project.projectType4.title}
           text={infoJson.project.projectType4.text}
           img={infoJson.project.projectType4.img.map((elm) => elm.item)}
-          htmlId="project-gallery1"
+          htmlId="project-gallery4"
         />
       </div>
     </section>

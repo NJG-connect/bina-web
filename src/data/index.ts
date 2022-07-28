@@ -2,7 +2,7 @@ import { CmsPropsType } from "lyatom-cms";
 
 const data: CmsPropsType = {
   //Master
-  branch: "dev", // Switch Branch to main for production
+  branch: "dev-home-about", // Switch Branch to main for production
   repo: "NJG-connect/bina-web",
   urlForLogin: "admin",
   mediaFolder: "/src/assets/images",
@@ -115,7 +115,7 @@ const data: CmsPropsType = {
                   title: "Fond",
                   mediaFolder: "src/assets/images",
                   id: "background",
-                  htmlId: "project-gallery-bg",
+                  htmlId: "project-gallery1-bg",
                 },
                 {
                   type: "array",
@@ -128,7 +128,130 @@ const data: CmsPropsType = {
                       title: "Image",
                       mediaFolder: "src/assets/images",
                       id: "item",
-                      htmlId: "project-gallery-img-item",
+                      htmlId: "project-gallery1-img-item",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "object",
+              title: "Type de Projet 2",
+              id: "projectType2",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "title",
+                  htmlId: "project-gallery2-title",
+                },
+                {
+                  type: "input",
+                  title: "Text",
+                  id: "text",
+                  htmlId: "project-gallery2-text",
+                },
+                {
+                  type: "image",
+                  title: "Fond",
+                  mediaFolder: "src/assets/images",
+                  id: "background",
+                  htmlId: "project-gallery2-bg",
+                },
+                {
+                  type: "array",
+                  title: "Images",
+                  id: "img",
+                  referenceFieldKey: "item",
+                  fields: [
+                    {
+                      type: "image",
+                      title: "Image",
+                      mediaFolder: "src/assets/images",
+                      id: "item",
+                      htmlId: "project-gallery2-img-item",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "object",
+              title: "Type de Projet 3",
+              id: "projectType3",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "title",
+                  htmlId: "project-gallery3-title",
+                },
+                {
+                  type: "input",
+                  title: "Text",
+                  id: "text",
+                  htmlId: "project-gallery3-text",
+                },
+                {
+                  type: "image",
+                  title: "Fond",
+                  mediaFolder: "src/assets/images",
+                  id: "background",
+                  htmlId: "project-gallery3-bg",
+                },
+                {
+                  type: "array",
+                  title: "Images",
+                  id: "img",
+                  referenceFieldKey: "item",
+                  fields: [
+                    {
+                      type: "image",
+                      title: "Image",
+                      mediaFolder: "src/assets/images",
+                      id: "item",
+                      htmlId: "project-gallery3-img-item",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "object",
+              title: "Type de Projet 4",
+              id: "projectType4",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "title",
+                  htmlId: "project-gallery4-title",
+                },
+                {
+                  type: "input",
+                  title: "Text",
+                  id: "text",
+                  htmlId: "project-gallery4-text",
+                },
+                {
+                  type: "image",
+                  title: "Fond",
+                  mediaFolder: "src/assets/images",
+                  id: "background",
+                  htmlId: "project-gallery4-bg",
+                },
+                {
+                  type: "array",
+                  title: "Images",
+                  id: "img",
+                  referenceFieldKey: "item",
+                  fields: [
+                    {
+                      type: "image",
+                      title: "Image",
+                      mediaFolder: "src/assets/images",
+                      id: "item",
+                      htmlId: "project-gallery4-img-item",
                     },
                   ],
                 },
