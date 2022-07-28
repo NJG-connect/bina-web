@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "./projectGallery.scss";
 import { ImgTemplate, Img, ZoomImg } from "../atoms";
+import useWindowDimensions from "../../utils/windowSizeHook";
 
 interface Props {
   bg: string;
@@ -13,6 +14,8 @@ interface Props {
 
 const ProjectGallery: React.FC<Props> = ({ bg, title, text, htmlId, img }) => {
   const [hover, setHover] = useState<boolean>(false);
+
+  const { width } = useWindowDimensions();
 
   const imgArr: string[] = img;
   if (imgArr.length > 5) imgArr.length = 5;
@@ -28,7 +31,7 @@ const ProjectGallery: React.FC<Props> = ({ bg, title, text, htmlId, img }) => {
       htmlId={`${htmlId}-bg`}
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
-      // onClick={() => setHover(!hover)}
+      onClick={() => width <= 780 && setHover(!hover)}
       size="cover"
     >
       <h1
