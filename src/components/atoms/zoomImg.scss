@@ -1,0 +1,31 @@
+@use "../../utils/variables.scss";
+
+.zoom-img-container {
+  @include variables.pointer();
+  position: relative;
+
+  .img {
+    @include variables.wh(100%, 100%);
+  }
+
+  .close-button-container {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    display: none;
+  }
+}
+
+.zoom-img-container-fullscreen {
+  @include variables.wh(100vw, 100vh);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  padding: 3rem;
+  background-color: #0000002f;
+
+  .close-button-container {
+    display: block;
+  }
+}

@@ -2,7 +2,7 @@ import { CmsPropsType } from "lyatom-cms";
 
 const data: CmsPropsType = {
   //Master
-  branch: "dev", // Switch Branch to main for production
+  branch: "dev-home-about", // Switch Branch to main for production
   repo: "NJG-connect/bina-web",
   urlForLogin: "admin",
   mediaFolder: "/src/assets/images",
@@ -81,84 +81,260 @@ const data: CmsPropsType = {
             },
           ],
         },
+        //Projects
         {
           type: "object",
-          title: "Savoir-Faire",
-          id: "knowhow",
+          title: "Projets",
+          id: "project",
           fields: [
-            //Presentation
+            {
+              type: "input",
+              title: "Titre",
+              id: "title",
+              htmlId: "project-gallery-title",
+            },
             {
               type: "object",
-              title: "Présentation",
-              id: "presentation",
+              title: "Type de Projet 1",
+              id: "projectType1",
               fields: [
-                //title
                 {
                   type: "input",
                   title: "Titre",
                   id: "title",
-                  htmlId: "presentation-title",
+                  htmlId: "project-gallery1-title",
                 },
-                //P1
                 {
                   type: "input",
-                  title: "Paragraphe 1",
-                  id: "paragraph1",
-                  htmlId: "presentation-p1",
+                  title: "Text",
+                  id: "text",
+                  htmlId: "project-gallery1-text",
                 },
-                //P2
-                {
-                  type: "input",
-                  title: "Paragraphe 2",
-                  id: "paragraph2",
-                  htmlId: "presentation-p2",
-                },
-                //Background Image
                 {
                   type: "image",
-                  title: "Image",
+                  title: "Fond",
                   mediaFolder: "src/assets/images",
-                  id: "img",
-                  htmlId: "presentation-img",
-                },
-              ],
-            },
-            //Skills
-            {
-              type: "object",
-              title: "Compétences",
-              id: "skills",
-              fields: [
-                //Background Image
-                {
-                  type: "image",
-                  title: "Background",
-                  mediaFolder: "src/assets/images",
-                  id: "img",
-                  htmlId: "skills",
+                  id: "background",
+                  htmlId: "project-gallery1-bg",
                 },
                 {
                   type: "array",
-                  title: "Compétences",
-                  id: "skill",
-                  referenceFieldKey: "title",
-                  canAdd: false,
-                  canDelete: false,
+                  title: "Images",
+                  id: "img",
+                  referenceFieldKey: "item",
                   fields: [
                     {
-                      type: "input",
-                      htmlId: "skill-text",
-                      id: "title",
-                      title: "Titre",
-                    },
-                    {
                       type: "image",
-                      title: "Icone",
+                      title: "Image",
                       mediaFolder: "src/assets/images",
-                      id: "icon",
-                      htmlId: "skill-img",
+                      id: "item",
+                      htmlId: "project-gallery1-img-item",
                     },
                   ],
+                },
+              ],
+            },
+            {
+              type: "object",
+              title: "Type de Projet 2",
+              id: "projectType2",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "title",
+                  htmlId: "project-gallery2-title",
+                },
+                {
+                  type: "input",
+                  title: "Text",
+                  id: "text",
+                  htmlId: "project-gallery2-text",
+                },
+                {
+                  type: "image",
+                  title: "Fond",
+                  mediaFolder: "src/assets/images",
+                  id: "background",
+                  htmlId: "project-gallery2-bg",
+                },
+                {
+                  type: "array",
+                  title: "Images",
+                  id: "img",
+                  referenceFieldKey: "item",
+                  fields: [
+                    {
+                      type: "image",
+                      title: "Image",
+                      mediaFolder: "src/assets/images",
+                      id: "item",
+                      htmlId: "project-gallery2-img-item",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "object",
+              title: "Type de Projet 3",
+              id: "projectType3",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "title",
+                  htmlId: "project-gallery3-title",
+                },
+                {
+                  type: "input",
+                  title: "Text",
+                  id: "text",
+                  htmlId: "project-gallery3-text",
+                },
+                {
+                  type: "image",
+                  title: "Fond",
+                  mediaFolder: "src/assets/images",
+                  id: "background",
+                  htmlId: "project-gallery3-bg",
+                },
+                {
+                  type: "array",
+                  title: "Images",
+                  id: "img",
+                  referenceFieldKey: "item",
+                  fields: [
+                    {
+                      type: "image",
+                      title: "Image",
+                      mediaFolder: "src/assets/images",
+                      id: "item",
+                      htmlId: "project-gallery3-img-item",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "object",
+              title: "Type de Projet 4",
+              id: "projectType4",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "title",
+                  htmlId: "project-gallery4-title",
+                },
+                {
+                  type: "input",
+                  title: "Text",
+                  id: "text",
+                  htmlId: "project-gallery4-text",
+                },
+                {
+                  type: "image",
+                  title: "Fond",
+                  mediaFolder: "src/assets/images",
+                  id: "background",
+                  htmlId: "project-gallery4-bg",
+                },
+                {
+                  type: "array",
+                  title: "Images",
+                  id: "img",
+                  referenceFieldKey: "item",
+                  fields: [
+                    {
+                      type: "image",
+                      title: "Image",
+                      mediaFolder: "src/assets/images",
+                      id: "item",
+                      htmlId: "project-gallery4-img-item",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        //About
+        {
+          type: "object",
+          title: "Présentation",
+          id: "about",
+          fields: [
+            //Title
+            {
+              type: "object",
+              title: "Title",
+              id: "title",
+              fields: [
+                //Main
+                {
+                  type: "input",
+                  title: "Grand Format",
+                  id: "main",
+                  htmlId: "about-title",
+                },
+                //Reduce
+                {
+                  type: "input",
+                  title: "Petit Format",
+                  id: "reduce",
+                  htmlId: "about-title",
+                },
+              ],
+            },
+            //Text
+            {
+              type: "input",
+              title: "Text",
+              id: "text",
+              htmlId: "about-text",
+            },
+            //Card 1
+            {
+              type: "object",
+              title: "Card 1",
+              id: "card1",
+              fields: [
+                //Name
+                {
+                  type: "input",
+                  title: "Name",
+                  id: "name",
+                  htmlId: "about-card1-name",
+                },
+                {
+                  type: "image",
+                  title: "Photo",
+                  mediaFolder: "src/assets/images",
+                  id: "img",
+                  htmlId: "about-card1-img",
+                },
+              ],
+            },
+            //Card 2
+            {
+              type: "object",
+              title: "Card 2",
+              id: "card2",
+              fields: [
+                //Name
+                {
+                  type: "input",
+                  title: "Name",
+                  id: "name",
+                  htmlId: "about-card2-name",
+                },
+                {
+                  type: "image",
+                  title: "Photo",
+                  mediaFolder: "src/assets/images",
+                  id: "img",
+                  htmlId: "about-card2-img",
                 },
               ],
             },
@@ -170,14 +346,14 @@ const data: CmsPropsType = {
           title: "Partenaires",
           id: "sponsor",
           fields: [
-            //Copyright
+            //Title
             {
               type: "input",
               title: "Titre",
               id: "title",
               htmlId: "sponsor-title",
             },
-            //Social
+            //Logo
             {
               type: "array",
               title: "Logo partenaires",
