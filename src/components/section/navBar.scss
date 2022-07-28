@@ -143,6 +143,14 @@
       display: none;
     }
 
+    .show-default-color {
+      background-color: variables.$secondary-color;
+    }
+
+    .show-variant-color {
+      background-color: variables.$primary-color;
+    }
+
     .show {
       position: fixed;
       z-index: 100;

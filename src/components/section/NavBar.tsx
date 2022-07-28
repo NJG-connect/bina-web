@@ -54,13 +54,13 @@ const NavBar: React.FC = () => {
       <div className="bina-logo" onClick={scrollToHeader}></div>
 
       <div
-        className={`right ${isColumn && "show slide-in"}`}
+        className={`right ${
+          isColumn &&
+          `show slide-in ${
+            isDefault ? "show-default-color" : "show-variant-color"
+          }`
+        }`}
         ref={navElm}
-        style={
-          isDefault
-            ? { backgroundColor: "#3A4F4E" }
-            : { backgroundColor: "#f0e7d6" }
-        }
       >
         {width <= 1100 && (
           <div
