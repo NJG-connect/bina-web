@@ -17,8 +17,13 @@
   }
 
   .top {
-    @include variables.wh(80%, 7rem);
-    @include variables.dbc(row);
+    @include variables.wh(100%, 7rem);
+    @include variables.dac(row);
+
+    .left,
+    .right {
+      width: 250px;
+    }
 
     .left {
       height: 100%;
@@ -75,7 +80,8 @@
       height: auto;
 
       .left {
-        flex-wrap: wrap;
+        align-items: center;
+        height: 7rem;
       }
 
       .mid {
