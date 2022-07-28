@@ -1,5 +1,5 @@
 export interface Data {
-  step: string;
+  step?: string;
   client?: "personal" | "professional";
   clientInfo?: {
     corporation?: string;

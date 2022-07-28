@@ -1,4 +1,5 @@
 import React from "react";
+import { Data } from "../../types/Data";
 
 import { ProjectOrganism } from "../organisms/";
 
@@ -7,7 +8,13 @@ interface Props {
 }
 
 const ProjectContainer: React.FC<Props> = ({ home }) => {
-  return <ProjectOrganism goHome={home} />;
+  const submitData: (data: Data) => void = (data) => {
+    console.log(data);
+  };
+
+  return (
+    <ProjectOrganism goHome={home} onSubmit={(data) => submitData(data)} />
+  );
 };
 
 export default ProjectContainer;

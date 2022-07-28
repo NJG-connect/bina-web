@@ -18,10 +18,7 @@ const InputFile: React.FC<Props> = ({ text, htmlId, onChange }) => {
           name="file"
           id="input-file"
           multiple
-          onChange={(e) => {
-            console.log(e.target);
-            onChange(e.target.files!);
-          }}
+          onChange={(e) => onChange(e.target.files!)}
         />
       </label>
     </div>

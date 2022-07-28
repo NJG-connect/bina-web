@@ -11,9 +11,10 @@ import {
 
 interface Props {
   goHome: () => void;
+  onSubmit: (data: Data) => void;
 }
 
-const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
+const ProjectOrganism: React.FC<Props> = ({ goHome, onSubmit }) => {
   const [data, setData] = useState<Data>({
     step: "0",
   });
@@ -47,13 +48,17 @@ const ProjectOrganism: React.FC<Props> = ({ goHome }) => {
   };
 
   const setFile: (files: File[]) => void = (files) => {
-    setData({ ...data, step: "6", file: files });
+    let tempData = { ...data, file: files };
+    delete tempData.step;
+    setData(tempData);
+    onSubmit(data);
+    goHome();
   };
 
   const goBack: () => void = () => {
     setData({
       ...data,
-      step: String(parseInt(data.step) - 1),
+      step: String(parseInt(data.step!) - 1),
     });
   };
 
