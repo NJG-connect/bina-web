@@ -17,7 +17,7 @@
   }
 
   .top {
-    @include variables.wh(80%, 5rem);
+    @include variables.wh(80%, 7rem);
     @include variables.dbc(row);
 
     .left {
@@ -36,8 +36,24 @@
       }
     }
 
-    .right {
+    .mid {
       height: 100%;
+      @include variables.dbc(column);
+
+      h3 {
+        text-align: center;
+        font-weight: 500;
+        color: variables.$gray-color;
+      }
+
+      .bina-logo {
+        @include variables.wh(250px, 70px);
+        border: 2px solid red;
+      }
+    }
+
+    .right {
+      height: 5rem;
       @include variables.dfp(column, space-between, flex-end);
     }
   }
@@ -52,19 +68,23 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 880px) {
   #footer {
     .top {
-      @include variables.dfp(column, flex-start, flex-start);
+      @include variables.dfp(column, flex-start, center);
       height: auto;
 
       .left {
-        height: 5rem;
+        flex-wrap: wrap;
+      }
+
+      .mid {
+        margin: 2rem 0;
       }
 
       .right {
         height: 5rem;
-        @include variables.dfp(column, space-between, flex-start);
+        @include variables.dfp(column, space-between, center);
         margin-top: 2rem;
       }
     }

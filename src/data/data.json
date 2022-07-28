@@ -61,10 +61,12 @@
     "subtitle": "Parce qu'il n'est pas toujours évident de savoir ce que l'on veut, on vous aide à faire votre choix avec un oeuil d'expert"
   },
   "Footer": {
+    "mail": "contact@bina.fr",
     "social": [
       { "title": "LinkedIn", "link": "#", "icon": "linkedin.svg" },
       { "title": "Instagram", "link": "#", "icon": "instagram.svg" },
-      { "title": "Facebook", "link": "#", "icon": "facebook.svg" }
+      { "title": "Facebook", "link": "#", "icon": "facebook.svg" },
+      { "title": "Pinterest", "link": "#", "icon": "facebook.svg" }
     ],
     "additionalLink": [
       { "title": "Déposez un devis", "link": "#" },
