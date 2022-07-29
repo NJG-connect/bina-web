@@ -1,8 +1,9 @@
 import { CmsPropsType } from "lyatom-cms";
+import { type } from "os";
 
 const data: CmsPropsType = {
   //Master
-  branch: "dev-home-about", // Switch Branch to main for production
+  branch: "dev-home-skills", // Switch Branch to main for production
   repo: "NJG-connect/bina-web",
   urlForLogin: "admin",
   mediaFolder: "/src/assets/images",
@@ -78,6 +79,60 @@ const data: CmsPropsType = {
               mediaFolder: "src/assets/images",
               id: "background",
               htmlId: "header",
+            },
+          ],
+        },
+        //Skills
+        {
+          type: "object",
+          title: "Savoir-Faire",
+          id: "skills",
+          fields: [
+            {
+              type: "input",
+              title: "Titre",
+              id: "title",
+              htmlId: "home-skills-title",
+            },
+            {
+              type: "image",
+              title: "GIF",
+              mediaFolder: "src/assets/images",
+              id: "gif",
+              htmlId: "home-skills-gif",
+            },
+            {
+              type: "array",
+              title: "Compétences",
+              id: "skill",
+              referenceFieldKey: "title",
+              fields: [
+                {
+                  type: "input",
+                  title: "Text",
+                  id: "title",
+                  htmlId: "home-skills-skill-text",
+                },
+                {
+                  type: "image",
+                  title: "Icône",
+                  mediaFolder: "src/assets/images",
+                  id: "icon",
+                  htmlId: "home-skills-skill-icon",
+                },
+              ],
+            },
+            {
+              type: "input",
+              title: "Text 1",
+              id: "text1",
+              htmlId: "home-skills-text1",
+            },
+            {
+              type: "input",
+              title: "Text 3",
+              id: "text2",
+              htmlId: "home-skills-text2",
             },
           ],
         },

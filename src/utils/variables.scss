@@ -66,9 +66,9 @@ $font: normal normal normal 52px/68px Lato;
   background-repeat: no-repeat;
 }
 
-@mixin pointer() {
+@mixin pointer($cursor: pointer) {
   &:hover {
-    cursor: pointer;
+    cursor: $cursor;
   }
 }
 
