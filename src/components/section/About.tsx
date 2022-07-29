@@ -18,6 +18,10 @@ const About: React.FC = () => {
         htmlId="about-title"
       />
 
+      <div className="bina-text">
+        <h4 id="about-bina-text">{infoJson.about["text-bina"]}</h4>
+      </div>
+
       <div className="about-main-container">
         <div className="left">
           <p id="about-text">{infoJson.about.text}</p>

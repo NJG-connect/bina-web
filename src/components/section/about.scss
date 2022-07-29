@@ -4,6 +4,20 @@
   @include variables.wh(100%, calc(100vh - 4rem));
   padding-top: 2rem;
 
+  .bina-text {
+    width: 100%;
+    @include variables.dcc(row);
+
+    h4 {
+      width: 80%;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 400;
+      color: variables.$secondary-color;
+      line-height: 1.2;
+    }
+  }
+
   .about-main-container {
     @include variables.wh(100%, 90%);
     @include variables.dfp(row, flex-start, center);
@@ -60,6 +74,7 @@
   #about {
     padding-top: 1rem;
     height: auto;
+
     .about-main-container {
       @include variables.dfp(column-reverse, flex-start, center);
       .left {
@@ -71,6 +86,14 @@
       .right {
         transform: translateY(10%);
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  #about {
+    .bina-text h4 {
+      font-size: 15px;
     }
   }
 }
