@@ -12,11 +12,11 @@
     }
   },
   "screen2": {
-    "background": "choose.png",
+    "background": "infoClient.png",
     "title": "Parlez nous de vous:"
   },
   "screen3": {
-    "background": "choose.png",
+    "background": "service.png",
     "title": "Dans quel domaine d'activité êtes-vous ?",
     "card1": {
       "icon": "key.svg",
@@ -32,12 +32,12 @@
     }
   },
   "screen4": {
-    "background": "choose.png",
+    "background": "surface.png",
     "title1": "De quel surface",
     "title2": "Pour combien de pièces ?"
   },
   "screen5": {
-    "background": "choose.png",
+    "background": "file.png",
     "title": "Déposez vos documents",
     "inputText": "Chargez vos documents",
     "emptyFileTitle": "Aucun document chargé",

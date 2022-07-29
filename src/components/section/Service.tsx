@@ -48,7 +48,7 @@ export const Service: React.FC<Props> = ({ back, onClick, home }) => {
         </div>
       </div>
       <Img
-        img="choose.png"
+        img={infoJson.screen3.background}
         className="right"
         size="cover"
         htmlId="project-screen3-bg"
