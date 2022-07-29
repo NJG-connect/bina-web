@@ -22,7 +22,7 @@ const Skills: React.FC = () => {
               icon={elm.icon}
               text={elm.title}
               index={String(index + 1)}
-              htmlId={`${index}-home-skills-skill`}
+              htmlId={`home-skills-skill`}
               key={`home-skills-skill-component-${index}`}
             />
           ))}

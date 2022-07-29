@@ -82,6 +82,7 @@ const data: CmsPropsType = {
             },
           ],
         },
+        //Skills
         {
           type: "object",
           title: "Savoir-Faire",
@@ -117,7 +118,7 @@ const data: CmsPropsType = {
                   title: "Icône",
                   mediaFolder: "src/assets/images",
                   id: "icon",
-                  htmlId: "home-skills-icon",
+                  htmlId: "home-skills-skill-icon",
                 },
               ],
             },
