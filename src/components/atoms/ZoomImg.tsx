@@ -18,7 +18,10 @@ const ZoomImg: React.FC<Props> = ({ img, htmlId, defaultStyle = "", size }) => {
       className={`zoom-img-container ${
         isFullscreen ? "zoom-img-container-fullscreen" : defaultStyle
       }`}
-      onClick={() => setIsFullscreen(!isFullscreen)}
+      onClick={(e) => {
+        e.stopPropagation();
+        setIsFullscreen(!isFullscreen);
+      }}
     >
       <Img htmlId={htmlId} img={img} size={size} className="img" />
       {isFullscreen && (

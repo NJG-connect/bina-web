@@ -21,14 +21,17 @@
     font-size: 50px;
     font-weight: 200;
     line-height: 2;
-    animation: titleAnimation2 0.5s ease forwards;
+    animation: titleAnimation2 0.5s ease;
   }
 
   .title-hover-mode {
     font-size: 35px;
     line-height: 1.5;
     font-weight: 500;
-    animation: titleAnimation 0.5s ease forwards;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: titleAnimation 0.5s ease;
   }
 
   .bottom-container {
@@ -206,7 +209,7 @@
     .bottom-container {
       min-height: 0;
       background-color: variables.$gray-color;
-      margin-top: 1rem;
+      margin-top: 5rem;
       padding: 1rem 2rem;
       border-bottom: 2px solid white;
       border-top: 2px solid white;
