@@ -1,6 +1,84 @@
 @use "../../utils/variables.scss";
 
 #home-skills {
-  @include variables.wh(100%, 100vh);
-  @include variables.dcc(row);
+  @include variables.wh(100%, auto);
+  min-height: 100vh;
+
+  .top {
+    @include variables.dac(row);
+    @include variables.wh(100%, 70vh);
+
+    .left {
+      @include variables.wh(45%, 65%);
+      box-shadow: 0 3px 6px black;
+    }
+
+    .right-container .skill-container:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .bottom {
+    @include variables.wh(100%, auto);
+    @include variables.dac(row);
+    margin-bottom: 2rem;
+
+    .text {
+      width: 40%;
+      font-size: 20px;
+      font-weight: 300;
+      text-align: center;
+      color: variables.$secondary-color;
+      line-height: 1.2;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  #home-skills {
+    .top {
+      @include variables.dxc(column);
+      height: auto;
+
+      .left {
+        @include variables.wh(90%, 350px);
+      }
+
+      .right-container {
+        margin: 2rem 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #home-skills {
+    .top {
+      @include variables.dxc(column);
+      height: auto;
+
+      .left {
+        @include variables.wh(90%, 350px);
+      }
+
+      .right-container {
+        margin: 2rem 0;
+        @include variables.dxc(column);
+      }
+    }
+
+    .bottom {
+      @include variables.dxc(column);
+
+      .text {
+        width: 90%;
+        font-size: 15px;
+
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
 }

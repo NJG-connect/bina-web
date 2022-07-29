@@ -8,12 +8,34 @@ import { Skill } from "../molecules";
 const Skills: React.FC = () => {
   return (
     <section id="home-skills">
-      <Skill
-        icon="key.svg"
-        text="Définir les objectifs du projet"
-        index="1"
-        htmlId="home-skills-skill1"
-      />
+      <Title value={infoJson.skills.title} htmlId="home-skills-title" />
+      <div className="top">
+        <Img
+          img={infoJson.skills.gif}
+          htmlId="home-skills-gif"
+          className="left"
+          size="cover"
+        />
+        <div className="right-container">
+          {infoJson.skills.skill.map((elm, index) => (
+            <Skill
+              icon={elm.icon}
+              text={elm.title}
+              index={String(index + 1)}
+              htmlId={`home-skills-skill-${index}`}
+              key={`home-skills-skill-component-${index}`}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="bottom">
+        <h5 id="home-skills-text1" className="text">
+          {infoJson.skills.text1}
+        </h5>
+        <h5 id="home-skills-text2" className="text">
+          {infoJson.skills.text2}
+        </h5>
+      </div>
     </section>
   );
 };

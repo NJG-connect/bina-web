@@ -3,10 +3,16 @@
 .skill-container {
   @include variables.wh(500px, auto);
   @include variables.dxc(row);
+  @include variables.pointer(default);
   position: relative;
   min-height: 4rem;
   box-shadow: 0px 3px 6px #f1e8d6d1;
   padding: 0 2rem;
+
+  &:hover {
+    transform: translateX(50px);
+    transition: all 0.3s ease;
+  }
 
   .icon {
     @include variables.wh(30px, 30px);

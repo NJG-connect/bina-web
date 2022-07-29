@@ -14,6 +14,20 @@
       "line2": "Un projet réussi..."
     }
   },
+  "skills": {
+    "title": "Savoir-faire",
+    "gif": "header.png",
+    "skill": [
+      { "title": "Définir les objectifs du projet", "icon": "key.svg" },
+      { "title": "Conception du projet", "icon": "key.svg" },
+      { "title": "Validation du projet", "icon": "key.svg" },
+      { "title": "Coordination et suivi de vos travaux", "icon": "key.svg" },
+      { "title": "Réception du chantier", "icon": "key.svg" },
+      { "title": "Les garanties après travaux", "icon": "key.svg" }
+    ],
+    "text1": "BINA a pour mot d’ordre de privilégier la qualité à la quantité. Nous vous proposons un service complet. Un architecte d’intérieur, un économiste, un conducteur de travaux et des bureaux d’études sont mis à votre disposition.",
+    "text2": "L’ensemble de nos artisans sont reconnus pour leur savoir-faire. En tant que contractant général, BINA assure la conception et la réalisation d’un projet en 6 temps :"
+  },
   "project": {
     "title": "Nos projets",
     "projectType1": {
