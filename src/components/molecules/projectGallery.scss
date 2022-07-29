@@ -68,7 +68,6 @@
 }
 
 .project-gallery-container-hover-mode {
-  // @include variables.dbc(column);
   @include variables.dfp(column, flex-end, center);
   padding: 2rem;
 }
