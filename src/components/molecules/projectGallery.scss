@@ -10,6 +10,7 @@
     text-align: center;
     width: 100%;
     text-transform: uppercase;
+    z-index: 0;
     position: absolute;
   }
 
@@ -34,9 +35,8 @@
     @include variables.dbc(column);
     height: 90%;
     min-height: 500px;
-    opacity: 0;
-    animation: showContainer 0.5s ease forwards;
-    animation-delay: 0.2s;
+    opacity: 1;
+    animation: showContainer 0.5s ease;
   }
 
   .text {
@@ -75,10 +75,13 @@
 //Keyframe
 
 @keyframes showContainer {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  30% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
