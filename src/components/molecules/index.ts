@@ -5,6 +5,7 @@ import NumberProjectCard from "./NumberProjectCard";
 import UploadedFile from "./UploadedFile";
 import AboutImg from "./AboutImg";
 import ProjectGallery from "./ProjectGallery";
+import Skill from "./Skill";
 
 export {
   Slider,
@@ -14,4 +15,5 @@ export {
   UploadedFile,
   AboutImg,
   ProjectGallery,
+  Skill,
 };

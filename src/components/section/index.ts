@@ -11,6 +11,7 @@ import Surface from "./Surface";
 import Document from "./Document";
 import About from "./About";
 import Project from "./Project";
+import Skills from "./Skills";
 
 export {
   NavBar,
@@ -26,4 +27,5 @@ export {
   Document,
   About,
   Project,
+  Skills,
 };
