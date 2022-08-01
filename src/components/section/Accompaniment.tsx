@@ -19,10 +19,12 @@ const Accompaniment: React.FC = () => {
             <TextBanner
               text={elm.title}
               htmlId="home-accompaniment-left-item"
+              indexId={String(index)}
               icon={elm.icon}
               iconPosition="left"
               size="md"
               color={{ background: "#3A4F4E", color: "#F0E7D6" }}
+              key={`home-accompaniment-${elm}-${index}`}
             />
           ))}
         </div>
@@ -48,10 +50,12 @@ const Accompaniment: React.FC = () => {
             <TextBanner
               text={elm.title}
               htmlId="home-accompaniment-right-item"
+              indexId={String(index)}
               icon={elm.icon}
               iconPosition="right"
               size="md"
               color={{ background: "#F3F3F3", color: "#3A504E" }}
+              key={`home-accompaniment-${elm}-${index}`}
             />
           ))}
         </div>

@@ -7,6 +7,7 @@ interface Props {
   text: string;
   htmlId: string;
   color: { color: string; background: string };
+  indexId?: string;
   size?: "md" | "lg";
   icon?: string;
   iconPosition?: "left" | "right";
@@ -16,6 +17,7 @@ const TextBanner: React.FC<Props> = ({
   text,
   htmlId,
   color,
+  indexId,
   size = "md",
   icon,
   iconPosition,
@@ -35,8 +37,17 @@ const TextBanner: React.FC<Props> = ({
       }`}
       style={{ backgroundColor: color.background }}
     >
-      {icon && <Img className="icon" htmlId={`${htmlId}-icon`} img={icon} />}
-      <h3 id={`${htmlId}-text`} style={{ color: color.color }}>
+      {icon && (
+        <Img
+          className="icon"
+          htmlId={`${htmlId}-icon${indexId ? indexId : ""}`}
+          img={icon}
+        />
+      )}
+      <h3
+        id={`${htmlId}-text${indexId ? indexId : ""}`}
+        style={{ color: color.color }}
+      >
         {text}
       </h3>
     </div>
