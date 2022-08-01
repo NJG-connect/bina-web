@@ -10,6 +10,7 @@ import ProgressBar from "./ProgressBar";
 import ImgTemplate from "./ImgTemplate";
 import InputFile from "./InputFile";
 import ZoomImg from "./ZoomImg";
+import TextBanner from "./TextBanner";
 
 export {
   Title,
@@ -24,4 +25,5 @@ export {
   ImgTemplate,
   InputFile,
   ZoomImg,
+  TextBanner,
 };

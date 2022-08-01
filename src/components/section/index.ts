@@ -12,6 +12,7 @@ import Document from "./Document";
 import About from "./About";
 import Project from "./Project";
 import Skills from "./Skills";
+import Accompaniment from "./Accompaniment";
 
 export {
   NavBar,
@@ -28,4 +29,5 @@ export {
   About,
   Project,
   Skills,
+  Accompaniment,
 };

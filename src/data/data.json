@@ -28,6 +28,59 @@
     "text1": "BINA a pour mot d’ordre de privilégier la qualité à la quantité. Nous vous proposons un service complet. Un architecte d’intérieur, un économiste, un conducteur de travaux et des bureaux d’études sont mis à votre disposition.",
     "text2": "L’ensemble de nos artisans sont reconnus pour leur savoir-faire. En tant que contractant général, BINA assure la conception et la réalisation d’un projet en 6 temps :"
   },
+  "accompaniment": {
+    "img": "key.svg",
+    "left": {
+      "title": "Un projet individualisé",
+      "item": [
+        {
+          "title": "Un seul interlocuteur",
+          "icon": "key.svg"
+        },
+        {
+          "title": "Un seul contrat",
+          "icon": "key.svg"
+        },
+        {
+          "title": "Une seule lecture",
+          "icon": "key.svg"
+        },
+        {
+          "title": "Un seul Prix",
+          "icon": "key.svg"
+        },
+        {
+          "title": "Un seul délai",
+          "icon": "key.svg"
+        }
+      ]
+    },
+    "right": {
+      "title": "Un service complet",
+      "item": [
+        {
+          "title": "Architectes d'intérieur",
+          "icon": "key.svg"
+        },
+        {
+          "title": "Economiste",
+          "icon": "key.svg"
+        },
+        {
+          "title": "Conducteur de travaux",
+          "icon": "key.svg"
+        },
+        {
+          "title": "Bureau d'étude",
+          "icon": "key.svg"
+        },
+        {
+          "title": "Tout corps d'états",
+          "icon": "key.svg"
+        }
+      ]
+    }
+  },
   "project": {
     "title": "Nos projets",
     "projectType1": {
