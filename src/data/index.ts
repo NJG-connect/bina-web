@@ -1,5 +1,4 @@
 import { CmsPropsType } from "lyatom-cms";
-import { type } from "os";
 
 const data: CmsPropsType = {
   //Master

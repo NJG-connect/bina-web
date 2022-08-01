@@ -25,7 +25,7 @@ const IconButton: React.FC<Props> = ({
       onClick={onClick}
       style={{
         border: `3px solid ${
-          style.border != "" ? style.border : "transparent"
+          style.border !== "" ? style.border : "transparent"
         }`,
         backgroundColor: `${
           style.background !== "" ? style.background : "transparent"

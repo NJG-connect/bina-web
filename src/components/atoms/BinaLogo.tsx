@@ -13,7 +13,7 @@ const BinaLogo: React.FC<Props> = ({ size = "lg", htmlId, onClick }) => {
   return (
     <div
       className={`atom-bina-logo-container ${
-        size == "md"
+        size === "md"
           ? "atom-bina-logo-container-medium"
           : "atom-bina-logo-container-large"
       } ${onClick && "atom-bina-logo-container-pointer"}`}

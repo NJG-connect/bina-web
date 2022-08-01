@@ -25,12 +25,12 @@ const TextBanner: React.FC<Props> = ({
   return (
     <div
       className={`atom-text-banner ${
-        size == "md"
+        size === "md"
           ? "atom-text-banner-medium-size"
           : "atom-text-banner-large-size"
       } ${
         iconPosition
-          ? iconPosition == "left"
+          ? iconPosition === "left"
             ? "atom-text-banner-row"
             : "atom-text-banner-row-reverse"
           : "atom-text-banner-center"
