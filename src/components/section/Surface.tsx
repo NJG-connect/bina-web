@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./surface.scss";
 import infoJson from "../../data/dataProject.json";
-import { Img, IconButton, ProgressBar } from "../atoms/";
+import { Img, IconButton, ProgressBar, BinaLogo } from "../atoms/";
 import { NumberProjectCard } from "../molecules/";
 import { mesure } from "../../types/Data";
 
@@ -22,7 +22,7 @@ const Surface: React.FC<Props> = ({ back, home, onSubmit }) => {
           <div className="arrow">
             <IconButton img="arrow.svg" onClick={back} />
           </div>
-          <div className="bina-logo" onClick={home}></div>
+          <BinaLogo onClick={home} />
         </div>
         <div className="mid">
           <div className="sub-top">

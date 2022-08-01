@@ -47,11 +47,6 @@
         transform: rotate(180deg);
       }
     }
-    .bina-logo {
-      @include variables.wh(250px, 80px);
-      @include variables.pointer();
-      border: 2px solid red;
-    }
 
     .bottom .atom-img {
       filter: brightness(0) saturate(100%) invert(97%) sepia(1%) saturate(202%)
@@ -107,18 +102,6 @@
           position: relative !important;
           align-self: flex-end;
           margin-top: 1rem;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  #surface {
-    .left {
-      .top {
-        .bina-logo {
-          @include variables.wh(200px, 50px);
         }
       }
     }

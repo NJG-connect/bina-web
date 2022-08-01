@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 
 import "./navBar.scss";
 import useWindowDimensions from "../../utils/windowSizeHook";
-import { IconButton, Button, Link } from "../atoms";
+import { IconButton, Button, Link, BinaLogo } from "../atoms";
 import infoJson from "../../data/data.json";
 
 const NavBar: React.FC = () => {
@@ -51,7 +51,9 @@ const NavBar: React.FC = () => {
         isDefault ? "home-nav-default-color" : "home-nav-variant-color"
       }`}
     >
-      <div className="bina-logo" onClick={scrollToHeader}></div>
+      <div className={`bina-logo ${isDefault && "bina-logo-filter"}`}>
+        <BinaLogo onClick={scrollToHeader} size="md" />
+      </div>
 
       <div
         className={`right ${

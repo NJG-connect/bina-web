@@ -2,7 +2,7 @@ import React from "react";
 
 import "./chooseClient.scss";
 import infoJson from "../../data/dataProject.json";
-import { Img, ProgressBar } from "../atoms/";
+import { Img, ProgressBar, BinaLogo } from "../atoms/";
 import { ProjectButton } from "../molecules/";
 
 interface Props {
@@ -14,7 +14,7 @@ const ChooseClient: React.FC<Props> = ({ onClick, home }) => {
   return (
     <section id="choose">
       <div className="left-container">
-        <div className="img" onClick={home}></div>
+        <BinaLogo onClick={home} />
         <h3 id="project-screen1-title">{infoJson.screen1.title}</h3>
         <div className="button-container">
           <ProjectButton

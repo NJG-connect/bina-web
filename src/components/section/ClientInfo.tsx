@@ -4,7 +4,7 @@ import "./clientInfo.scss";
 import infoJson from "../../data/dataProject.json";
 import { clientInfo, clientInfoKey } from "../../types/Data";
 import { verifForm, generateToast } from "../../utils/verifForm";
-import { Img, ProgressBar, IconButton } from "../atoms/";
+import { Img, ProgressBar, IconButton, BinaLogo } from "../atoms/";
 import { ClientForm } from "../molecules/";
 
 interface Props {
@@ -84,7 +84,7 @@ const ClientInfo: React.FC<Props> = ({
           <div className="back-button">
             <IconButton img="arrow.svg" onClick={back} />
           </div>
-          <div className="logo" onClick={home}></div>
+          <BinaLogo onClick={home} />
         </div>
         <h3 id="project-screen2-title">{infoJson.screen2.title}</h3>
         <ClientForm

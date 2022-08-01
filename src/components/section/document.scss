@@ -21,12 +21,6 @@
       position: relative;
       @include variables.dcc(row);
 
-      .bina-logo {
-        @include variables.wh(250px, 70px);
-        @include variables.pointer();
-        border: 2px solid red;
-      }
-
       .arrow {
         position: absolute;
         left: 0;
@@ -95,10 +89,6 @@
     .right {
       .top {
         width: 90%;
-
-        .bina-logo {
-          @include variables.wh(200px, 50px);
-        }
       }
     }
   }

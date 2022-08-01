@@ -11,6 +11,7 @@ import ImgTemplate from "./ImgTemplate";
 import InputFile from "./InputFile";
 import ZoomImg from "./ZoomImg";
 import TextBanner from "./TextBanner";
+import BinaLogo from "./BinaLogo";
 
 export {
   Title,
@@ -26,4 +27,5 @@ export {
   InputFile,
   ZoomImg,
   TextBanner,
+  BinaLogo,
 };

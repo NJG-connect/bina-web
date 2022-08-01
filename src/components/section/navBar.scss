@@ -20,10 +20,12 @@
   z-index: 99;
 
   .bina-logo {
-    @include variables.wh(150px, 50px);
-    @include variables.pointer();
-    border: 2px solid red;
     margin-left: 5rem;
+    transition: all 0.3s ease;
+  }
+  .bina-logo-filter .img {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(6565%)
+      hue-rotate(1deg) brightness(110%) contrast(83%);
   }
 
   .right {

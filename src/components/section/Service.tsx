@@ -3,7 +3,7 @@ import react from "react";
 import "./service.scss";
 import infoJson from "../../data/dataProject.json";
 import { services } from "../../types/Data";
-import { Img, ProgressBar, IconButton } from "../atoms";
+import { Img, ProgressBar, IconButton, BinaLogo } from "../atoms";
 import { ProjectButton } from "../molecules";
 
 interface Props {
@@ -20,7 +20,7 @@ export const Service: React.FC<Props> = ({ back, onClick, home }) => {
           <div className="arrow">
             <IconButton img="arrow.svg" onClick={back} />
           </div>
-          <div className="bina-logo" onClick={home}></div>
+          <BinaLogo onClick={home} />
         </div>
         <h3 id="project-screen3-title">{infoJson.screen3.title}</h3>
         <div className="card-button-container">

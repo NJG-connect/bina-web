@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import infoJson from "../../data/dataProject.json";
 import "./document.scss";
-import { Img, Button, IconButton, InputFile } from "../atoms";
+import { Img, Button, IconButton, InputFile, BinaLogo } from "../atoms";
 import { UploadedFile } from "../molecules";
 import createId from "../../utils/createId";
 
@@ -34,7 +34,7 @@ const Document: React.FC<Props> = ({ home, back, onSubmit, initialValue }) => {
           <div className="arrow">
             <IconButton img="arrow.svg" onClick={back} />
           </div>
-          <div className="bina-logo" onClick={home}></div>
+          <BinaLogo onClick={home} />
         </div>
         <div className="mid">
           <h3 id="project-screen5-title">{infoJson.screen5.title}</h3>

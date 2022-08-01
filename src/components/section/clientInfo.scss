@@ -22,12 +22,6 @@
         left: 0;
         transform: rotate(180deg);
       }
-
-      .logo {
-        @include variables.wh(250px, 80px);
-        border: 2px solid red;
-        @include variables.pointer();
-      }
     }
 
     h3 {
@@ -85,10 +79,6 @@
     .right-container {
       .top {
         width: 95%;
-
-        .logo {
-          @include variables.wh(200px, 50px);
-        }
       }
 
       .bottom {
