@@ -136,6 +136,55 @@ const data: CmsPropsType = {
             },
           ],
         },
+        //Accommpaniment
+        {
+          type: "object",
+          title: "Accompagnement",
+          id: "accompaniment",
+          fields: [
+            {
+              type: "image",
+              title: "Icône centrale",
+              mediaFolder: "src/assets/images",
+              id: "img",
+              htmlId: "home-accompaniment-img",
+            },
+            {
+              type: "object",
+              title: "Bandeau gauche",
+              id: "left",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "title",
+                  htmlId: "home-accompaniment-left-title-text",
+                },
+                {
+                  type: "array",
+                  title: "Items",
+                  referenceFieldKey: "title",
+                  id: "item",
+                  fields: [
+                    {
+                      type: "input",
+                      title: "Texte",
+                      id: "title",
+                      htmlId: "home-accompaniment-left-item-text",
+                    },
+                    {
+                      type: "image",
+                      title: "Icône",
+                      mediaFolder: "src/assets/images",
+                      id: "icon",
+                      htmlId: "home-accompaniment-left-item-text",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
         //Projects
         {
           type: "object",
