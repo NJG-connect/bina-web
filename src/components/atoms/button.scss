@@ -39,9 +39,9 @@
 .contact-button {
   @include variables.dcc(row);
   padding: 12px 0;
-  font-size: 29px;
+  font-size: 20px;
   background-color: variables.$primary-color;
-  color: black;
+  color: variables.$secondary-color;
 
   &:hover {
     color: variables.$primary-color;
