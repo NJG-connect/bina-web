@@ -2,7 +2,7 @@ import React from "react";
 
 import "./footer.scss";
 import infoJson from "../../data/data.json";
-import { Link, Img } from "../atoms";
+import { Link, Img, BinaLogo } from "../atoms";
 
 const Footer: React.FC = () => {
   return (
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
         <div className="mid">
-          <div className="bina-logo"></div>
+          <BinaLogo />
           <h3 id="footer-contact-mail">{infoJson.Footer.mail}</h3>
         </div>
         <div className="right">
