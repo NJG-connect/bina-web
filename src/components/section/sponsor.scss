@@ -3,7 +3,7 @@
 #sponsor {
   @include variables.wh(100%, 20rem);
   @include variables.dac(column);
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 
   .slider-off {
     @include variables.wh(100%, 228px);

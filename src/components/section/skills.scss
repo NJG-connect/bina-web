@@ -4,7 +4,7 @@
   @include variables.wh(100%, auto);
   @include variables.dcc(column);
   min-height: 100vh;
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 
   .top {
     @include variables.dcc(row);
