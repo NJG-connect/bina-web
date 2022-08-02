@@ -2,7 +2,7 @@
 
 #about {
   @include variables.wh(100%, calc(100vh - 4rem));
-  padding-top: 2rem;
+  margin-top: 2.5rem;
 
   .bina-text {
     width: 100%;
