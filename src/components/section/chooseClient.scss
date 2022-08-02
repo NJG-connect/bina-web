@@ -9,6 +9,19 @@
     @include variables.wh(65%, 100%);
     @include variables.dac(column);
 
+    .top {
+      position: relative;
+      width: 90%;
+      @include variables.dcc(row);
+
+      .icon-button-container .icon-button-img {
+        @include variables.wh(30px, 30px);
+        filter: brightness(0) saturate(100%);
+        position: absolute;
+        left: 0;
+      }
+    }
+
     h3 {
       font-weight: 400;
       font-size: 28px;
