@@ -3,12 +3,10 @@
 //Variant color styles
 .home-nav-default-color {
   background-color: variables.$secondary-color;
-  transition: all 0.3s ease;
 }
 
 .home-nav-variant-color {
   background-color: variables.$primary-color;
-  transition: all 0.3s ease;
 }
 
 //Basic style
@@ -18,9 +16,9 @@
   @include variables.wh(100%, 5rem);
   @include variables.dxc(row);
   z-index: 99;
+  transition: all 0.3s ease;
 
   .bina-logo {
-    margin-left: 5rem;
     transition: all 0.3s ease;
   }
   .bina-logo-filter .img {
@@ -29,46 +27,49 @@
   }
 
   .right {
-    width: 80%;
-    @include variables.dbc(row);
-    margin-right: 5rem;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    z-index: 300;
 
     .navigation {
-      width: 60%;
-      @include variables.dxc(row);
+      width: 100%;
+      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(4, 2fr);
+      grid-template-rows: 1fr;
     }
 
     .navigation a {
       position: relative;
       text-transform: uppercase;
-      font-size: 16px;
+      font-size: clamp(13px, 16px, 16px);
       text-align: center;
-      padding: 7px 20px;
+      padding: 7px 0;
       transition: all 0.3s ease;
     }
 
     .navigation-default-color a:hover {
-      text-shadow: 0 0 0.02px variables.$primary-color,
-        0 0 0.02px variables.$primary-color;
+      text-shadow: 0 0 0.5px variables.$primary-color,
+        0 0 0.5px variables.$primary-color;
     }
 
-    .navigation-default-color a:nth-child(2) {
-      border-left: 2px solid variables.$primary-color;
+    .navigation-default-color a:not(:last-child) {
       border-right: 2px solid variables.$primary-color;
     }
 
     .navigation-variant-color a:hover {
-      text-shadow: 0 0 0.02px black, 0 0 0.02px black;
+      text-shadow: 0 0 0.5px black, 0 0 0.5px black;
     }
 
-    .navigation-variant-color a:nth-child(2) {
-      border-left: 2px solid black;
+    .navigation-variant-color a:not(:last-child) {
       border-right: 2px solid black;
     }
 
     .link {
-      width: 30%;
-      @include variables.dac(row);
+      width: 100%;
+      min-width: 300px;
+      @include variables.dbc(row);
 
       div {
         transition: all 0.3s ease;
@@ -101,38 +102,25 @@
 //Keyframmes
 @keyframes slideIn {
   from {
-    transform: translateX(100%);
+    transform: translateY(-100%);
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes slideOut {
   from {
-    transform: translateX(0);
+    transform: translateY(0);
   }
   to {
-    transform: translateX(100%);
+    transform: translateY(-120%);
   }
 }
 
 //Responsive
-@media only screen and (max-width: 1300px) {
-  #home-nav {
-    .right {
-      .navigation {
-        width: 60%;
-      }
 
-      .link {
-        width: 35%;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
   #home-nav {
     @include variables.dcc(row);
 
@@ -143,6 +131,11 @@
 
     .right {
       display: none;
+
+      .link {
+        @include variables.dbc(column);
+        height: 110px;
+      }
     }
 
     .show-default-color {
@@ -155,48 +148,39 @@
 
     .show {
       position: fixed;
-      z-index: 100;
-      @include variables.wh(50%, 100vh);
+      @include variables.wh(100%, auto);
       @include variables.dac(column);
       top: 0;
-      right: 0;
-      margin: 0;
-      transform: translateX(100%);
+      left: 0;
+      margin-top: 5rem;
+      padding: 2rem 0;
       transition: all 0.3s ease;
-
-      .icon {
-        top: 2.5rem;
-        transform: translateY(-50%);
-      }
-
-      .navigation,
-      .link {
-        width: 90%;
-      }
 
       .navigation {
         @include variables.dbc(column);
-        height: 20%;
+        margin-bottom: 2rem;
+        width: 90%;
 
         & a {
           font-size: 18px;
         }
 
-        & a:nth-child(2) {
+        & a:not(:last-child) {
           border: none;
+          margin-bottom: 1rem;
         }
       }
     }
 
     .slide-in {
       animation: 0.7s slideIn;
-      animation-play-state: ease-in;
+      animation-timing-function: ease;
       animation-fill-mode: forwards;
     }
 
     .slide-out {
       animation: 0.7s slideOut;
-      animation-play-state: ease-in;
+      animation-timing-function: ease;
       animation-fill-mode: forwards;
     }
   }
@@ -204,10 +188,6 @@
 
 @media only screen and (max-width: 800px) {
   #home-nav {
-    .show {
-      width: 75%;
-    }
-
     .icon {
       right: 2rem;
     }
@@ -216,10 +196,6 @@
 
 @media only screen and (max-width: 400px) {
   #home-nav {
-    .show {
-      width: 100%;
-    }
-
     .icon {
       right: 1rem;
     }

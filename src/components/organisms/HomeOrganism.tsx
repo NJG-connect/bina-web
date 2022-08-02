@@ -20,9 +20,9 @@ const HomeOrganism: React.FC = () => {
 
       <Header />
 
-      <Skills />
-
       <Accompaniment />
+
+      <Skills />
 
       <Project />
 

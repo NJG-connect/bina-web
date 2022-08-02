@@ -1,18 +1,13 @@
 @use "../../utils/variables.scss";
 
 .skill-container {
-  @include variables.wh(500px, auto);
+  @include variables.wh(100%, auto);
   @include variables.dxc(row);
   @include variables.pointer(default);
   position: relative;
   min-height: 4rem;
   box-shadow: 0px 3px 6px #f1e8d6d1;
   padding: 0 2rem;
-
-  &:hover {
-    transform: translateX(50px);
-    transition: all 0.3s ease;
-  }
 
   .icon {
     @include variables.wh(30px, 30px);
@@ -37,17 +32,39 @@
   }
 }
 
+@media only screen and (max-width: 1380px) {
+  .skill-container {
+    .text {
+      font-size: 17px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .skill-container {
+    .text {
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .skill-container {
+    .text {
+      font-size: 17px;
+    }
+  }
+}
+
 @media only screen and (max-width: 780px) {
   .skill-container {
-    width: 350px;
-
     .icon {
       @include variables.wh(25px, 25px);
       min-width: 25px;
     }
 
     .text {
-      font-size: 17px;
+      font-size: 15px;
     }
 
     .index {
@@ -56,9 +73,16 @@
   }
 }
 
+@media only screen and (max-width: 580px) {
+  .skill-container {
+    .text {
+      font-size: 17px;
+    }
+  }
+}
+
 @media only screen and (max-width: 380px) {
   .skill-container {
-    width: 90%;
     padding: 0 1.5rem;
 
     .icon {

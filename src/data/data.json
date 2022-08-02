@@ -1,9 +1,10 @@
 {
   "NavBar": {
     "Links": [
-      { "title": "Nos Projets", "href": "#home-project" },
-      { "title": "Nos Engagements", "href": "#know-how" },
-      { "title": "Votre Tranquilité", "href": "#skills" }
+      { "title": "L'accompagnement", "href": "#accompaniment" },
+      { "title": "Leurs déroulements", "href": "#home-skills" },
+      { "title": "Vos Projets", "href": "#home-project" },
+      { "title": "Qui sommes nous ?", "href": "#about" }
     ],
     "Boutton": "Préparer mon projet"
   },

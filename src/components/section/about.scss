@@ -2,10 +2,11 @@
 
 #about {
   @include variables.wh(100%, calc(100vh - 4rem));
-  padding-top: 2rem;
+  margin-top: 4rem;
 
   .bina-text {
     width: 100%;
+    margin-top: 3rem;
     @include variables.dcc(row);
 
     h4 {

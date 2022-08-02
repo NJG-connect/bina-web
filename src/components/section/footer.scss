@@ -50,11 +50,6 @@
         font-weight: 500;
         color: variables.$gray-color;
       }
-
-      .bina-logo {
-        @include variables.wh(250px, 70px);
-        border: 2px solid red;
-      }
     }
 
     .right {

@@ -26,7 +26,9 @@ const NavBar: React.FC = () => {
 
   const onClose: () => void = () => {
     const elm: any = navElm.current;
-    elm.className = "right show slide-out";
+    elm.className = `right show slide-out ${
+      isDefault ? "show-default-color" : "show-variant-color"
+    }`;
     setTimeout(() => setIsColumn(!isColumn), 700);
   };
 
@@ -64,16 +66,6 @@ const NavBar: React.FC = () => {
         }`}
         ref={navElm}
       >
-        {width <= 1100 && (
-          <div
-            className={`icon ${
-              isDefault ? "icon-default-color" : "icon-variant-color"
-            }`}
-          >
-            <IconButton img="close.png" onClick={onClose} />
-          </div>
-        )}
-
         <div
           className={`navigation ${
             isDefault ? "navigation-default-color" : "navigation-variant-color"
@@ -109,13 +101,23 @@ const NavBar: React.FC = () => {
         </div>
       </div>
 
-      {width <= 1100 && (
+      {width <= 1200 && !isColumn && (
         <div
           className={`icon ${
             isDefault ? "icon-default-color" : "icon-variant-color"
           }`}
         >
           <IconButton img="menu.png" onClick={() => setIsColumn(!isColumn)} />
+        </div>
+      )}
+
+      {width <= 1200 && isColumn && (
+        <div
+          className={`icon ${
+            isDefault ? "icon-default-color" : "icon-variant-color"
+          }`}
+        >
+          <IconButton img="close.png" onClick={onClose} />
         </div>
       )}
     </nav>
