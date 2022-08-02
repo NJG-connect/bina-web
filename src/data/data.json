@@ -1,7 +1,7 @@
 {
   "NavBar": {
     "Links": [
-      { "title": "Nos Projets", "href": "#" },
+      { "title": "Nos Projets", "href": "#home-project" },
       { "title": "Nos Engagements", "href": "#know-how" },
       { "title": "Votre Tranquilité", "href": "#skills" }
     ],
