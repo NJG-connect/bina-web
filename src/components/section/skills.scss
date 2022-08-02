@@ -2,28 +2,24 @@
 
 #home-skills {
   @include variables.wh(100%, auto);
+  @include variables.dcc(column);
   min-height: 100vh;
   margin-top: 2.5rem;
 
   .top {
-    @include variables.dac(row);
-    @include variables.wh(100%, auto);
+    @include variables.dcc(row);
+    @include variables.wh(100%, 500px);
     margin-top: 1rem;
 
-    .left {
-      @include variables.wh(45%, auto);
-      box-shadow: 0 3px 6px black;
-    }
-
-    .right-container .skill-container:not(:last-child) {
-      margin-bottom: 1rem;
+    .gif {
+      @include variables.wh(70%, 100%);
     }
   }
 
-  .bottom {
+  .mid {
     @include variables.wh(100%, auto);
     @include variables.dac(row);
-    margin-bottom: 2rem;
+    margin: 2rem 0 4rem 0;
 
     .text {
       width: 40%;
@@ -35,21 +31,43 @@
       letter-spacing: 3px;
     }
   }
+
+  .bottom {
+    @include variables.wh(100%, auto);
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+  }
 }
 
 @media only screen and (max-width: 980px) {
   #home-skills {
     .top {
-      @include variables.dxc(column);
-      height: auto;
-
-      .left {
-        @include variables.wh(90%, 350px);
+      height: 400px;
+      .gif {
+        @include variables.wh(90%, 100%);
       }
+    }
 
-      .right-container {
-        margin: 2rem 0;
+    .bottom {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  #home-skills {
+    .top {
+      height: 250px;
+      .gif {
+        @include variables.wh(95%, 100%);
       }
+    }
+
+    .bottom {
+      grid-template-columns: 1fr;
     }
   }
 }
@@ -57,20 +75,10 @@
 @media only screen and (max-width: 480px) {
   #home-skills {
     .top {
-      @include variables.dxc(column);
-      height: auto;
-
-      .left {
-        @include variables.wh(90%, 350px);
-      }
-
-      .right-container {
-        margin: 2rem 0;
-        @include variables.dxc(column);
-      }
+      height: 200px;
     }
 
-    .bottom {
+    .mid {
       @include variables.dxc(column);
 
       .text {
@@ -81,6 +89,10 @@
           margin-bottom: 2rem;
         }
       }
+    }
+
+    .bottom {
+      padding: 0 0.6rem;
     }
   }
 }

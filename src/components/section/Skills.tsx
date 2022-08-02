@@ -13,28 +13,28 @@ const Skills: React.FC = () => {
         <Img
           img={infoJson.skills.gif}
           htmlId="home-skills-gif"
-          className="left"
-          size="cover"
+          className="gif"
+          size="contain"
         />
-        <div className="right-container">
-          {infoJson.skills.skill.map((elm, index) => (
-            <Skill
-              icon={elm.icon}
-              text={elm.title}
-              index={String(index + 1)}
-              htmlId={`home-skills-skill`}
-              key={`home-skills-skill-component-${index}`}
-            />
-          ))}
-        </div>
       </div>
-      <div className="bottom">
+      <div className="mid">
         <h5 id="home-skills-text1" className="text">
           {infoJson.skills.text1}
         </h5>
         <h5 id="home-skills-text2" className="text">
           {infoJson.skills.text2}
         </h5>
+      </div>
+      <div className="bottom">
+        {infoJson.skills.skill.map((elm, index) => (
+          <Skill
+            icon={elm.icon}
+            text={elm.title}
+            index={String(index + 1)}
+            htmlId={`home-skills-skill`}
+            key={`home-skills-skill-component-${index}`}
+          />
+        ))}
       </div>
     </section>
   );
