@@ -14,7 +14,11 @@ import {
   AccompanimentSg,
 } from "../section";
 
-const HomeOrganism: React.FC = () => {
+interface Props {
+  onSubmit: (data: { name: string; phone: string }) => void;
+}
+
+const HomeOrganism: React.FC<Props> = ({ onSubmit }) => {
   return (
     <>
       <NavBar />
@@ -35,7 +39,7 @@ const HomeOrganism: React.FC = () => {
 
       <Quote />
 
-      <Contact />
+      <Contact onSubmit={(data) => onSubmit(data)} />
 
       <Footer />
     </>

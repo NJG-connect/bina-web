@@ -11,9 +11,13 @@ interface translate {
   [key: string]: string;
 }
 
-const Contact: React.FC = () => {
-  const [name, setName] = useState<string>();
-  const [tel, setTel] = useState<string>();
+interface Props {
+  onSubmit: (data: { name: string; phone: string }) => void;
+}
+
+const Contact: React.FC<Props> = ({ onSubmit }) => {
+  const [name, setName] = useState<string>("");
+  const [tel, setTel] = useState<string>("");
 
   const translate: translate = {
     name: "Nom Prénom",
@@ -21,7 +25,7 @@ const Contact: React.FC = () => {
   };
 
   function verif() {
-    if (verifForm({ name: name, phone: tel }).success !== true) {
+    if (verifForm({ name, phone: tel }).success !== true) {
       const { error } = verifForm({ name, phone: tel });
       if (error.length >= 2) {
         generateToast("Plusieurs champs sont incorrect.");
@@ -29,6 +33,7 @@ const Contact: React.FC = () => {
         generateToast(`Le champs "${translate[error[0]]}" est incorrect.`);
       }
     } else {
+      onSubmit({ name: name, phone: tel });
       setName("");
       setTel("");
       generateToast("Le formulaire à bien été envoyé", "success");
