@@ -142,6 +142,33 @@ const data: CmsPropsType = {
           id: "accompaniment",
           fields: [
             {
+              type: "input",
+              title: "Titre",
+              id: "title",
+              htmlId: "home-accompaniment-title",
+            },
+            {
+              type: "array",
+              title: "Bandeau haut",
+              id: "top",
+              referenceFieldKey: "title",
+              fields: [
+                {
+                  type: "input",
+                  title: "Titre",
+                  id: "title",
+                  htmlId: "home-accompaniment-top-title",
+                },
+                {
+                  type: "image",
+                  title: "Icône",
+                  mediaFolder: "src/assets/images",
+                  id: "icon",
+                  htmlId: "home-accompaniment-top-img",
+                },
+              ],
+            },
+            {
               type: "image",
               title: "Icône centrale",
               mediaFolder: "src/assets/images",
@@ -423,6 +450,13 @@ const data: CmsPropsType = {
                   htmlId: "about-title",
                 },
               ],
+            },
+            //Bina text
+            {
+              type: "input",
+              title: "Text haut",
+              id: "text-bina",
+              htmlId: "about-bina-text",
             },
             //Text
             {
