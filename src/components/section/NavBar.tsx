@@ -94,7 +94,7 @@ const NavBar: React.FC = () => {
             htmlId="navbar-button"
           />
           <IconButton
-            img="letter.png"
+            img="letter.webp"
             onClick={() => scrollToContact()}
             style={{ border: isDefault ? "#F0E7D6" : "black" }}
           />
@@ -107,7 +107,7 @@ const NavBar: React.FC = () => {
             isDefault ? "icon-default-color" : "icon-variant-color"
           }`}
         >
-          <IconButton img="menu.png" onClick={() => setIsColumn(!isColumn)} />
+          <IconButton img="menu.webp" onClick={() => setIsColumn(!isColumn)} />
         </div>
       )}
 
@@ -117,7 +117,7 @@ const NavBar: React.FC = () => {
             isDefault ? "icon-default-color" : "icon-variant-color"
           }`}
         >
-          <IconButton img="close.png" onClick={onClose} />
+          <IconButton img="close.webp" onClick={onClose} />
         </div>
       )}
     </nav>

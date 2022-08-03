@@ -12,7 +12,6 @@
 
   .button-img {
     @include variables.wh(25px, 25px);
-    @include variables.img();
     filter: brightness(0) saturate(100%) invert(68%) sepia(21%) saturate(733%)
       hue-rotate(126deg) brightness(91%) contrast(84%);
   }

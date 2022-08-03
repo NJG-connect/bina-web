@@ -13,7 +13,7 @@
 }
 
 .atom-bina-logo-container-large {
-  @include variables.wh(250px, 70px);
+  @include variables.wh(250px, 80px);
 }
 
 .atom-bina-logo-container-pointer {
@@ -22,6 +22,6 @@
 
 @media only screen and (max-width: 480px) {
   .atom-bina-logo-container-large {
-    @include variables.wh(200px, 50px);
+    @include variables.wh(200px, 60px);
   }
 }

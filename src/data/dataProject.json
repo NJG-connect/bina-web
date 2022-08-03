@@ -1,6 +1,6 @@
 {
   "screen1": {
-    "background": "choose.png",
+    "background": "choose.webp",
     "title": "Votre projet concerne:",
     "card1": {
       "icon": "key.svg",
@@ -12,11 +12,11 @@
     }
   },
   "screen2": {
-    "background": "infoClient.png",
+    "background": "infoClient.webp",
     "title": "Parlez nous de vous:"
   },
   "screen3": {
-    "background": "service.png",
+    "background": "service.webp",
     "title": "Dans quel domaine d'activité êtes-vous ?",
     "card1": {
       "icon": "key.svg",
@@ -32,12 +32,12 @@
     }
   },
   "screen4": {
-    "background": "surface.png",
+    "background": "surface.webp",
     "title1": "De quel surface",
     "title2": "Pour combien de pièces ?"
   },
   "screen5": {
-    "background": "file.png",
+    "background": "file.webp",
     "title": "Déposez vos documents",
     "inputText": "Chargez vos documents",
     "emptyFileTitle": "Aucun document chargé",

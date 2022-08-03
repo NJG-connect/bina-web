@@ -6,25 +6,34 @@ interface Props {
   img: string;
   className?: string;
   htmlId?: string;
-  size?: string;
+  size?: "fill" | "contain" | "cover";
 }
 
 const Img: React.FC<Props> = ({
   img,
   className = "",
   htmlId = "",
-  size = "100%",
+  size = "contain",
 }) => {
   return (
-    <div
-      className={`${className} atom-img`}
+    <img
+      src={require(`../../assets/images/${img}`)}
       id={htmlId}
-      style={{
-        backgroundImage: `url(${require(`../../assets/images/${img}`)})`,
-        backgroundSize: `${size}`,
-      }}
-    ></div>
+      className={`${className} atom-img`}
+      alt={img}
+      loading="lazy"
+      style={{ objectFit: `${size}` }}
+    />
   );
 };
 
 export default Img;
+
+// <div
+//   className={`${className} atom-img`}
+//   id={htmlId}
+//   style={{
+//     backgroundImage: `url(${require(`../../assets/images/${img}`)})`,
+//     backgroundSize: `${size}`,
+//   }}
+// ></div>

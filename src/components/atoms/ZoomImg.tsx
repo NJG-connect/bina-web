@@ -7,7 +7,7 @@ interface Props {
   img: string;
   htmlId: string;
   defaultStyle?: string;
-  size?: string;
+  size?: "fill" | "contain" | "cover";
 }
 
 const ZoomImg: React.FC<Props> = ({ img, htmlId, defaultStyle = "", size }) => {
@@ -26,7 +26,7 @@ const ZoomImg: React.FC<Props> = ({ img, htmlId, defaultStyle = "", size }) => {
       <Img htmlId={htmlId} img={img} size={size} className="img" />
       {isFullscreen && (
         <div className="close-button-container">
-          <IconButton img="close.png" onClick={() => setIsFullscreen(false)} />
+          <IconButton img="close.webp" onClick={() => setIsFullscreen(false)} />
         </div>
       )}
     </div>

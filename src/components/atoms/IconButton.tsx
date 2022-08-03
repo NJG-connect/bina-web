@@ -32,7 +32,7 @@ const IconButton: React.FC<Props> = ({
         }`,
       }}
     >
-      <Img img={img} className="icon-button-img" size="100%" />
+      <Img img={img} className="icon-button-img" />
     </div>
   );
 };

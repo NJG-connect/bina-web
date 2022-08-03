@@ -9,7 +9,7 @@
     "Boutton": "Préparer mon projet"
   },
   "Header": {
-    "background": "header.png",
+    "background": "header.webp",
     "title": {
       "line1": "Un projet préparé,",
       "line2": "Un projet réussi..."
@@ -17,7 +17,7 @@
   },
   "skills": {
     "title": "Savoir-faire",
-    "gif": "header.png",
+    "gif": "header.webp",
     "skill": [
       { "title": "Définir les objectifs du projet", "icon": "crossair.svg" },
       { "title": "Conception du projet", "icon": "addFile.svg" },
@@ -104,50 +104,50 @@
     "title": "Nos projets",
     "projectType1": {
       "title": "Hôtellerie & restauration",
-      "background": "choose.png",
+      "background": "choose.webp",
       "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!",
       "img": [
-        { "item": "header.png" },
-        { "item": "header.png" },
-        { "item": "header.png" },
-        { "item": "header.png" },
-        { "item": "header.png" }
+        { "item": "header.webp" },
+        { "item": "header.webp" },
+        { "item": "header.webp" },
+        { "item": "header.webp" },
+        { "item": "header.webp" }
       ]
     },
     "projectType2": {
       "title": "Retail",
-      "background": "choose.png",
+      "background": "choose.webp",
       "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!",
       "img": [
-        { "item": "header.png" },
-        { "item": "header.png" },
-        { "item": "header.png" },
-        { "item": "header.png" },
-        { "item": "header.png" }
+        { "item": "header.webp" },
+        { "item": "header.webp" },
+        { "item": "header.webp" },
+        { "item": "header.webp" },
+        { "item": "header.webp" }
       ]
     },
     "projectType3": {
       "title": "Résidentiel",
-      "background": "choose.png",
+      "background": "choose.webp",
       "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!",
       "img": [
-        { "item": "header.png" },
-        { "item": "header.png" },
-        { "item": "header.png" },
-        { "item": "header.png" },
-        { "item": "header.png" }
+        { "item": "header.webp" },
+        { "item": "header.webp" },
+        { "item": "header.webp" },
+        { "item": "header.webp" },
+        { "item": "header.webp" }
       ]
     },
     "projectType4": {
       "title": "Autres Projets",
-      "background": "choose.png",
+      "background": "choose.webp",
       "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!",
       "img": [
-        { "item": "header.png" },
-        { "item": "header.png" },
-        { "item": "header.png" },
-        { "item": "header.png" },
-        { "item": "header.png" }
+        { "item": "header.webp" },
+        { "item": "header.webp" },
+        { "item": "header.webp" },
+        { "item": "header.webp" },
+        { "item": "header.webp" }
       ]
     }
   },
@@ -160,11 +160,11 @@
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet convallis dolor, vitae pharetra magna. Vivamus ac scelerisque risus. In hac habitasse platea dictumst. Curabitur malesuada id odio et rhoncus. Curabitur non ligula velit. Curabitur tristique tempor accumsan.",
     "card1": {
       "name": "Fayçal Benchoira",
-      "img": "choose.png"
+      "img": "choose.webp"
     },
     "card2": {
       "name": "Nicolas Iehl",
-      "img": "choose.png"
+      "img": "choose.webp"
     }
   },
   "sponsor": {
@@ -181,7 +181,7 @@
     "author": "Steve Jobs"
   },
   "Contact": {
-    "background": "header.png",
+    "background": "header.webp",
     "title": "Pas le temps pour un devis. Laisser vos coordonnées, on vous rappelle",
     "subtitle": "Parce qu'il n'est pas toujours évident de savoir ce que l'on veut, on vous aide à faire votre choix avec un oeuil d'expert"
   },

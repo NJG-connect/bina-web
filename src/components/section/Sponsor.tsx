@@ -30,7 +30,7 @@ const Sponsor: React.FC = () => {
               img={elm.title}
               className="img"
               key={`slide-${elm}-${index}`}
-              size="80%"
+              size="contain"
             />
           ))}
         </div>
