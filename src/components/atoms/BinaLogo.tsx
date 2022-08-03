@@ -19,7 +19,7 @@ const BinaLogo: React.FC<Props> = ({ size = "lg", htmlId, onClick }) => {
       } ${onClick && "atom-bina-logo-container-pointer"}`}
       onClick={onClick}
     >
-      <Img className="img" htmlId={htmlId} img="bina-logo.png" size="90%" />
+      <Img className="img" htmlId={htmlId} img="bina-logo.webp" size="90%" />
     </div>
   );
 };

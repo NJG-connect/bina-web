@@ -23,7 +23,9 @@ const Button: React.FC<Props> = ({
   return (
     <div id={htmlId} className={`atom-button ${className}`} onClick={onClick}>
       {value}
-      {className === "submit-button" && <Img className="img" img="check.png" />}
+      {className === "submit-button" && (
+        <Img className="img" img="check.webp" />
+      )}
     </div>
   );
 };

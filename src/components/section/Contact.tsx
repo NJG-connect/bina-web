@@ -43,7 +43,7 @@ const Contact: React.FC<Props> = ({ onSubmit }) => {
   return (
     <section id="contact">
       <ImgTemplate
-        img="contact.png"
+        img="contact.webp"
         className="background"
         htmlId="contact-background"
         size="cover"
@@ -58,14 +58,14 @@ const Contact: React.FC<Props> = ({ onSubmit }) => {
                 type="text"
                 onChange={(value) => setName(value)}
                 placeholder="Nom Prénom"
-                icon="user.png"
+                icon="user.webp"
                 value={name}
               />
               <Input
                 type="tel"
                 onChange={(value) => setTel(value)}
                 placeholder="Tél"
-                icon="phone.png"
+                icon="phone.webp"
                 value={tel}
               />
             </div>
