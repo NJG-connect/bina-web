@@ -7,7 +7,7 @@ interface Props {
   img: string;
   htmlId: string;
   defaultStyle?: string;
-  size?: string;
+  size?: "fill" | "contain" | "cover";
 }
 
 const ZoomImg: React.FC<Props> = ({ img, htmlId, defaultStyle = "", size }) => {

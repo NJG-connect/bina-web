@@ -61,9 +61,14 @@ $font: normal normal normal 52px/68px Lato;
   align-items: $a;
 }
 
-@mixin img() {
+@mixin imgTemplate() {
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@mixin img() {
+  vertical-align: middle;
+  object-position: center;
 }
 
 @mixin pointer($cursor: pointer) {

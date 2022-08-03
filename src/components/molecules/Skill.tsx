@@ -17,7 +17,6 @@ const Skill: React.FC<Props> = ({ text, index, icon, htmlId }) => {
         img={icon}
         className="icon"
         htmlId={`${htmlId}-icon${parseInt(index) - 1}`}
-        size="90%"
       />
       <p id={`${htmlId}-text${parseInt(index) - 1}`} className="text">
         {text}

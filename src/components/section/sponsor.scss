@@ -11,8 +11,9 @@
     background-color: variables.$white-color;
 
     .img {
-      min-width: 90px;
-      min-height: 90px;
+      @include variables.wh(80px, 80px);
+      min-width: 80px;
+      min-height: 80px;
 
       &:not(:last-child) {
         margin-right: 4rem;
