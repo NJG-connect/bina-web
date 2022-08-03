@@ -52,3 +52,11 @@ Les atoms suivants doivent être accompagné d'un style supplémentaire :
 - Img (=> Obligation de définir la taille dans le composant parent)
 - ImgTemplate (=> Contient des enfants)
 - CardButton (=> Contient des enfants)
+
+
+
+
+responsive desktop first 
+space between section by margintop on each
+snake case for class and id
+Bonne chance pour projet et navbar
