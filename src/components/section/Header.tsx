@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         img="header.webp"
         size="cover"
       >
-        <div>
+        <div className="header-title-container">
           <h1 id="header-title1">{infoJson.Header.title.line1}</h1>
           <h1 id="header-title2">{infoJson.Header.title.line2}</h1>
         </div>

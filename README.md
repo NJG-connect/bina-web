@@ -54,9 +54,17 @@ Les atoms suivants doivent être accompagné d'un style supplémentaire :
 - CardButton (=> Contient des enfants)
 
 
+## Patch à réaliser
+
+- [ ] NavBar (=> Simplifier la structure html et le css) -> Section
+- [ ] ProjectGallery (=> Simplifier la structure html et le css) -> Molecule
+- [ ] ProjectGallery animation (=> Actuellement trop couteuse)
 
 
-responsive desktop first 
-space between section by margintop on each
-snake case for class and id
-Bonne chance pour projet et navbar
+## Comment est pensé le CSS
+
+Le nom des classes et id est en **snake case** version tirret du millieu _(=> dede-dede)_
+
+Modèle **Desktop first** pour le responsive
+
+L'espacement des différentes section se fait avec un **margin-top de 3rem** sur chaque section
