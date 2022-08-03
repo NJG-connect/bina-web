@@ -30,6 +30,24 @@
     "text2": "L’ensemble de nos artisans sont reconnus pour leur savoir-faire. En tant que contractant général, BINA assure la conception et la réalisation d’un projet en 6 temps :"
   },
   "accompaniment": {
+    "title": "L'accompagnement",
+    "top": [
+      { "title": "Une solution clé en main", "icon": "key.svg" },
+      {
+        "title": "Une assurance décennale de vos ouvrages",
+        "icon": "sheild.svg"
+      },
+      { "title": "Un interlocuteur unique", "icon": "collaboration.svg" },
+      {
+        "title": "Un engagement contractuel sur les prix et les délais",
+        "icon": "delay.svg"
+      },
+      {
+        "title": "Une sélection des entreprise sous traitantes",
+        "icon": "handleshake.svg"
+      },
+      { "title": "Une obligation de résultat", "icon": "improvement.svg" }
+    ],
     "img": "key.svg",
     "left": {
       "title": "Un projet individualisé",

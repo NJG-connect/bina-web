@@ -1,12 +1,12 @@
 import React from "react";
 
-import "./accompaniment.scss";
+import "./accompanimentSg.scss";
 import infoJson from "../../data/data.json";
 import { TextBanner, Img } from "../atoms";
 
-const Accompaniment: React.FC = () => {
+const AccompanimentSg: React.FC = () => {
   return (
-    <section id="accompaniment">
+    <section id="accompaniment-sg">
       <div className="left">
         <TextBanner
           text={infoJson.accompaniment.left.title}
@@ -64,4 +64,4 @@ const Accompaniment: React.FC = () => {
   );
 };
 
-export default Accompaniment;
+export default AccompanimentSg;

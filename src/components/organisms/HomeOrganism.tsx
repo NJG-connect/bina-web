@@ -10,7 +10,8 @@ import {
   About,
   Project,
   Skills,
-  Accompaniment,
+  AccompanimentFs,
+  AccompanimentSg,
 } from "../section";
 
 const HomeOrganism: React.FC = () => {
@@ -20,7 +21,9 @@ const HomeOrganism: React.FC = () => {
 
       <Header />
 
-      <Accompaniment />
+      <AccompanimentFs />
+
+      <AccompanimentSg />
 
       <Skills />
 

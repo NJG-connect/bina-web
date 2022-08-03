@@ -12,7 +12,8 @@ import Document from "./Document";
 import About from "./About";
 import Project from "./Project";
 import Skills from "./Skills";
-import Accompaniment from "./Accompaniment";
+import AccompanimentSg from "./AccompanimentSg";
+import AccompanimentFs from "./AccompanimentFs";
 
 export {
   NavBar,
@@ -29,5 +30,6 @@ export {
   About,
   Project,
   Skills,
-  Accompaniment,
+  AccompanimentSg,
+  AccompanimentFs,
 };

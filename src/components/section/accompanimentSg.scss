@@ -1,9 +1,9 @@
 @use "../../utils/variables.scss";
 
-#accompaniment {
+#accompaniment-sg {
   @include variables.wh(100%, auto);
   @include variables.dbc(row);
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 
   .left,
   .right {
@@ -35,7 +35,7 @@
 }
 
 @media only screen and (max-width: 880px) {
-  #accompaniment {
+  #accompaniment-sg {
     @include variables.dfp(column, center, flex-start);
 
     .mid {
@@ -50,7 +50,7 @@
 }
 
 @media only screen and (max-width: 480px) {
-  #accompaniment {
+  #accompaniment-sg {
     .left,
     .right {
       height: auto;
