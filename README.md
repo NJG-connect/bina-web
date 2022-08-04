@@ -78,3 +78,10 @@ Le nom des classes et id est en **snake case** version tirret du millieu _(=> de
 Modèle **Desktop first** pour le responsive
 
 L'espacement des différentes section se fait avec un **margin-top de 3rem** sur chaque section
+
+
+## .env
+
+|            Key              |     Description       |
+| :--------------------------:| :-------------------: |
+| REACT_APP_GH_TOKEN_PERSONAL | Clé d'API GitHub      |
