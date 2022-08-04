@@ -14,9 +14,10 @@
   position: fixed;
   top: 0;
   @include variables.wh(100%, 5rem);
-  @include variables.dxc(row);
+  @include variables.dcc(row);
   z-index: 99;
   transition: all 0.3s ease;
+  padding: 0 2rem;
 
   .bina-logo {
     transition: all 0.3s ease;
