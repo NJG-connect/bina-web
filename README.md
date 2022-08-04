@@ -59,6 +59,12 @@ Les atoms suivants doivent être accompagné d'un style supplémentaire :
 - [ ] NavBar (=> Simplifier la structure html et le css) -> Section
 - [ ] ProjectGallery (=> Simplifier la structure html et le css) -> Molecule
 - [ ] ProjectGallery animation (=> Actuellement trop couteuse)
+- [ ] Bug sur l'import de fichier (=> Dernier screen partie projet)
+    Impossible d'ajouter un fichier si celui-ci à été ajouté puis supprimer et qu'il n'y a pas d'autre fichier importé.
+    Pour reproduir le bug :
+        1. Importer un fichier
+        2. le supprimer
+        3. L'importer à nouveau
 
 
 ## Comment est pensé le CSS
