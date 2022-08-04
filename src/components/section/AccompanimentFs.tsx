@@ -13,7 +13,10 @@ const AccompanimentFs: React.FC = () => {
       />
       <div className="main-container">
         {infoJson.accompaniment.top.map((elm, index) => (
-          <div className="item-container">
+          <div
+            className="item-container"
+            key={`accompaniment-fs-item-container-${index}`}
+          >
             <div className="icon-container">
               <Img
                 className="icon"
