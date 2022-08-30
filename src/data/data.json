@@ -49,11 +49,11 @@
     "left": {
       "title": "Un projet individualisé",
       "item": [
-        { "title": "Un seul interlocuteur", "icon": "collaboration.svg" },
-        { "title": "Un seul contrat", "icon": "addFile.svg" },
-        { "title": "Une seule lecture", "icon": "approve.svg" },
-        { "title": "Un seul Prix", "icon": "approve.svg" },
-        { "title": "Un seul délai", "icon": "delay.svg" }
+        { "title": "Un seul interlocuteur", "icon": "interlocuteur.png" },
+        { "title": "Un seul contrat", "icon": "contrat.png" },
+        { "title": "Une seule lecture", "icon": "lecture.png" },
+        { "title": "Un seul Prix", "icon": "prix.png" },
+        { "title": "Un seul délai", "icon": "delai.png" }
       ]
     },
     "right": {
