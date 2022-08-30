@@ -71,7 +71,7 @@
     "title": "Nos projets",
     "projectType1": {
       "title": "Hôtellerie & restauration",
-      "background": "choose.webp",
+      "background": "pro.png",
       "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!",
       "img": [
         { "item": "header.webp" },
@@ -83,7 +83,7 @@
     },
     "projectType2": {
       "title": "Retail",
-      "background": "choose.webp",
+      "background": "retail.png",
       "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!",
       "img": [
         { "item": "header.webp" },
@@ -95,7 +95,7 @@
     },
     "projectType3": {
       "title": "Résidentiel",
-      "background": "choose.webp",
+      "background": "residentiel.png",
       "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!",
       "img": [
         { "item": "header.webp" },
@@ -107,7 +107,7 @@
     },
     "projectType4": {
       "title": "Autres Projets",
-      "background": "choose.webp",
+      "background": "autres.png",
       "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur iste nostrum magnam illo excepturi iure doloremque deleniti voluptatem molestias!",
       "img": [
         { "item": "header.webp" },
