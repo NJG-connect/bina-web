@@ -59,11 +59,11 @@
     "right": {
       "title": "Un service complet",
       "item": [
-        { "title": "Architectes d'intérieur", "icon": "key.svg" },
-        { "title": "Economiste", "icon": "key.svg" },
-        { "title": "Conducteur de travaux", "icon": "key.svg" },
-        { "title": "Bureau d'étude", "icon": "key.svg" },
-        { "title": "Tout corps d'états", "icon": "key.svg" }
+        { "title": "Architectes d'intérieur", "icon": "archi.png" },
+        { "title": "Economiste", "icon": "eco.png" },
+        { "title": "Conducteur de travaux", "icon": "travaux.png" },
+        { "title": "Bureau d'étude", "icon": "etude.png" },
+        { "title": "Tout corps d'états", "icon": "corps_detat.png" }
       ]
     }
   },
