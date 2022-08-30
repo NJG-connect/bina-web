@@ -149,7 +149,7 @@
       { "title": "LinkedIn", "link": "#", "icon": "linkedin.svg" },
       { "title": "Instagram", "link": "#", "icon": "instagram.svg" },
       { "title": "Facebook", "link": "#", "icon": "facebook.svg" },
-      { "title": "Pinterest", "link": "#", "icon": "facebook.svg" }
+      { "title": "Pinterest", "link": "#", "icon": "pinterest.svg" }
     ],
     "additionalLink": [
       { "title": "Déposez un devis", "link": "#" },
